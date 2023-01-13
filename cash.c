@@ -6,7 +6,7 @@ float take_change(int coins, float change, float cent);
 
 int main(void)
 {
-    int coins = 0; //Count # of coins
+    int coins = 0; //Track # of coins
     float change = get_float("Change:"); //Get amount to change
 
     coins = take_coins(coins, change, 0.25);
