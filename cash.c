@@ -26,11 +26,13 @@ int main(void)
     /*for (i = change; i > 0.25; i - 0.25)
     {
         coins++;
+        change -= 0.25;
     }
-    change = coins
-    for (i = change - count*0.25; i > 0.10; i - 0.10)
+
+    for (i = change; i > 0.10; i - 0.10)
     {
         count++;
+        change -= 0.1;
     }*/
 }
 
@@ -42,3 +44,5 @@ coins = integer
 money = money - integer
 
 take money divide per 0.1 , take integer*/
+
+int 
