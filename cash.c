@@ -25,9 +25,10 @@ int main(void)
 
     /*for (i = change; i > 0.25; i - 0.25)
     {
-        count++;
+        coins++;
     }
-    for (i = total.change - count*0.25; i > 0.10; i - 0.10)
+    change = coins
+    for (i = change - count*0.25; i > 0.10; i - 0.10)
     {
         count++;
     }*/
