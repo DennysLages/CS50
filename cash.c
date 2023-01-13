@@ -16,7 +16,7 @@ int main(void)
     printf("# of coins used: %i\n", coins);
 }
 
-float take_cent(float change, float cent)
+float take_cent(int coins, float change, float cent)
 {
     for (float i = change; i > cent; i - cent)
     {
