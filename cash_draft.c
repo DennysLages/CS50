@@ -51,7 +51,7 @@ float take_change(float change, float cent)
 }
 
 
-
+//Below is only drafts
 
 
   //float change; //Calculate remaining change
