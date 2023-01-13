@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<cs50.h>
 
-int, float take_cent(int coins, float change, float cent);
+int take_cent(int coins, float change, float cent);
 
 int main(void)
 {
@@ -16,7 +16,7 @@ int main(void)
     printf("# of coins used: %i\n", coins);
 }
 
-int, float take_cent(int coins, float change, float cent)
+int take_cent(int coins, float change, float cent)
 {
     for (float i = change; i > cent; i -= cent)
     {
@@ -25,7 +25,7 @@ int, float take_cent(int coins, float change, float cent)
         printf("# of coins used: %i\n", coins);
     }
     return coins;
-    return change;
+    //return change;
 }
 
 
