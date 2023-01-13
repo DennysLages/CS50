@@ -22,6 +22,7 @@ int main(void)
     change = take_change(change, 0.01);
 
     printf("# of coins used: %i\n", coins);
+    printf("Remaining change: %.2f\n", change);
 }
 
 int take_coins(int coins, float change, float cent)
