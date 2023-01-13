@@ -20,23 +20,23 @@ int main(void)
     coins = change / 0.05;
     change = change - coins;
 
-    // printf("# of coins used: %i\n", coins);
+    printf("# of coins used: %i\n", coins);
 
-    for (i = change; i > 0.25; i - 0.25)
+    /*for (i = change; i > 0.25; i - 0.25)
     {
         count++;
     }
     for (i = total.change - count*0.25; i > 0.10; i - 0.10)
     {
         count++;
-    }
+    }*/
 }
 
-2.56
+/*2.56
 take 0.25 , remaining > 0.25
 take money divide per 0.25 , take integer
 
 coins = integer
 money = money - integer
 
-take money divide per 0.1 , take integer
+take money divide per 0.1 , take integer*/
