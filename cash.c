@@ -2,29 +2,32 @@
 #include<cs50.h>
 
 int take_coins(int coins, float change, float cent);
-float take_change(float change, float cent);
+int take_change(float change, float cent);
 
 int main(void)
 {
     int coins = 0; //Track # of coins
-    float change = 0; //Prepare to receive value to change
+    float money = 0; //Prepare to receive value to change
+    int change = 0;
     do //Get amount to change
     {
-        change = get_float("Change:");
+        money = get_float("Change:");
     }
-    while (change < 0);
+    while (money < 0);
 
-    coins = take_coins(coins, change, 0.25);
-    change = take_change(change, 0.25);
+    change = money*100;
 
-    coins = take_coins(coins, change, 0.1);
-    change = take_change(change, 0.1);
+    coins = take_coins(coins, change, 25);
+    change = take_change(change, 25);
 
-    coins = take_coins(coins, change, 0.05);
-    change = take_change(change, 0.05);
+    coins = take_coins(coins, change, 1);
+    change = take_change(change, 1);
 
-    coins = take_coins(coins, change, 0.01);
-    change = take_change(change, 0.01);
+    coins = take_coins(coins, change, 5);
+    change = take_change(change, 5);
+
+    coins = take_coins(coins, change, 1);
+    change = take_change(change, 1);
 
     printf("# of coins used: %i\n", coins);
     //printf("Remaining change: %f\n", change);
@@ -40,7 +43,7 @@ int take_coins(int coins, float change, float cent)
     return coins;
 }
 
-float take_change(float change, float cent)
+int take_change(float change, float cent)
 {
     for (float i = change; i >= cent; i -= cent)
     {
