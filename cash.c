@@ -59,4 +59,5 @@ int take.cent(cent)
         coins++;
         change -= cent;
     }
+    return coins;
 }
