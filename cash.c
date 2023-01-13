@@ -29,8 +29,8 @@ int take_coins(int coins, float change, float cent)
     for (float i = change; i >= cent; i -= cent)
     {
         coins++;
-        printf("# of coins used: %i\n", coins);
     }
+    printf("# of coins used: %i\n", coins);
     return coins;
 }
 
