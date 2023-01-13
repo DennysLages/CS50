@@ -36,7 +36,7 @@ int take_coins(int coins, float change, float cent)
 
 float take_change(float change, float cent)
 {
-    for (float i = change; i > cent; i -= cent)
+    for (float i = change; i >= cent; i -= cent)
     {
         change -= cent;
     }
