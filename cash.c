@@ -7,7 +7,7 @@ int take_change(float change, float cent);
 int main(void)
 {
     int coins = 0; //Track # of coins
-    float money = 0; //Prepare to receive value to change
+    float money = 0; //Prepare to receive positive value to change
     int change = 0;
     do //Get amount to change
     {
@@ -33,6 +33,7 @@ int main(void)
     //printf("Remaining change: %f\n", change);
 }
 
+//Calculate # of coins
 int take_coins(int coins, float change, float cent)
 {
     for (float i = change; i >= cent; i -= cent)
@@ -43,6 +44,7 @@ int take_coins(int coins, float change, float cent)
     return coins;
 }
 
+//Calculate remaining change
 int take_change(float change, float cent)
 {
     for (float i = change; i >= cent; i -= cent)
