@@ -22,9 +22,10 @@ float take_cent(int coins, float change, float cent)
     {
         coins++;
         change -= cent;
+        printf("# of coins used: %i\n", coins);
     }
     return coins;
-    return change;
+    //return change;
 }
 
 
