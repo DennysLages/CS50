@@ -1,20 +1,22 @@
 #include<stdio.h>
 #include<cs50.h>
 
-int take_cent(float cent);
+float take_cent(float change, float cent);
 
 int main(void)
 {
     int coins = 0; //Count # of coins
     float change = get_float("Change:"); //Get amount to change
 
-    take_cent(0.25);
-    take_cent(0.1);
-    take_cent(0.05);
-    take_cent(0.01);
+    take_cent(change, 0.25);
+    take_cent(change, 0.1);
+    take_cent(change, 0.05);
+    take_cent(change, 0.01);
 
+    printf("# of coins used: %i\n", coins);
+}
 
-int take_cent(float cent)
+float take_cent(float change, float cent)
 {
     for (float i = change; i > cent; i - cent)
     {
@@ -22,6 +24,7 @@ int take_cent(float cent)
         change -= cent;
     }
     return coins;
+    return change;
 }
 
 
@@ -42,7 +45,7 @@ int take_cent(float cent)
     coins = change / 0.05;
     change = change - coins*0.01;*/
 
-    printf("# of coins used: %i\n", coins);
+
 
     /*for (i = change; i > 0.25; i - 0.25)
     {
@@ -55,7 +58,6 @@ int take_cent(float cent)
         count++;
         change -= 0.1;
     }*/
-}
 
 /*2.56
 take 0.25 , remaining > 0.25
