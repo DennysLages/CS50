@@ -8,7 +8,8 @@ int main(void)
 
     //float change; //Calculate remaining change
 
-    coins = change / 0.25;
+    //Would work if know how to make a list
+    /*coins = change / 0.25;
     change = change - coins*0.25;
 
     coins = change / 0.10;
@@ -18,7 +19,7 @@ int main(void)
     change = change - coins*0.05;
 
     coins = change / 0.05;
-    change = change - coins*0.01;
+    change = change - coins*0.01;*/
 
     printf("# of coins used: %i\n", coins);
 
