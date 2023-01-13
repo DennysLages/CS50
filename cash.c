@@ -1,17 +1,17 @@
 #include<stdio.h>
 #include<cs50.h>
 
-float take_cent(float change, float cent);
+float take_cent(int coins, float change, float cent);
 
 int main(void)
 {
     int coins = 0; //Count # of coins
     float change = get_float("Change:"); //Get amount to change
 
-    take_cent(change, 0.25);
-    take_cent(change, 0.1);
-    take_cent(change, 0.05);
-    take_cent(change, 0.01);
+    take_cent(coins, change, 0.25);
+    take_cent(coins, change, 0.1);
+    take_cent(coins, change, 0.05);
+    take_cent(coins, change, 0.01);
 
     printf("# of coins used: %i\n", coins);
 }
