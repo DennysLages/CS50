@@ -20,8 +20,8 @@ int main(void)
     coins = take_coins(coins, change, 25);
     change = take_change(change, 25);
 
-    coins = take_coins(coins, change, 1);
-    change = take_change(change, 1);
+    coins = take_coins(coins, change, 10);
+    change = take_change(change, 10);
 
     coins = take_coins(coins, change, 5);
     change = take_change(change, 5);
