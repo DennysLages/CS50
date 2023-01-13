@@ -15,7 +15,7 @@ int main(void)
     }
     while (money < 0);
 
-    change = money*100;
+    change = money * 100;
 
     coins = take_coins(coins, change, 25);
     change = take_change(change, 25);
