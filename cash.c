@@ -3,11 +3,14 @@
 
 int main(void)
 {
-    int count = 0; //Count # of coins
-    float total.change = get_float("Change:"); //Get amount to change
+    int coins = 0; //Count # of coins
+    float change = get_float("Change:"); //Get amount to change
     //float change; //Calculate remaining change
 
-    for (i = total.change; i > 0.25; i - 0.25)
+    coins = change / 0.25;
+    change = change - coins;
+
+    for (i = change; i > 0.25; i - 0.25)
     {
         count++;
     }
@@ -16,3 +19,12 @@ int main(void)
         count++;
     }
 }
+
+2.56
+take 0.25 , remaining > 0.25
+take money divide per 0.25 , take integer
+
+coins = integer
+money = money - integer
+
+take money divide per 0.1 , take integer
