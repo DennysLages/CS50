@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<cs50.h>
 
-int take_cent(int cent);
+int take_cent(float cent);
 
 int main(void)
 {
@@ -52,9 +52,9 @@ money = money - integer
 
 take money divide per 0.1 , take integer*/
 
-int take_cent(int cent)
+int take_cent(float cent)
 {
-    for (i = change; i > cent; i - cent)
+    for (float i = change; i > cent; i - cent)
     {
         coins++;
         change -= cent;
