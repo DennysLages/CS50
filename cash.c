@@ -39,8 +39,8 @@ float take_change(int coins, float change, float cent)
     for (float i = change; i >= cent; i -= cent)
     {
         change -= cent;
-        printf("Remaining change: %.2f\n", change);
     }
+    printf("Remaining change: %.2f\n", change);
     return change;
 }
 
