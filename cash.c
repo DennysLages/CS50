@@ -1,22 +1,30 @@
 #include<stdio.h>
 #include<cs50.h>
 
-int take_cent(int coins, float change, float cent);
+int take_coins(int coins, float change, float cent);
+float take_change(int coins, float change, float cent);
 
 int main(void)
 {
     int coins = 0; //Count # of coins
     float change = get_float("Change:"); //Get amount to change
 
-    coins = take_cent(coins, change, 0.25);
-    coins = take_cent(coins, change, 0.1);
-    coins = take_cent(coins, change, 0.05);
-    coins = take_cent(coins, change, 0.01);
+    coins = take_coins(coins, change, 0.25);
+    change = take_change(coins, change, 0.25);
+
+    coins = take_coins(coins, change, 0.25);
+    change = take_change(coins, change, 0.25);
+
+    coins = take_coins(coins, change, 0.25);
+    change = take_change(coins, change, 0.25);
+
+    coins = take_coins(coins, change, 0.25);
+    change = take_change(coins, change, 0.25);
 
     printf("# of coins used: %i\n", coins);
 }
 
-int take_cent(int coins, float change, float cent)
+int take_coins(int coins, float change, float cent)
 {
     for (float i = change; i > cent; i -= cent)
     {
@@ -25,8 +33,19 @@ int take_cent(int coins, float change, float cent)
         printf("# of coins used: %i\n", coins);
     }
     return coins;
+}
+
+float take_change(int coins, float change, float cent)
+{
+    for (float i = change; i > cent; i -= cent)
+    {
+        coins++;
+        change -= cent;
+        printf("# of coins used: %i\n", coins);
+    }
     return change;
 }
+
 
 
 
