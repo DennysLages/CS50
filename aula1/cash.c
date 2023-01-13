@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<cs50.h>
+#include<math.h>
 
 int take_coins(int coins, float change, float cent);
 int take_change(float change, float cent);
@@ -15,7 +16,7 @@ int main(void)
     }
     while (money < 0);
 
-    change = money * 100;
+    change = round(money * 100);
 
     coins = take_coins(coins, change, 25);
     change = take_change(change, 25);
