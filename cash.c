@@ -9,16 +9,16 @@ int main(void)
     //float change; //Calculate remaining change
 
     coins = change / 0.25;
-    change = change - coins;
+    change = change - coins*0.25;
 
     coins = change / 0.10;
-    change = change - coins;
+    change = change - coins*0.10;
 
     coins = change / 0.05;
-    change = change - coins;
+    change = change - coins*0.05;
 
     coins = change / 0.05;
-    change = change - coins;
+    change = change - coins*0.01;
 
     printf("# of coins used: %i\n", coins);
 
