@@ -52,7 +52,7 @@ money = money - integer
 
 take money divide per 0.1 , take integer*/
 
-int take_cent(cent)
+int take_cent(int cent)
 {
     for (i = change; i > cent; i - cent)
     {
