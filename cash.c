@@ -1,10 +1,17 @@
 #include<stdio.h>
 #include<cs50.h>
 
+int take.cent(cent)
+
 int main(void)
 {
     int coins = 0; //Count # of coins
     float change = get_float("Change:"); //Get amount to change
+
+    take.cent(0.25);
+    take.cent(0.1);
+    take.cent(0.05);
+    take.cent(0.01);
 
     //float change; //Calculate remaining change
 
@@ -45,4 +52,11 @@ money = money - integer
 
 take money divide per 0.1 , take integer*/
 
-int 
+int take.cent(cent)
+{
+    for (i = change; i > cent; i - cent)
+    {
+        coins++;
+        change -= cent;
+    }
+}
