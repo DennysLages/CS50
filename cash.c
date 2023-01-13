@@ -13,7 +13,21 @@ int main(void)
     take_cent(0.05);
     take_cent(0.01);
 
-    //float change; //Calculate remaining change
+
+int take_cent(float cent)
+{
+    for (float i = change; i > cent; i - cent)
+    {
+        coins++;
+        change -= cent;
+    }
+    return coins;
+}
+
+
+
+
+  //float change; //Calculate remaining change
 
     //Would work if know how to make a list
     /*coins = change / 0.25;
@@ -51,13 +65,3 @@ coins = integer
 money = money - integer
 
 take money divide per 0.1 , take integer*/
-
-int take_cent(float cent)
-{
-    for (float i = change; i > cent; i - cent)
-    {
-        coins++;
-        change -= cent;
-    }
-    return coins;
-}
