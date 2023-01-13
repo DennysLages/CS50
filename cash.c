@@ -29,7 +29,8 @@ int main(void)
     coins = take_coins(coins, change, 1);
     change = take_change(change, 1);
 
-    printf("# of coins used: %i\n", coins);
+    printf("%i\n", coins);
+    //printf("# of coins used: %i\n", coins);
     //printf("Remaining change: %f\n", change);
 }
 
