@@ -9,9 +9,9 @@ int main(void)
     float change = get_float("Change:"); //Get amount to change
 
     take_cent(coins, change, 0.25);
-    take_cent(coins, change, 0.1);
+    /*take_cent(coins, change, 0.1);
     take_cent(coins, change, 0.05);
-    take_cent(coins, change, 0.01);
+    take_cent(coins, change, 0.01);*/
 
     printf("# of coins used: %i\n", coins);
 }
