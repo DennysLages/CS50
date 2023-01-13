@@ -5,7 +5,9 @@ int main(void)
 {
     int coins = 0; //Count # of coins
     float change = get_float("Change:"); //Get amount to change
+
     //float change; //Calculate remaining change
+
 
     coins = change / 0.25;
     change = change - coins;
