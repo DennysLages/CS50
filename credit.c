@@ -18,6 +18,8 @@ int main(void)
         number = round(number / 100);
     } while(number > 0);
 
+    printf("%i\n", sum);
+
     number = card_number; //Reassign card_number to a test variable
     do
     {
