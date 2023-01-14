@@ -15,7 +15,7 @@ int main(void)
     {
         int i = number % 10;
         sum = sum i * 2;
-        number = number / 10;
+        number = round(number / 10);
     } while(number > 0)
 
     number = card_number; //Reassign card_number to a test variable
@@ -23,7 +23,7 @@ int main(void)
     {
         int i = number % 10;
         sum = sum i * 2;
-        number = number / 10;
+        number = round(number / 10);
     } while(number > 0)
 
     printf("%i, sum");
