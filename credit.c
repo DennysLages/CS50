@@ -10,7 +10,7 @@ int main(void)
 
     if (checksum(card_number) % 10 == 0)
     {
-        printf("OK\n");
+        //printf("OK\n");
         if (round(card_number / pow(10,13)) == 34 || round(card_number / pow(10,13)) == 37)
         {
             printf("American Express\n");
@@ -67,6 +67,6 @@ int checksum(long card_number)
         number = round(number / 100);
     } while(number > 0);
 
-    printf("%i\n", sum);
+    //printf("%i\n", sum);
     return sum;
 }
