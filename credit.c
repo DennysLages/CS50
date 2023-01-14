@@ -17,7 +17,15 @@ int main(void)
 
     do
     {
-        sum += (number % 10) * 2;
+        if(number % 10 * 2 < 9)
+        {
+            sum += (number % 10) * 2;
+        }
+        else
+        {
+            sum += ((number % 10) + (number % 100)) * 2;
+        }
+
         printf("%i\n", sum);
         number = round(number / 100);
     } while(number > 0);
