@@ -2,18 +2,27 @@
 #include<cs50.h>
 #include<math.h>
 
+int checksum(long card_number);
+
 int main(void)
 {
     long card_number = get_long("Card#\n");
 
-    //Take card_number / 10, do this until >> zero
-    //Atribute mod 10 * 2 to a sum
+    if (checksum % 10 == 0)
+    {
+        printf("OK\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 
+}
+
+int checksum(long card_number)
+{
     long number = round(card_number / 10); //Assign card_number to a test variable
     int sum = 0;
-
-    //number = number % 10;
-    //printf("%li\n", number);
 
     do
     {
@@ -40,5 +49,5 @@ int main(void)
     } while(number > 0);
 
     printf("%i\n", sum);
-
+    return sum;
 }
