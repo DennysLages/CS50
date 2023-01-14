@@ -11,21 +11,20 @@ int main(void)
     if (checksum(card_number) % 10 == 0)
     {
         //printf("OK\n");
-        printf("%lf\n",round (card_number / pow(10,14)));
-        if (round(card_number / pow(10,13)) == 34 || round(card_number / pow(10,13)) == 37)
+        printf("%i\n",(int) (card_number / pow(10,14)));
+        if ((int) (card_number / pow(10,13)) == 34 || (int) (card_number / pow(10,13)) == 37)
         {
             printf("AMEX\n");
         }
-        else if (round (card_number / pow(10,14)) > 50 && /*50 <*/ round (card_number / pow(10,14)) < 56)
+        else if ((int) (card_number / pow(10,14)) > 50 && /*50 <*/ (int) (card_number / pow(10,14)) < 56)
         {
-
             printf("MASTERCARD\n");
         }
-        else if (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) == 4)
+        else if (pow(10,12) < card_number < pow(10,13) && (int) (card_number / pow(10,12)) == 4)
         {
             printf("VISA\n");
         }
-        else if (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) == 4)
+        else if (pow(10,15) < card_number < pow(10,16) && (int) (card_number / pow(10,15)) == 4)
         {
             printf("VISA\n");
         }
