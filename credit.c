@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    long card_number = getlong("Card# :%li\n");
+    long card_number = get_long("Card# :%li\n");
 
     //Take card_number / 10, do this until >> zero
     //Atribute mod 10 * 2 to a sum
