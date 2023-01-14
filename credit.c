@@ -11,19 +11,19 @@ int main(void)
     if (checksum(card_number) % 10 == 0)
     {
         printf("OK\n");
-        if (round(card_number / 10ˆ13) = 34 || 37)
+        if (round(card_number / pow(10,13)) == 34 || round(card_number / pow(10,13)) == 37)
         {
             printf("American Express\n");
         }
-        if else (50 < round (card_number / 10^14) > 56)
+        if else (50 < round (card_number / pow(10,14)) > 56)
         {
             printf("MasterCard\n");
         }
-        if else (10^12 < card_number < 10ˆ13 && round(card_number / 10ˆ12) = 4)
+        if else (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) = 4)
         {
             printf("Visa\n");
         }
-        if else (10^15 < card_number < 10ˆ16 && round(card_number / 10ˆ15) = 4)
+        if else (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) = 4)
         {
             printf("Visa\n");
         }
