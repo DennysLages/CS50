@@ -17,6 +17,7 @@ int main(void)
         }
         else if (round (card_number / pow(10,14)) > 50 && /*50 <*/ round (card_number / pow(10,14)) < 56)
         {
+            printf("%li\n",round (card_number / pow(10,14));
             printf("MASTERCARD\n");
         }
         else if (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) == 4)
