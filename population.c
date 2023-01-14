@@ -10,9 +10,14 @@ int main(void)
     do
     {
         start = get_int("Start size: \n");
+    }
+    while (start < 9);
+
+    do
+    {
         end = get_int("End size: \n");
     }
-    while (start < 9 || end < 9 || start > end);
+    while (start > end);
 
     for(int i = 0; start < end; i++)
     {
