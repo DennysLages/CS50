@@ -9,8 +9,9 @@ int main(void)
     //Take card_number / 10, do this until >> zero
     //Atribute mod 10 * 2 to a sum
 
-    long number = card_number; //Assign card_number to a test variable
+     number = card_number; //Assign card_number to a test variable
     int sum = 0;
+
     do
     {
         int i = number % 10;
