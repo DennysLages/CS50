@@ -11,10 +11,15 @@ int main(void)
     if (checksum(card_number) % 10 == 0)
     {
         printf("OK\n");
-        if (card_number > 10ˆ12 && card_number < 10ˆ16)
+        if (card_number > 10ˆ12 && card_number < 10ˆ16 && round(card_number / 10ˆ13) = 34 || 37)
         {
-            
+            printf("American Express\n");
         }
+        if else ( 50 < round (card_number / 10^14) > 56)
+        {
+            printf("MasterCard\n");
+        }
+        if else ()
     }
     else
     {
