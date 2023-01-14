@@ -13,19 +13,19 @@ int main(void)
         //printf("OK\n");
         if (round(card_number / pow(10,13)) == 34 || round(card_number / pow(10,13)) == 37)
         {
-            printf("American Express\n");
+            printf("AMEX\n");
         }
         else if (round (card_number / pow(10,14)) > 50 && /*50 <*/ round (card_number / pow(10,14)) < 56)
         {
-            printf("MasterCard\n");
+            printf("MASTERCARD\n");
         }
         else if (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) == 4)
         {
-            printf("Visa\n");
+            printf("VISA\n");
         }
         else if (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) == 4)
         {
-            printf("Visa\n");
+            printf("VISA\n");
         }
         else
         {
