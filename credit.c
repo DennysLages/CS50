@@ -8,7 +8,7 @@ int main(void)
 {
     long card_number = get_long("Card#\n");
 
-    if (checksum % 10 == 0)
+    if (checksum(card_number) % 10 == 0)
     {
         printf("OK\n");
     }
@@ -16,7 +16,6 @@ int main(void)
     {
         printf("INVALID\n");
     }
-
 }
 
 int checksum(long card_number)
