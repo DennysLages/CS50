@@ -15,7 +15,7 @@ int main(void)
     }
     while (start > end);
 
-    for(int i = 0, start < end, i++)
+    for(int i = 0; start < end; i++)
     {
         start += start/3 - start/4;
         years++;
