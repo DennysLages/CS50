@@ -13,7 +13,7 @@ int main(void)
         start = get_int("Start size: \n");
         end = get_int("End size: \n");
     }
-    while (start < 0 && end < 0 && start > end);
+    while (start < 0 && end < 0 && start < end);
 
     for(int i = 0; start < end; i++)
     {
