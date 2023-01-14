@@ -4,11 +4,12 @@
 
 int main(void)
 {
-    long number = getlong("Card# :%li\n");
+    long card_number = getlong("Card# :%li\n");
 
-    Take number / 10, do this until >> zero
-    Atribute mod 10 * 2 to a sum
+    //Take card_number / 10, do this until >> zero
+    //Atribute mod 10 * 2 to a sum
 
+    long number = card_number; //Assign card_number to a test variable
     int sum = 0;
     do
     {
@@ -17,6 +18,7 @@ int main(void)
         number = number / 10;
     } while(number > 0)
 
+    number = card_number; //Reassign card_number to a test variable
     do
     {
         int i = number % 10;
