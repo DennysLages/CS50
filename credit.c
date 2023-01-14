@@ -23,7 +23,7 @@ int main(void)
         }
         else
         {
-            sum += ((number % 10) * 2) % 10 + 2;
+            sum += ((number % 10) * 2) % 10 + 1;
         }
 
         printf("%i\n", sum);
