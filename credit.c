@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    long card_number = get_long("Card# :\n");
+    long card_number = get_long("Card#\n");
 
     //Take card_number / 10, do this until >> zero
     //Atribute mod 10 * 2 to a sum
@@ -25,6 +25,6 @@ int main(void)
         number = round(number / 100);
     } while(number > 0);
 
-    printf("%i", sum);
+    printf("%i\n", sum);
 
 }
