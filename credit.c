@@ -12,14 +12,17 @@ int main(void)
     int number = round(card_number / 10); //Assign card_number to a test variable
     int sum = 0;
 
-    do
+    number = number % 10;
+    printf("%i\n", number);
+
+    /*do
     {
         sum += (number % 10) * 2;
         printf("%i\n", sum);
         number = round(number / 100);
     } while(number > 0);
 
-    printf("%i\n", sum);
+    printf("%i\n", sum);*/
 
     /*number = card_number; //Reassign card_number to a test variable
     do
