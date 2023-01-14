@@ -15,17 +15,21 @@ int main(void)
         {
             printf("American Express\n");
         }
-        if else (50 < round (card_number / pow(10,14)) > 56)
+        else if (50 < round (card_number / pow(10,14)) > 56)
         {
             printf("MasterCard\n");
         }
-        if else (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) = 4)
+        else if (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) = 4)
         {
             printf("Visa\n");
         }
-        if else (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) = 4)
+        else if (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) = 4)
         {
             printf("Visa\n");
+        }
+        else
+        {
+            printf("INVALID\n");
         }
     }
     else
