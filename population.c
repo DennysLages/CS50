@@ -13,7 +13,7 @@ int main(void)
         start = get_int("Start size: \n");
         end = get_int("End size: \n");
     }
-    while (start > end);
+    while (start >= end);
 
     do
     {
