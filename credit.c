@@ -11,7 +11,10 @@ int main(void)
     if (checksum(card_number) % 10 == 0)
     {
         printf("OK\n");
-        if (card_number > 10ˆ14)
+        if (card_number > 10ˆ12 && card_number < 10ˆ16)
+        {
+            
+        }
     }
     else
     {
