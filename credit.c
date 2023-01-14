@@ -19,11 +19,11 @@ int main(void)
         {
             printf("MasterCard\n");
         }
-        else if (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) = 4)
+        else if (pow(10,12) < card_number < pow(10,13) && round(card_number / pow(10,12)) == 4)
         {
             printf("Visa\n");
         }
-        else if (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) = 4)
+        else if (pow(10,15) < card_number < pow(10,16) && round(card_number / pow(10,15)) == 4)
         {
             printf("Visa\n");
         }
