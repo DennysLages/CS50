@@ -9,11 +9,11 @@ int main(void)
     //Take card_number / 10, do this until >> zero
     //Atribute mod 10 * 2 to a sum
 
-    int number = round(card_number / 10); //Assign card_number to a test variable
+    long number = round(card_number / 10); //Assign card_number to a test variable
     int sum = 0;
 
     number = number % 10;
-    printf("%i\n", number);
+    printf("%li\n", number);
 
     /*do
     {
