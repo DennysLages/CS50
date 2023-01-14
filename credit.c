@@ -15,7 +15,7 @@ int main(void)
         {
             printf("American Express\n");
         }
-        else if (50 < round (card_number / pow(10,14)) > 56)
+        else if (50 < round (card_number / pow(10,14)) < 56)
         {
             printf("MasterCard\n");
         }
