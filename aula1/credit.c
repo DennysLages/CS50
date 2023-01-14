@@ -11,20 +11,20 @@ int main(void)
     if (checksum(card_number) % 10 == 0)
     {
         //printf("OK\n");
-        printf("%i\n",(int) (card_number / pow(10,14)));
-        if ((int) (card_number / pow(10,13)) == 34 || (int) (card_number / pow(10,13)) == 37)
+        //printf("%i\n",(int)(card_number / pow(10, 14)));
+        if ((int)(card_number / pow(10, 13)) == 34 || (int)(card_number / pow(10, 13)) == 37)
         {
             printf("AMEX\n");
         }
-        else if ((int) (card_number / pow(10,14)) > 50 && /*50 <*/ (int) (card_number / pow(10,14)) < 56)
+        else if ((int)(card_number / pow(10, 14)) > 50 && /*50 <*/ (int)(card_number / pow(10, 14)) < 56)
         {
             printf("MASTERCARD\n");
         }
-        else if (pow(10,12) < card_number < pow(10,13) && (int) (card_number / pow(10,12)) == 4)
+        else if (pow(10, 12) < card_number < pow(10, 13) && (int)(card_number / pow(10, 12)) == 4)
         {
             printf("VISA\n");
         }
-        else if (pow(10,15) < card_number < pow(10,16) && (int) (card_number / pow(10,15)) == 4)
+        else if (pow(10, 15) < card_number < pow(10, 16) && (int)(card_number / pow(10, 15)) == 4)
         {
             printf("VISA\n");
         }
@@ -46,7 +46,7 @@ int checksum(long card_number)
 
     do
     {
-        if(number % 10 * 2 < 9)
+        if (number % 10 * 2 < 9)
         {
             sum += (number % 10) * 2;
         }
@@ -54,10 +54,10 @@ int checksum(long card_number)
         {
             sum += ((number % 10) * 2) % 10 + 1;
         }
-
         //printf("%i\n", sum);
         number = round(number / 100);
-    } while(number > 0);
+    }
+    while (number > 0);
 
     //printf("%i\n", sum);
 
@@ -66,7 +66,8 @@ int checksum(long card_number)
     {
         sum += (number % 10);
         number = round(number / 100);
-    } while(number > 0);
+    }
+    while (number > 0);
 
     //printf("%i\n", sum);
     return sum;
