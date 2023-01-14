@@ -5,11 +5,13 @@
 int main(void)
 {
     int years = 0;
+    int start;
+    int end;
 
     do
     {
-        int start = get_int("Start size: \n");
-        int end = get_int("End size: \n");
+        start = get_int("Start size: \n");
+        end = get_int("End size: \n");
     }
     while (start > end);
 
@@ -20,5 +22,5 @@ int main(void)
     }
     while (start < end);
 
-    prinf("Years: %i\n", years);
+    printf("Years: %i\n", years);
 }
