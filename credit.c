@@ -29,7 +29,7 @@ int main(void)
         }
         else
         {
-            printf("INVALID\n");
+            printf("VALID BUT NOT FOUND\n");
         }
     }
     else
