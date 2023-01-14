@@ -25,6 +25,6 @@ int main(void)
         number = round(number / 100);
     } while(number > 0);
 
-    printf("%i, sum");
+    printf("%i", sum);
 
 }
