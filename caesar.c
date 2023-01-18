@@ -3,9 +3,9 @@
 #include <string.h> //strlen
 #include <ctype.h> //isaplha
 
-int main(int argc, string argv[])
+int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
-    while (argc <= 0)
+    while (argv[1] <= 0)
     {
         printf("Usage: ./caesar key");
     }
@@ -17,7 +17,7 @@ int main(int argc, string argv[])
     {
         if (isalpha(plaintext[i]))
         {
-            char test = plaintext[i] + argc;
+            char test = plaintext[i] + argv[1];
             if (test > 'Z')
             {
                 plaintext[i] -= 'Z' - 'A' - 1;
@@ -27,7 +27,7 @@ int main(int argc, string argv[])
                 plaintext[i] -= 'z' - 'a' - 1;
             }
 
-            plaintext[i] += argc;
+            plaintext[i] += argv[1];
         }
     }
 
