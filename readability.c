@@ -20,7 +20,7 @@ int main(void)
         {
             l++;
         }
-        else if(text[i] >= 'A' && text[i] <= 'Z')
+        else if (text[i] >= 'A' && text[i] <= 'Z')
         {
             l++;
         }
