@@ -8,13 +8,13 @@ int main(void)
     int l = 0;
     int s = 0;
 
-    //string space = " ";
-    //int m = strlen(space);
-    //printf("%i\n", space[m]);
+    // Needs to count # of words (s) and # of letters (l).
+    // Does not count punctuation.
+    // So it needs to be inside a & z or A and Z.
 
-    for (int i = 0, n = strlen(text); i < n; i++)
+    for (int i = 0, n = strlen(text); i <= n; i++)
     {
-        if (text[i] >= 'a' && text[i] <= 'z')
+        if (text[i] >= 'a' && text[i] <= 'z') // Get letters = look one by one and check if it is a valid letter until find \0.
         {
             l++;
         }
@@ -23,27 +23,15 @@ int main(void)
             l++;
         }
 
-        if (/*text[i] == ' ' ||*/ text[i] == '\0')
+        if (text[i] == ' ' || text[i] == '\0') // Get words = look one by one and count++ if find "space" until find \0.
         {
             s++;
-        }/*
-        else if (i == n)
-        {
-            s++;
-        }*/
-
+        }
     }
+
+    int index = round(0.0588 * l - 0.296 * s - 15.8);
+
+    printf("Grade: \n", index);
+
     return 0;
 }
-
-// int l = strlen(text)
-
-// Needs to count # of words and # of letters.
-// Does not count punctuation.
-// So it needs to be inside a & z or A and Z.
-
-// Get letters = look one by one and check if it is a valid letter until find \0.
-// Get words = look one by one and count++ if find "space" until find \0.
-
-// int index = round(0.0588 * l - 0.296 * s - 15.8);
-
