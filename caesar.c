@@ -8,7 +8,7 @@ int refuse(string s);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
-    if(refuse(argv[1]) = 1) //test to refuse problems like more arguments, not an integer, false integer
+    if(refuse(argv[1]) == 1) //test to refuse problems like more arguments, not an integer, false integer
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -48,11 +48,9 @@ int refuse (string s)
     }
     for (int j = 0, n = strlen(argv[1]); j < n; j++)
     {
-        if (argv[1][j] >= '0' || argv[1][j] <= 9)
+        if (argv[1][j] < '0' || argv[1][j] > 9)
         {
-            
+            return 1;
         }
     }
-
-
 }
