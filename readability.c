@@ -27,7 +27,7 @@ int main(void)
 
         if
         {
-            
+
         }
 
         if (text[i] == ' ' || text[i] == '\0') // Get words = look one by one and count++ if find "space" until find \0.
