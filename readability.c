@@ -1,6 +1,7 @@
-#include <stdio.h>
-#include <cs50.h>
-#include <string.h>
+#include <stdio.h>  //For print
+#include <cs50.h>   //For get_string
+#include <string.h> //For strlen
+#include <math.h>   //For round
 
 int main(void)
 {
@@ -31,7 +32,7 @@ int main(void)
 
     int index = round(0.0588 * l - 0.296 * s - 15.8);
 
-    printf("Grade: \n", index);
+    printf("Grade: %i\n", index);
 
     return 0;
 }
