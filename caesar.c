@@ -4,7 +4,7 @@
 #include <ctype.h> //isaplha
 #include <stdlib.h> //atoi >> converts string to integer
 
-int refuse(int , string s);
+int refuse(int size, string s);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
@@ -40,9 +40,9 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     return 0;
 }
 
-int refuse (string s)
+int refuse (int size, string s)
 {
-    if (argc != 2 || key <= 0)
+    if (size != 2 || key <= 0)
     {
         return 1;
     }
