@@ -8,8 +8,9 @@ int main(void)
     int l = 0;
     int s = 0;
 
-    string space = " ";
-    printf("%i\n", space[0]);
+    //string space = " ";
+    //int m = strlen(space);
+    //printf("%i\n", space[m]);
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
@@ -22,14 +23,14 @@ int main(void)
             l++;
         }
 
-        if (text[i] == ' ' || text[i] == '\0')
+        if (/*text[i] == ' ' ||*/ text[i] == '\0')
         {
             s++;
-        }
+        }/*
         else if (i == n)
         {
             s++;
-        }
+        }*/
 
     }
     return 0;
