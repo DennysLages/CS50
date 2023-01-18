@@ -17,10 +17,12 @@ int main(int argc, string argv[])
     {
         if (isalpha(plaintext[i]))
         {
-            if (plaintext[i] + argc > "Z")
+            char test = plaintext[i] + argc;
+            if (test > "Z")
             {
-                plaintext[i] += argc;
+                plaintext[i] -= ';
             }
+            plaintext[i] += argc;
         }
     }
 
