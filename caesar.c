@@ -3,7 +3,7 @@
 #include <string.h> //strlen
 #include <ctype.h> //isaplha
 
-int main(int argc, string argv[])
+int main(int argc) //, string argv[])
 {
     while (argc <= 0)
     {
