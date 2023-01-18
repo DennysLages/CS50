@@ -2,10 +2,12 @@
 #include <cs50.h> //get_string
 #include <string.h> //strlen
 #include <ctype.h> //isaplha
+#include <stdlib.h> //atoi >> converts string to integer
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
-    while (argc != 2 || argv[1] < 0)
+    int key = atoi(argv[1]);
+    while (argc != 2 || key <= 0)
     {
         printf("Usage: ./caesar key");
     }
@@ -17,7 +19,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     {
         if (isalpha(plaintext[i]))
         {
-            char test = plaintext[i] + (int) argv[1];
+            char test = plaintext[i] + key;
             if (test > 'Z')
             {
                 plaintext[i] -= 'Z' - 'A' - 1;
@@ -27,7 +29,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
                 plaintext[i] -= 'z' - 'a' - 1;
             }
 
-            plaintext[i] += (int) argv[1];
+            plaintext[i] += key;
         }
     }
 
