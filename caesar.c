@@ -6,7 +6,7 @@ int main(int argc, string argv[])
 {
     string plaintext = get_string("plaintext: ");
 
-    for(int i = 0, n = strgen(plaintext); i < n, i++)
+    for(int i = 0, n = strlen(plaintext); i < n; i++)
     {
         plaintext[i] += argc;
     }
