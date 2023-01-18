@@ -4,7 +4,7 @@
 #include <ctype.h> //isaplha
 #include <stdlib.h> //atoi >> converts string to integer
 
-int refuse(string s);
+int refuse(int size, string s);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
@@ -14,15 +14,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         return 1;
     }
 
-    int key = atoi(argv[1]); //turns string to an integer
-
-    if (size != 2 || key <= 0)
-    {
-        return 1;
-    }
-
     string plaintext = get_string("plaintext: ");
-
 
     for (int i = 0, n = strlen(plaintext); i < n; i++) //Test if will be higher than z/Z, convert and cipher
     {
@@ -55,4 +47,13 @@ int refuse (int size, string s)
             return 1;
         }
     }
+
+    int key = atoi(s); //turns string to an integer
+
+    if (size != 2 || key <= 0)
+    {
+        return 1;
+    }
+
+    return key;
 }
