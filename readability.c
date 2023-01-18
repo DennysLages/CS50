@@ -6,10 +6,11 @@
 int main(void)
 {
     string text = get_string("Text:\n");
-    int l = 0;
-    int s = 0;
+    int l = 0; //letters
+    int s = 0; //sentences
+    int w = 0; //words
 
-    // Needs to count # of words (s) and # of letters (l).
+    // Needs to count # of words (w), # of letters (l) and # of sentences (s).
     // Does not count punctuation.
     // So it needs to be inside a & z or A and Z.
 
@@ -24,13 +25,18 @@ int main(void)
             l++;
         }
 
+        if
+        {
+            
+        }
+
         if (text[i] == ' ' || text[i] == '\0') // Get words = look one by one and count++ if find "space" until find \0.
         {
-            s++;
+            words++;
         }
     }
 
-    float average100 = 100 / (float) s;
+    float average100 = 100 / (float) w;
     int index = round(0.0588 * l * average100 - 0.296 * s * average100 - 15.8);
 
     printf("Grade: %i\n", index);
