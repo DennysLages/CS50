@@ -8,6 +8,9 @@ int main(void)
     int l = 0;
     int s = 0;
 
+    char space = ' ';
+    printf("%i\n", space);
+
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (text[i] >= 'a' && text[i] <= 'z')
