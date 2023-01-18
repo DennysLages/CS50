@@ -41,7 +41,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
 
 int refuse (int size, string s)
 {
-    for (int j = 0, n = strlen(s); j < n; j++)
+    for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
         if (s[j] < '0' || s[j] > 9)
         {
@@ -51,7 +51,7 @@ int refuse (int size, string s)
 
     int key = atoi(s); //turns string to an integer
 
-    if (size != 2 || key <= 0)
+    if (size != 2 || key <= 0) //Test wrong number of CLArg and negative keys
     {
         return -1;
     }
