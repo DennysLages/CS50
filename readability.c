@@ -10,11 +10,11 @@ int main(void)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        if (text[i] > 'a' && text[i] < 'z')
+        if (text[i] >= 'a' && text[i] <= 'z')
         {
             l++;
         }
-        else if(text[i] > 'A' && text[i] < 'Z')
+        else if(text[i] >= 'A' && text[i] <= 'Z')
         {
             l++;
         }
