@@ -21,7 +21,11 @@ int main(void)
         {
             l++;
         }
-        //if (text[i] == )
+
+        if (text[i] == ' ' || text[i] == '\0')
+        {
+            s++;
+        }
 
     }
     return 0;
