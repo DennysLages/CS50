@@ -26,6 +26,10 @@ int main(void)
         {
             s++;
         }
+        else if (text[i] == '\0')
+        {
+            s++;
+        }
 
     }
     return 0;
