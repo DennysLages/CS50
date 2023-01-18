@@ -22,11 +22,11 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             char test = plaintext[i] + key;
             if (test > 'Z')
             {
-                plaintext[i] -= 'Z' - 'A';
+                plaintext[i] -= 'Z' - 'A' + 1;
             }
             else if (test > 'z')
             {
-                plaintext[i] -= 'z' - 'a' - 1;
+                plaintext[i] -= 'z' - 'a' + 1;
             }
 
             plaintext[i] += key;
