@@ -8,7 +8,7 @@ int refuse(string s);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
-    if(refuse(argv[1]) == 1) //test to refuse problems like more arguments, not an integer, false integer
+    if (refuse(argv[1]) == 1) //test to refuse problems like more arguments, not an integer, false integer
     {
         printf("Usage: ./caesar key\n");
         return 1;
