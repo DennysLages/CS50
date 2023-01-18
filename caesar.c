@@ -11,5 +11,5 @@ int main(int argc, string argv[])
         plaintext[i] += argc;
     }
 
-    printf("ciphertext: %s", plaintext);
+    printf("ciphertext: %s\n", plaintext);
 }
