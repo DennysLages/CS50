@@ -1,8 +1,10 @@
 #include <stdio.h>
+#include <cs50.h>
+#include <string.h>
 
-int main(int argc)
+int main(int argc, string argv[])
 {
-    plaintext = get_string("plaintext: ");
+    string plaintext = get_string("plaintext: ");
 
     for(int i = 0, n = strgen(plaintext); i < n, i++)
     {
