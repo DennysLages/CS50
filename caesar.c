@@ -5,7 +5,7 @@
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
-    while (argv[1] <= 0)
+    while (argc != 2 || argv[1] <= 0)
     {
         printf("Usage: ./caesar key");
     }
