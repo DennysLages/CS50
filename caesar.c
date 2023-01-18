@@ -20,8 +20,13 @@ int main(int argc, string argv[])
             char test = plaintext[i] + argc;
             if (test > 'Z')
             {
-                plaintext[i] -= 'Z' - 'A';
+                plaintext[i] -= 'Z' - 'A' - 1;
             }
+            else if (test > 'z')
+            {
+                plaintext[i] -= 'z' - 'a' - 1;
+            }
+
             plaintext[i] += argc;
         }
     }
