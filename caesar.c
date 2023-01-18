@@ -18,9 +18,9 @@ int main(int argc, string argv[])
         if (isalpha(plaintext[i]))
         {
             char test = plaintext[i] + argc;
-            if (test > "Z")
+            if (test > 'Z')
             {
-                plaintext[i] -= ';
+                plaintext[i] -= 'A';
             }
             plaintext[i] += argc;
         }
