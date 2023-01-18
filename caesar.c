@@ -1,9 +1,15 @@
-#include <stdio.h>
-#include <cs50.h>
-#include <string.h>
+#include <stdio.h> //print
+#include <cs50.h> //get_string
+#include <string.h> //strlen
+#include <ctype.h> //isaplha
 
 int main(int argc, string argv[])
 {
+    while (isalpha(argc))
+    {
+        printf("Usage: ./caesar key");
+    }
+
     string plaintext = get_string("plaintext: ");
 
     for(int i = 0, n = strlen(plaintext); i < n; i++)
