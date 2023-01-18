@@ -30,7 +30,8 @@ int main(void)
         }
     }
 
-    int index = round(0.0588 * l - 0.296 * s - 15.8);
+    float average100 = 100 / (float) s;
+    int index = round(0.0588 * l * average100 - 0.296 * s * average100 - 15.8);
 
     printf("Grade: %i\n", index);
 
