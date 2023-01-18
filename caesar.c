@@ -9,7 +9,8 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     int key = atoi(argv[1]);
     while (argc != 2 || key <= 0)
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
 
     string plaintext = get_string("plaintext: ");
@@ -34,4 +35,5 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     }
 
     printf("ciphertext: %s\n", plaintext);
+    return 0;
 }
