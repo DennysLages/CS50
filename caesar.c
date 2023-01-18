@@ -4,7 +4,7 @@
 #include <ctype.h> //isaplha
 #include <stdlib.h> //atoi >> converts string to integer
 
-int refuse(int string s);
+int refuse(int , string s);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
