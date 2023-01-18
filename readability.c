@@ -25,21 +25,32 @@ int main(void)
             l++;
         }
 
-        if (text[i] = '!' || '?' || '.')
+        if (text[i] == '!' || text[i] == '?' || text[i] == '.')
         {
             s++;
         }
 
         if (text[i] == ' ' || text[i] == '\0') // Get words = look one by one and count++ if find "space" until find \0.
         {
-            words++;
+            w++;
         }
     }
 
     float average100 = 100 / (float) w;
     int index = round(0.0588 * l * average100 - 0.296 * s * average100 - 15.8);
 
-    printf("Grade: %i\n", index);
+    if (index < -1)
+    {
+        printf("Before Grade 1");
+    }
+    else if (index > 16)
+    {
+        printf("Grade 16+");
+    }
+    else if (index > 1 && index < 16)
+    {
+        printf("Grade: %i\n", index);
+    }
 
     return 0;
 }
