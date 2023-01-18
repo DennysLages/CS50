@@ -5,7 +5,7 @@
 
 int main(int argc, string argv[])
 {
-    while (isalpha(argc))
+    while (argc <= 0)
     {
         printf("Usage: ./caesar key");
     }
@@ -14,7 +14,10 @@ int main(int argc, string argv[])
 
     for(int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        plaintext[i] += argc;
+        if(isalpha(plaintext[i]) == true)
+        {
+            plaintext[i] += argc;
+        }
     }
 
     printf("ciphertext: %s\n", plaintext);
