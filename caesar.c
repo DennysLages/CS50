@@ -21,7 +21,9 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     {
         if (isalpha(plaintext[i]))
         {
-            char test = plaintext[i] + key;
+            CYPHER = LETRA + KEY
+
+            /*char test = plaintext[i] + key;
             if (test > 'Z')
             {
                 plaintext[i] -= 'Z' - 'A' + 1;
@@ -29,7 +31,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             else if (test > 'z')
             {
                 plaintext[i] -= 'z' - 'a' + 1;
-            }
+            }*/
 
             plaintext[i] += key;
         }
