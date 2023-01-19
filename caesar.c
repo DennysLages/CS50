@@ -38,7 +38,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
 
 int refuse (int size, string s) //if argv[1] don`t exist, there will be no refuse();
 {
-    if (size != 2) //Test wrong number of CLArg and negative keys
+    if (size != 2) //Test wrong number of CLArg
     {
         return -1;
     }
@@ -53,10 +53,10 @@ int refuse (int size, string s) //if argv[1] don`t exist, there will be no refus
 
     int key = atoi(s); //turns string to an integer
 
-    if (key <= 0) //Test wrong number of CLArg and negative keys
+   /* if (key <= 0) //Test wrong number of CLArg and negative keys
     {
         return -1;
-    }
+    }*/
 
     return key;
 }
