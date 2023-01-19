@@ -17,7 +17,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
 
     string plaintext = get_string("plaintext: ");
 
-    for (int i = 0, n = strlen(plaintext); i < n; i++) //Check if will be higher than z/Z, convert and cipher
+    for (int i = 0, n = strlen(plaintext); i < n; i++) //Check caps and z/Z end. Convert and cipher.
     {
         if (isalpha(plaintext[i]))
         {
