@@ -23,11 +23,11 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         {
             if (isupper(plaintext[i]))
             {
-                plaintext[i] = 'A' + (plaintext[i] - 'A' + key) %26;
+                plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;
             }
             else if (islower(plaintext[i]))
             {
-                plaintext[i] = 'a' + (plaintext[i] - 'a' + key) %26;
+                plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;
             }
         }
     }
@@ -36,7 +36,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     return 0;
 }
 
-int refuse (int size, string s) //if argv[1] don`t exist, there will be no refuse();
+int refuse(int size, string s) //if argv[1] don`t exist, there will be no refuse()
 {
     if (size != 2) //Test wrong number of CLArg
     {
