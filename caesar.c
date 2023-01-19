@@ -21,7 +21,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     {
         if (isalpha(plaintext[i]))
         {
-            plaintext[i] = (plaintext[i] + key) %26 ;
+            plaintext[i] = (plaintext[i] + key);// %26;
 
             /*char test = plaintext[i] + key;
             if (test > 'Z')
