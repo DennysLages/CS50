@@ -43,7 +43,7 @@ int refuse (int size, string s)
 {
     for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
-        if (s[j] < '0' || s[j] > 9)
+        if (s[j] < '0' || s[j] > '9')
         {
             return -1;
         }
