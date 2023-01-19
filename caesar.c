@@ -53,10 +53,5 @@ int refuse (int size, string s) //if argv[1] don`t exist, there will be no refus
 
     int key = atoi(s); //turns string to an integer
 
-   /* if (key <= 0) //Test wrong number of CLArg and negative keys
-    {
-        return -1;
-    }*/
-
     return key;
 }
