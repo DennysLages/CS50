@@ -21,14 +21,15 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     {
         if (isalpha(plaintext[i]))
         {
-            if (isupper(plaintext[i]))
+            cipher = ()
+            /*if (isupper(plaintext[i]))
             {
                 plaintext[i] = 'A' + (plaintext[i] - 'A' + key) %26;
             }
             else if (islower(plaintext[i]))
             {
                 plaintext[i] = 'a' + (plaintext[i] - 'a' + key) %26;
-            }
+            }*/
         }
     }
 
