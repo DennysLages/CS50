@@ -24,7 +24,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             plaintext[i] += key %26;
 
             /*A = 100     A = 100   Z = 126
-            +2          +28         +28 >> 154
+            +2          +28         +28 >> 154 >> 102
             C = 102     ?? = A + key = 128 >> A + key%26 = A + 2;*/
 
             /*char test = plaintext[i] + key;
