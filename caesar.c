@@ -36,7 +36,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     return 0;
 }
 
-int refuse (int size, string s)
+int refuse (int size, string s) //if argv[1] don`t exist, there will be no refuse();
 {
     for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
