@@ -17,7 +17,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
 
     string plaintext = get_string("plaintext: ");
 
-    for (int i = 0, n = strlen(plaintext); i < n; i++) //Test if will be higher than z/Z, convert and cipher
+    for (int i = 0, n = strlen(plaintext); i < n; i++) //Check if will be higher than z/Z, convert and cipher
     {
         if (isalpha(plaintext[i]))
         {
@@ -29,22 +29,6 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             {
                 plaintext[i] = 'a' + (plaintext[i] - 'a' + key) %26;
             }
-
-            /*A = 100     A = 100   Z = 126
-            +2          +28         +28 >> 154 >> 102
-            C = 102     ?? = A + key = 128 >> A + key%26 = A + 2;*/
-
-            /*char test = plaintext[i] + key;
-            if (test > 'Z')
-            {
-                plaintext[i] -= 'Z' - 'A' + 1;
-            }
-            else if (test > 'z')
-            {
-                plaintext[i] -= 'z' - 'a' + 1;
-            }
-
-            plaintext[i] += key;*/
         }
     }
 
