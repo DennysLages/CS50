@@ -1,7 +1,7 @@
 #include <stdio.h> //print
 #include <cs50.h> //get_string
 #include <string.h> //strlen
-#include <ctype.h> //isaplha
+#include <ctype.h> //isaplha isupper islower
 #include <stdlib.h> //atoi >> converts string to integer
 
 int refuse(int size, string s);
@@ -21,8 +21,12 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     {
         if (isalpha(plaintext[i]))
         {
-            plaintext[i] = 'A' + (plaintext[i] - 'A' + key) %26;
-            plaintext[i] = plaintext[i] + key %26;
+            if (isupper(plaintext[i]))
+            {
+                plaintext[i] = 'A' + (plaintext[i] - 'A' + key) %26;
+            }
+            else if (islower(plaintext[i]))
+            
 
             /*A = 100     A = 100   Z = 126
             +2          +28         +28 >> 154 >> 102
