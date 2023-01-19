@@ -26,7 +26,9 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
                 plaintext[i] = 'A' + (plaintext[i] - 'A' + key) %26;
             }
             else if (islower(plaintext[i]))
-            
+            {
+                plaintext[i] = 'a' + (plaintext[i] - 'a' + key) %26;
+            }
 
             /*A = 100     A = 100   Z = 126
             +2          +28         +28 >> 154 >> 102
