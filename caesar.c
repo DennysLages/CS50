@@ -21,7 +21,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     {
         if (isalpha(plaintext[i]))
         {
-            plaintext[i] += key %26;
+            plaintext[i] = 'A' + (plaintext[i] + key) %26;
 
             /*A = 100     A = 100   Z = 126
             +2          +28         +28 >> 154 >> 102
