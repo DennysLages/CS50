@@ -56,15 +56,16 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
 int validate_key(int size, string s)
 {
     //Test wrong number of CLArg, and size of key (argv(1))
-    if (size != 2 || strlen(s[1]) != 26)
+    if (size != 2 || int n = strlen(s[1]) != 26)
     {
         return 1;
     }
 
     //Prepare to organize key by position
-    char key[strlen(s[1])];
+    //char key[strlen(s[1])];
+    char key[n];
 
-    for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
+    for (int j = 0; j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
         if (!isaplha(s[j]))
         {
@@ -81,7 +82,10 @@ int validate_key(int size, string s)
         }
     }
 
-    for (int k = 0, )
+    for (int k = 0; k < n; k++)
+    {
+        key[k]
+    }
 
     //Check for repeated letters
 
