@@ -53,10 +53,11 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
 
     for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
-        if (isaplha(s[j]))
+        if (!isaplha(s[j]))
         {
-            return -1;
+            return 1;
         }
+        
     }
 
     //Check for repeated letters
