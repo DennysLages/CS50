@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int LEN_KEY = strlen(argv[1]);
+    const int LEN_KEY = strlen(argv[1]);
 
     if (LEN_KEY != 26)
     {
@@ -61,11 +61,27 @@ int main(int argc, string argv[])
         }
     }
 
-    //5.
+    //5. Get plaintext from user & resume each letter(alpha) to a position
+    string plaintext = get_string("plaintext: ");
+
+    for (int i = 0, n = strlen(plaintext); i < n; i++) //Check caps and z/Z end. Convert and cipher.
+    {
+        if (isalpha(plaintext[i]))
+        {
+            if (isupper(plaintext[i]))
+            {
+                int position = plaintext[i] - 'A';
+                plaintext[i] = 'A' + key[position];
+            }
+            else if (islower(plaintext[i]))
+            {
+                int position = plaintext[i] - 'a';
+                plaintext[i] = 'a' + key[position];
+            }
+        }
+    }
 }
 
-
-    //const int LEN_KEY = validate_arg(argc, argv[1])
 
 1. Validate Key
     1.1 Only 2 CLArg
