@@ -6,20 +6,27 @@
 
 int main(int argc, string argv[])
 {
-    //Test 1. Check # of argc
+    //Test Key.1 Check # of argc
     if (int LEN_KEY = strlen(argv[1]) != 26 || argc !=2)
     {
+        printf("Usage: ./substitution KEY");
         return 1;
     }
 
     /*//Test2. Check key size and if only alpha
     int n = strlen(argc[1]);*/
 
-    //Test2. Check if only alpha & get key by list of positions
+    //Test Key.2 Check if only alpha & get key by list of positions
     char key[LEN_KEY];
 
     for (int j = 0; j < n; j++)
     {
+        if (!isaplha(s[j]))
+        {
+            printf("only use alpha key");
+            return 1;
+        }
+
         if (isaplha(s[j]))
         {
             if (islower(s[j]))
