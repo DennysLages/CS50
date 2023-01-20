@@ -50,13 +50,16 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     return 0;
 }
 
-int validate_key(int size, string s[]) //if argv[1] don`t exist, there will be no refuse()
+//if argv[1] don`t exist, there will be no Aux Function validate_key
+int validate_key(int size, string s)
 {
-    if (size != 2 || strlen(s[1]) != 26) //Test wrong number of CLArg
+    //Test wrong number of CLArg, and size of key (argv(1))
+    if (size != 2 || strlen(s[1]) != 26)
     {
         return 1;
     }
 
+    //Prepare to organize key by position
     char key[strlen(s[1])];
 
     for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
