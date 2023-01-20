@@ -34,7 +34,7 @@ int main(int argc, string argv[])
 
         for (int j = i + 1; j < LEN_KEY; j++)
         {
-            if (key[i] == key[j])
+            if (argv[1][i] == argv[1][j])
             {
                 printf("Do not repeat letters\n");
                 return 1;
