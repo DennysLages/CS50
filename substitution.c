@@ -27,11 +27,15 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
                 {
                    Plaintext[j] = argv[1][j];
                 }
-                plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;
+                //plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;
             }
             else if (islower(plaintext[i]))
             {
-                plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;
+                For(int j = 0; argv[1][j] != \0; j++)
+                {
+                Plaintext[j] = argv[1][j];
+                }
+                //plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;
             }
         }
     }
