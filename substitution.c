@@ -9,7 +9,7 @@ int main(int argc, string argv[])
     //Key 1. Check # of argc
     if (argc != 2)
     {
-        printf("Usage: ./substitution KEY");
+        printf("Usage: ./substitution KEY\n");
         return 1;
     }
 
@@ -17,7 +17,7 @@ int main(int argc, string argv[])
 
     if (LEN_KEY != 26)
     {
-        printf("Usage: ./substitution KEY");
+        printf("Usage: ./substitution KEY\n");
         return 1;
     }
 
@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     {
         if (!isalpha(argv[1][i]))
         {
-            printf("only use alpha key");
+            printf("only use alpha key\n");
             return 1;
         }
 
@@ -36,7 +36,7 @@ int main(int argc, string argv[])
         {
             if (key[i] == key[j])
             {
-                printf("Do not repeat letters");
+                printf("Do not repeat letters\n");
                 return 1;
             }
         }
