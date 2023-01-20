@@ -25,7 +25,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         {
             if (isupper(plaintext[i]))
             {
-                plaintext[i] = 'A' + key[i];
+                plaintext[i] = plaintext[i] - 'A' + key[i];
 
                 for (int j = 0; j < LEN_KEY ; j++)
                 {
