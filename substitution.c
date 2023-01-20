@@ -4,7 +4,7 @@
 #include <ctype.h> //isaplha isupper islower
 #include <stdlib.h> //atoi >> converts string to integer
 
-int validate_key(int size, string s[]);
+char validate_key(int size, string s[]);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
@@ -53,7 +53,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
 }
 
 //if argv[1] don`t exist, there will be no Aux Function validate_key
-int validate_key(int size, string s)
+char validate_key(int size, string s)
 {
     //Test wrong number of CLArg, and size of key (argv(1))
     if (size != 2 || int n = strlen(s[1]) != 26)
