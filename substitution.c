@@ -51,15 +51,15 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
         return 1;
     }
 
-    //Check for repeated letters
-
-    /*for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
+    for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
-        if (s[j] < '0' || s[j] > '9')
+        if (isaplha(s[j]))
         {
             return -1;
         }
     }
+
+    //Check for repeated letters
 
     int key = atoi(s); //turns string to an integer*/
 
@@ -67,5 +67,12 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
 }
 
 
-1. Validate Kety
-2. 
+1. Validate Key
+    1.1 Only 2 CLArg
+    1.2 Only Alpha chars
+    1.3 Non Repeatable letters
+2. Get Plaintext
+    2.1 Resume each letter to a position (a or A)
+3. Encipher
+    3.1 Get each letter + key (position)
+4. Print ciphetext
