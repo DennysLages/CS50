@@ -43,7 +43,7 @@ int main(int argc, string argv[])
     }
 
     //Key 4. Get key by list of positions
-    for (int i = 0; i < LEN_KEY;i++)
+    for (int i = 0; i < LEN_KEY; i++)
     {
         if (isalpha(argv[1][i]))
         {
