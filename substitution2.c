@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    argv[1]
+    char  = argv[1];
 
     /*//Test2. Check key size and if only alpha
     int n = strlen(argc[1]);*/
