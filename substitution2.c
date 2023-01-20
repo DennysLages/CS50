@@ -6,6 +6,14 @@
 
 int main(int argc, string argv[])
 {
+    //Test 1. Check # of argc
+    if (argc !=2)
+    {
+        return 1;
+    }
+
+    //Test2. 
+
     const int LEN_KEY = validate_arg(argc, argv[1])
 
 }
