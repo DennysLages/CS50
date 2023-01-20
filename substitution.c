@@ -17,7 +17,7 @@ int main(int argc, string argv[])
 
     if (LEN_KEY != 26)
     {
-        printf("Usage: ./substitution KEY\n");
+        printf("Key must contain 26 characters.\n");
         return 1;
     }
 
@@ -25,10 +25,10 @@ int main(int argc, string argv[])
     char key[LEN_KEY];
 
     for (int i = 0; i < LEN_KEY; i++)
-    {s
+    {
         if (!isalpha(argv[1][i]))
         {
-            printf("only use alpha key\n");
+            printf("Key must only contain alphabetic characters.\n");
             return 1;
         }
 
@@ -36,7 +36,7 @@ int main(int argc, string argv[])
         {
             if (argv[1][i] == argv[1][j])
             {
-                printf("Do not repeat letters\n");
+                printf("Key must not contain repeated characters.\n");
                 return 1;
             }
         }
