@@ -15,6 +15,8 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         return 1;
     }*/
 
+    const int LEN_KEY = strlen(key);
+
     string plaintext = get_string("plaintext: ");
 
     for (int i = 0, n = strlen(plaintext); i < n; i++) //Check caps and z/Z end. Convert and cipher.
@@ -25,7 +27,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             {
                 plaintext[i] = 'A' + key[i];
 
-                for (int j = 0, ; j < n ; j++)
+                for (int j = 0; j < LEN_KEY ; j++)
                 {
                    plaintext[j] = argv[1][j];
                 }
