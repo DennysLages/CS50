@@ -4,7 +4,7 @@
 #include <ctype.h> //isaplha isupper islower
 #include <stdlib.h> //atoi >> converts string to integer
 
-int validate_key(int size, string s);
+int validate_key(int size, string s[]);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
@@ -44,12 +44,14 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
     return 0;
 }
 
-int validate_key(int size, string s) //if argv[1] don`t exist, there will be no refuse()
+int validate_key(int size, string s[]) //if argv[1] don`t exist, there will be no refuse()
 {
-    if (size != 2) //Test wrong number of CLArg
+    if (size != 2 || strlen(s[1]) != 26) //Test wrong number of CLArg
     {
         return 1;
     }
+
+    char key[strlen(s[1])];
 
     for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
@@ -57,7 +59,16 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
         {
             return 1;
         }
-        
+
+        if (islower(s[j]))
+        {
+            key[j] = s[j] - 'a';
+        }
+        else if (isupper(s[j]))
+        {
+            key[j] = s[j] - 'A';
+        }
+
     }
 
     //Check for repeated letters
