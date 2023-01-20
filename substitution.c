@@ -23,7 +23,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         {
             if (isupper(plaintext[i]))
             {
-                For (int j = 0; j < n ; j++)
+                for (int j = 0; j < n ; j++)
                 {
                    Plaintext[j] = argv[1][j];
                 }
@@ -31,7 +31,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             }
             else if (islower(plaintext[i]))
             {
-                For (int j = 0; j < n ; j++)
+                for (int j = 0; j < n ; j++)
                 {
                 Plaintext[j] = argv[1][j];
                 }
