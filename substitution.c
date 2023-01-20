@@ -4,19 +4,61 @@
 #include <ctype.h> //isaplha isupper islower
 #include <stdlib.h> //atoi >> converts string to integer
 
-//char validate_key(int size, string s[]);
-
-int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
+int main(int argc, string argv[])
 {
-    char key = validate_key(argc, argv[1]);
-    /*if (key == 1) //test to refuse problems like more arguments, not an integer, false integer
+    //Key 1. Check # of argc
+    if (argc != 2)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Usage: ./substitution KEY");
         return 1;
-    }*/
+    }
 
-    const int LEN_KEY = strlen(key);
+    const int LEN_KEY = strlen(argv[1]);
 
+    if (LEN_KEY != 26)
+    {
+        printf("Usage: ./substitution KEY");
+        return 1;
+    }
+
+    //Key 2 & 3. Check if only alpha & non repeatable letters
+    char key[LEN_KEY];
+
+    for (int i = 0; i < LEN_KEY; i++)
+    {
+        if (!isalpha(argv[1][i]))
+        {
+            printf("only use alpha key");
+            return 1;
+        }
+
+        for (int j = i + 1; j < LEN_KEY; j++)
+        {
+            if (key[i] == key[j])
+            {
+                printf("Do not repeat letters");
+                return 1;
+            }
+        }
+    }
+
+    //Key 4. Get key by list of positions
+    for (int i = 0; i < LEN_KEY;i++)
+    {
+        if (isalpha(argv[1][i]))
+        {
+            if (islower(argv[1][i]))
+            {
+                key[i] = argv[1][i] - 'a';
+            }
+            else if (isupper(argv[1][i]))
+            {
+                key[i] = argv[1][i] - 'A';
+            }
+        }
+    }
+
+    //Plaintext 5. Get text, resume each letter(alpha) to a position & encypher back
     string plaintext = get_string("plaintext: ");
 
     for (int i = 0, n = strlen(plaintext); i < n; i++) //Check caps and z/Z end. Convert and cipher.
@@ -27,80 +69,21 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             {
                 int position = plaintext[i] - 'A';
                 plaintext[i] = 'A' + key[position];
-
-                /*for (int j = 0; j < LEN_KEY ; j++)
-                {
-                   plaintext[j] = argv[1][j];
-                }
-                //plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;*/
             }
             else if (islower(plaintext[i]))
             {
                 int position = plaintext[i] - 'a';
                 plaintext[i] = 'a' + key[position];
-
-                /*for (int j = 0; j < n ; j++)
-                {
-                plaintext[j] = argv[1][j];
-                }
-                //plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;*/
             }
         }
     }
 
+    // Print final result
     printf("ciphertext: %s\n", plaintext);
     return 0;
 }
 
-//if argv[1] don`t exist, there will be no Aux Function validate_key
-char validate_key(int size, string s)
-{
-    //Test wrong number of CLArg, and size of key (argv(1))
-    if (size != 2 || int n = strlen(s[1]) != 26)
-    {
-        return 1;
-    }
-
-    //Prepare to organize key by position
-    //char key[strlen(s[1])];
-    char key[n];
-
-    for (int j = 0; j < n; j++) //size = argc, s = argv[1] to test non integer key
-    {
-        if (!isaplha(s[j]))
-        {
-            return 1;
-        }
-
-        if (islower(s[j]))
-        {
-            key[j] = s[j] - 'a';
-        }
-        else if (isupper(s[j]))
-        {
-            key[j] = s[j] - 'A';
-        }
-    }
-
-    for (int k = 0; k < n; k++)
-    {
-        for (int m = k + 1; m < n; m++)
-        {
-            if (key[k] == key[m])
-            {
-                return 1;
-            }
-        }
-    }
-
-    //Check for repeated letters
-
-    //int key = atoi(s); //turns string to an integer*/
-
-    return key;
-}
-
-
+/*
 1. Validate Key
     1.1 Only 2 CLArg
     1.2 Only Alpha chars
@@ -109,4 +92,4 @@ char validate_key(int size, string s)
     2.1 Resume each letter to a position (a or A)
 3. Encipher
     3.1 Get each letter + key (position)
-4. Print ciphetext
+4. Print ciphetext*/
