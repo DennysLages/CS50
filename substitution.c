@@ -84,7 +84,13 @@ int validate_key(int size, string s)
 
     for (int k = 0; k < n; k++)
     {
-        key[k]
+        for (int m = k + 1; m < n; m++)
+        {
+            if (key[k] == key[m])
+            {
+                return 1;
+            }
+        }
     }
 
     //Check for repeated letters
