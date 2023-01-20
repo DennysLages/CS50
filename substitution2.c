@@ -16,39 +16,48 @@ int main(int argc, string argv[])
     /*//Test2. Check key size and if only alpha
     int n = strlen(argc[1]);*/
 
-    //Test Key.2 Check if only alpha & get key by list of positions
+    //Test Key.2 & 3 Check if only alpha & non repeatable letters
     char key[LEN_KEY];
 
-    for (int j = 0; j < n; j++)
+    for (int i = 0; i < LEN_KEY; i++)
     {
-        if (!isaplha(s[j]))
+        if (!isaplha(s[i]))
         {
             printf("only use alpha key");
             return 1;
         }
+
+        for (int j = i + 1; j < LEN_KEY; j++)
+        {
+            if (key[i] == key[j])
+            {
+                printf("Do not repeat letters");
+                return 1;
+            }
+        }
     }
 
-
-
-        if (isaplha(s[j]))
+    //4. Get key by list of positions
+    for (int i = 0; i < LEN_KEY;i++)
+    {
+        if (isaplha(s[i]))
         {
-            if (islower(s[j]))
+            if (islower(s[i]))
             {
-                key[j] = s[j] - 'a';
+                key[i] = s[i] - 'a';
             }
             else if (isupper(s[j]))
             {
-                key[j] = s[j] - 'A';
+                key[i] = s[i] - 'A';
             }
         }
-
-
     }
+
+    //5.
+}
 
 
     //const int LEN_KEY = validate_arg(argc, argv[1])
-
-}
 
 1. Validate Key
     1.1 Only 2 CLArg
