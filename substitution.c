@@ -65,3 +65,7 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
 
     return 0;
 }
+
+
+1. Validate Kety
+2. 
