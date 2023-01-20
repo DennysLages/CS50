@@ -36,7 +36,8 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             }
             else if (islower(plaintext[i]))
             {
-                plaintext[i] = 'a' + key[i];
+                int position = plaintext[i] - 'a';
+                plaintext[i] = 'a' + key[position];
 
                 /*for (int j = 0; j < n ; j++)
                 {
