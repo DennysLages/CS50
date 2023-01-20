@@ -6,7 +6,7 @@
 
 int main(int argc, string argv[])
 {
-    //Test Key.1 Check # of argc
+    //Key 1. Check # of argc
     if (argc !=2)
     {
         printf("Usage: ./substitution KEY");
@@ -21,10 +21,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    /*//Test2. Check key size and if only alpha
-    int n = strlen(argc[1]);*/
-
-    //Test Key.2 & 3 Check if only alpha & non repeatable letters
+    //Key 2 & 3. Check if only alpha & non repeatable letters
     char key[LEN_KEY];
 
     for (int i = 0; i < LEN_KEY; i++)
@@ -45,7 +42,7 @@ int main(int argc, string argv[])
         }
     }
 
-    //4. Get key by list of positions
+    //Key 4. Get key by list of positions
     for (int i = 0; i < LEN_KEY;i++)
     {
         if (isaplha(argv[1][i]))
@@ -61,7 +58,7 @@ int main(int argc, string argv[])
         }
     }
 
-    //5. Get plaintext from user & resume each letter(alpha) to a position
+    //Plaintext 5. Get text, resume each letter(alpha) to a position & encypher back
     string plaintext = get_string("plaintext: ");
 
     for (int i = 0, n = strlen(plaintext); i < n; i++) //Check caps and z/Z end. Convert and cipher.
@@ -80,9 +77,13 @@ int main(int argc, string argv[])
             }
         }
     }
+
+    // Print final result
+    printf("ciphertext: %s\n", plaintext);
+    return 0;
 }
 
-
+/*
 1. Validate Key
     1.1 Only 2 CLArg
     1.2 Only Alpha chars
