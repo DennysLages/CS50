@@ -25,7 +25,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             {
                 for (int j = 0; j < n ; j++)
                 {
-                   Plaintext[j] = argv[1][j];
+                   plaintext[j] = argv[1][j];
                 }
                 //plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;
             }
@@ -33,7 +33,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             {
                 for (int j = 0; j < n ; j++)
                 {
-                Plaintext[j] = argv[1][j];
+                plaintext[j] = argv[1][j];
                 }
                 //plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;
             }
