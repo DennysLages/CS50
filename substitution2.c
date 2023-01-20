@@ -7,7 +7,8 @@
 int main(int argc, string argv[])
 {
     const int LEN_KEY = validate_arg(argc, argv[1])
-}   
+
+}
 
 1. Validate Key
     1.1 Only 2 CLArg
