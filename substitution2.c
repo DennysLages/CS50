@@ -26,6 +26,9 @@ int main(int argc, string argv[])
             printf("only use alpha key");
             return 1;
         }
+    }
+
+
 
         if (isaplha(s[j]))
         {
