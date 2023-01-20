@@ -51,6 +51,8 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
         return 1;
     }
 
+    //Check for repeated letters
+
     /*for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
     {
         if (s[j] < '0' || s[j] > '9')
