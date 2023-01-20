@@ -21,8 +21,6 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    char s_key = argv[1];
-
     /*//Test2. Check key size and if only alpha
     int n = strlen(argc[1]);*/
 
@@ -31,7 +29,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < LEN_KEY; i++)
     {
-        if (!isaplha(s.key[i]))
+        if (!isaplha(argv[1][i]))
         {
             printf("only use alpha key");
             return 1;
