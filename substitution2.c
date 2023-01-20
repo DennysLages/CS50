@@ -15,7 +15,25 @@ int main(int argc, string argv[])
     /*//Test2. Check key size and if only alpha
     int n = strlen(argc[1]);*/
 
-    //Test2. Check if only alpha
+    //Test2. Check if only alpha & get key by list of positions
+    char key[LEN_KEY];
+
+    for (int j = 0; j < n; j++)
+    {
+        if (isaplha(s[j]))
+        {
+            if (islower(s[j]))
+            {
+                key[j] = s[j] - 'a';
+            }
+            else if (isupper(s[j]))
+            {
+                key[j] = s[j] - 'A';
+            }
+        }
+
+
+    }
 
 
     //const int LEN_KEY = validate_arg(argc, argv[1])
