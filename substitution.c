@@ -9,7 +9,7 @@ int validate_key(int size, string s);
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
     int key = validate_key(argc, argv[1]);
-    if (key == -1) //test to refuse problems like more arguments, not an integer, false integer
+    if (key == 1) //test to refuse problems like more arguments, not an integer, false integer
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -48,7 +48,7 @@ int validate_key(int size, string s) //if argv[1] don`t exist, there will be no 
 {
     if (size != 2) //Test wrong number of CLArg
     {
-        return -1;
+        return 1;
     }
 
     /*for (int j = 0, n = strlen(s); j < n; j++) //size = argc, s = argv[1] to test non integer key
