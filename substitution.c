@@ -8,12 +8,12 @@ int validate_key(int size, string s[]);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
-    int key = validate_key(argc, argv[1]);
-    if (key == 1) //test to refuse problems like more arguments, not an integer, false integer
+    char key = validate_key(argc, argv[1]);
+    /*if (key == 1) //test to refuse problems like more arguments, not an integer, false integer
     {
         printf("Usage: ./caesar key\n");
         return 1;
-    }
+    }*/
 
     string plaintext = get_string("plaintext: ");
 
@@ -23,9 +23,9 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         {
             if (isupper(plaintext[i]))
             {
+                plaintext[i] = 'A' + key[i];
 
-
-                /*for (int j = 0; j < n ; j++)
+                for (int j = 0, ; j < n ; j++)
                 {
                    plaintext[j] = argv[1][j];
                 }
@@ -33,7 +33,7 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
             }
             else if (islower(plaintext[i]))
             {
-
+                plaintext[i] = 'a' + key[i];
 
                 /*for (int j = 0; j < n ; j++)
                 {
