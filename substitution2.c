@@ -12,7 +12,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //Test2. 
+    //Test2. Check key size and if only alpha
+    int n = strlen(argc[1]);
+    
 
     const int LEN_KEY = validate_arg(argc, argv[1])
 
