@@ -79,8 +79,9 @@ int validate_key(int size, string s)
         {
             key[j] = s[j] - 'A';
         }
-
     }
+
+    for (int k = 0, )
 
     //Check for repeated letters
 
