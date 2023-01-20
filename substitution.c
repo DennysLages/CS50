@@ -23,19 +23,23 @@ int main(int argc, string argv[]) //argc = # of arguments & argv[] = words recei
         {
             if (isupper(plaintext[i]))
             {
-                for (int j = 0; j < n ; j++)
+
+
+                /*for (int j = 0; j < n ; j++)
                 {
                    plaintext[j] = argv[1][j];
                 }
-                //plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;
+                //plaintext[i] = 'A' + (plaintext[i] - 'A' + key) % 26;*/
             }
             else if (islower(plaintext[i]))
             {
-                for (int j = 0; j < n ; j++)
+
+
+                /*for (int j = 0; j < n ; j++)
                 {
                 plaintext[j] = argv[1][j];
                 }
-                //plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;
+                //plaintext[i] = 'a' + (plaintext[i] - 'a' + key) % 26;*/
             }
         }
     }
@@ -73,9 +77,9 @@ int validate_key(int size, string s[]) //if argv[1] don`t exist, there will be n
 
     //Check for repeated letters
 
-    int key = atoi(s); //turns string to an integer*/
+    //int key = atoi(s); //turns string to an integer*/
 
-    return 0;
+    return key;
 }
 
 
