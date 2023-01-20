@@ -4,7 +4,7 @@
 #include <ctype.h> //isaplha isupper islower
 #include <stdlib.h> //atoi >> converts string to integer
 
-char validate_key(int size, string s[]);
+//char validate_key(int size, string s[]);
 
 int main(int argc, string argv[]) //argc = # of arguments & argv[] = words received from command line
 {
