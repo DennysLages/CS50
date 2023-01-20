@@ -7,13 +7,21 @@
 int main(int argc, string argv[])
 {
     //Test Key.1 Check # of argc
-    if (int LEN_KEY = strlen(argv[1]) != 26 || argc !=2)
+    if (argc !=2)
     {
         printf("Usage: ./substitution KEY");
         return 1;
     }
 
-    char s.key = argv[1];
+    int LEN_KEY = strlen(argv[1]);
+
+    if (LEN_KEY != 26)
+    {
+        printf("Usage: ./substitution KEY");
+        return 1;
+    }
+
+    char s_key = argv[1];
 
     /*//Test2. Check key size and if only alpha
     int n = strlen(argc[1]);*/
