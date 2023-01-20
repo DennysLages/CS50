@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     char key[LEN_KEY];
 
     for (int i = 0; i < LEN_KEY; i++)
-    {
+    {s
         if (!isalpha(argv[1][i]))
         {
             printf("only use alpha key\n");
