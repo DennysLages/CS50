@@ -48,15 +48,15 @@ int main(int argc, string argv[])
     //4. Get key by list of positions
     for (int i = 0; i < LEN_KEY;i++)
     {
-        if (isaplha(s[i]))
+        if (isaplha(argv[1][i]))
         {
-            if (islower(s[i]))
+            if (islower(argv[1][i]))
             {
-                key[i] = s[i] - 'a';
+                key[i] = argv[1][i] - 'a';
             }
-            else if (isupper(s[j]))
+            else if (isupper(argv[1][j]))
             {
-                key[i] = s[i] - 'A';
+                key[i] = argv[1][i] - 'A';
             }
         }
     }
