@@ -7,16 +7,18 @@
 int main(int argc, string argv[])
 {
     //Test 1. Check # of argc
-    if (argc !=2)
+    if (int LEN_KEY = strlen(argv[1]) != 26 || argc !=2)
     {
         return 1;
     }
 
-    //Test2. Check key size and if only alpha
-    int n = strlen(argc[1]);
-    
+    /*//Test2. Check key size and if only alpha
+    int n = strlen(argc[1]);*/
 
-    const int LEN_KEY = validate_arg(argc, argv[1])
+    //Test2. Check if only alpha
+
+
+    //const int LEN_KEY = validate_arg(argc, argv[1])
 
 }
 
