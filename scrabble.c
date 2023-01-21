@@ -3,15 +3,18 @@
 #include <string.h> //strlen
 #include <ctype.h> //islower & isupper
 
+// Points assigned to each letter of the alphabet
 const int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 int get_points(string player);
 
 int main(void)
 {
+    //Get inputs from both players
     string p_1 = get_string("Player 1:\n");
     string p_2 = get_string("Player 2:\n");
 
+    //Get points from both words
     int sum1 = get_points(p_1);
     int sum2 = get_points(p_2);
 
@@ -29,6 +32,7 @@ int main(void)
     }
 }
 
+//Compute and return score of each player
 int get_points(string player)
 {
     int position;
