@@ -34,7 +34,7 @@ int get_points(string player)
     int position;
     int sum = 0;
 
-    for (int i = 0, n = strlen(player); i< n; i++)
+    for (int i = 0, n = strlen(player); i < n; i++)
     {
         if (islower(player[i]))
         {
