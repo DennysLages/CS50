@@ -39,12 +39,12 @@ int get_points(string player)
         if (islower(player[i]))
         {
             position = player[i] - 'a';
-            sum = points[position];
+            sum += points[position];
         }
         else if (isupper(player[i]))
         {
             position = player[i] - 'A';
-            sum = points[position];
+            sum += points[position];
         }
     }
     return sum;
