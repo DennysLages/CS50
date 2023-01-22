@@ -43,7 +43,7 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        string single_vote = '\0';
+        string single_vote = "\0";
         int check = 0;
         do
         {
