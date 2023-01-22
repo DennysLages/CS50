@@ -204,3 +204,5 @@ void eliminate(int min)
     // TODO
     return;
 }
+
+//Maybe confusing order of functions vote & tabulate
