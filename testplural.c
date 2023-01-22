@@ -23,7 +23,7 @@ int main(int argc, string argv[])
 
     for (i = 0; i < voters; i++)
     {
-
+        get_string()
     }
 }
 
