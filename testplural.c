@@ -18,15 +18,18 @@ candidate;
 
 int main(int argc, string argv[])
 {
+    //1. Create candidates profile and assign start of 0 votes for everyone
     candidate candidates[argc - 1];
     for (int i = 0; i < argc - 1; i++)
     {
         candidates[i].votes = 0;
     }
 
+    //2. Get # of voters & validate input
     int voters = get_int("Number of voters: ");
     printf("\n");
 
+    //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
         string vote = get_string("Vote: ");
@@ -39,7 +42,8 @@ int main(int argc, string argv[])
         }
         printf("\n");
     }
-    // shold I declare its size than assign 1 values first ?
+
+    //4. Find highest # of votes and return winner candidate
     candidate winner;
     winner = candidates[0];
 
