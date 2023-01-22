@@ -81,7 +81,7 @@ bool vote(string name)
 void print_winner(void)
 {
     string winner[candidate_count];
-    winner = candidate;
+    winner[0] = candidate[0];
 
     for (int i = 0; i < candidate_count; i++)
     {
