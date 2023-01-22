@@ -181,7 +181,7 @@ bool print_winner(void)
 
     for (int i = 0, candidates_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[0].votes / total_votes > 0.5)
+        if (candidates[i].eliminated == false && candidates[i].votes / total_votes > 0.5)
         {
             printf("%s\n", candidates[0].name);
             return true;
