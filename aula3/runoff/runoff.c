@@ -198,8 +198,8 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO >> change candidates[i].eliminated to true
-    candidates[strlen]
+    // TODO >> change candidates[MIN or last].eliminated to true
+    candidates[candidate_count - 1].eliminated = true;
     return 0;
 }
 
