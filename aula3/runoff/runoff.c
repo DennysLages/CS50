@@ -199,7 +199,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO >> change candidates[i].eliminated to true
-    
+    candidates[strlen]
     return 0;
 }
 
