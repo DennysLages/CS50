@@ -29,7 +29,6 @@ int main(int argc, string argv[])
 
     //2. Get # of voters & validate input
     int voters = get_positive_int("Number of voters: ");
-    printf("\n");
 
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
@@ -57,7 +56,7 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("%s\n", winner.name);
+    printf("%s", winner.name);
     return 0;
 }
 
