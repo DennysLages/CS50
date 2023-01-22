@@ -66,7 +66,14 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
+    for (int i = 0; i < CANDIDATE_COUNT; j++)
+        {
+            if (strcasecmp(single_vote, candidates[j].name) == 0)
+            {
+                candidates[j].votes++;
+                check = 1;
+            }
+        }
     return false;
 }
 
