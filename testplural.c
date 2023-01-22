@@ -91,14 +91,14 @@ int validate_input(int argc)
 
 string get_valid_vote(string phrase)
 {
-    int n = 0;
+    string valid_vote;
     do
     {
-        n = get_int("%s", phrase);
+        n = get_string("%s", phrase);
     }
     while(n < 1);
 
-    return n;
+    return valid_vote;
 }
 /*
 for each vote , assign +1 to candidates.votes[i]
