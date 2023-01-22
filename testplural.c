@@ -20,7 +20,7 @@ int get_positive_int(string phrase);
 
 int main(int argc, string argv[])
 {
-    //1. Create candidates profile and assign start of 0 votes for everyone
+    //1. Create candidates profile with all names and assign start of 0 votes for everyone
     candidate candidates[argc - 1];
     for (int i = 0; i < argc - 1; i++)
     {
@@ -39,7 +39,7 @@ int main(int argc, string argv[])
         {
             if(strcasecmp(single_vote, argv[j]) == 0)
             {
-                candidates[j].votes++;
+                candidates[j - 1].votes++;
             }
         }
     }
