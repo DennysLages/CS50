@@ -34,14 +34,14 @@ int main(int argc, string argv[])
         }
         printf("\n");
     }
-
-    candidate winner = candidates.name[0];
+    // shold I declare its size than assign 1 values first ?
+    candidate winner[0] = candidates[0];
 
     for (i = 0, i < argc - 1, i++)
     {
-        if(candidates.votes[i + 1] > winner)
+        if(candidates.votes[i + 1] > winner.votes)
         {
-            winner = candidates.name[i + 1];
+            winner.name = candidates.name[i + 1];
         }
     }
 
