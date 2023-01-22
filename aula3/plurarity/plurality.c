@@ -67,13 +67,13 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcasecmp(name, candidates[i].name) == 0)
         {
-            if (strcasecmp(name, candidates[i].name) == 0)
-            {
-                candidates[i].votes++;
-                return true;
-            }
+            candidates[i].votes++;
+            return true;
         }
+    }
     return false;
 }
 
@@ -81,14 +81,14 @@ bool vote(string name)
 void print_winner(void)
 {
     candidate winner[candidate_count];
-    winner[0] = candidate[0];
+    winner[0] = candidates[0];
 
     do
     {
         int check = 0;
         for (int i = 0; i < candidate_count - 1; i++)
         {
-            if (candidates[i].votes < candidades[i + 1].votes)
+            if (candidates[i].votes < candidates[i + 1].votes)
             {
                 winner[i] = candidates[i + 1];
                 winner[i + 1] = candidates[i];
