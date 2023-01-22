@@ -181,7 +181,7 @@ bool print_winner(void)
 
     for (int i = 0, candidates_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[i].votes / total_votes > 0.5)
+        if (candidates[i].eliminated == false && candidates[i].votes / voter_count > 0.5)
         {
             printf("%s\n", candidates[0].name);
             return true;
@@ -205,14 +205,6 @@ bool is_tie(int min)
     // TODO >> if candidates[i].votes == candidates[i + 1]
     int total_votes = 0;
 
-    for (int i = 0; candidates_count; i++)
-    {
-        if (candidates[i].eliminated == false)
-        {
-            total_votes = candidates[i].votes;
-        }
-    }
-
     for (int i = 0, candidates_count; i++)
     {
         if (candidates[i].eliminated == false && candidates[i].votes == total_votes / candidates_count)
@@ -220,7 +212,7 @@ bool is_tie(int min)
             return true;
         }
     }
-    
+
     return false;
 }
 
