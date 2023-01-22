@@ -67,14 +67,14 @@ do sum 1 & check = 1;
 while check = 0 >> check again for input
 */
 
-        string single_vote = get_valid_vote(CANDIDATE_COUNT, "Vote: ");
+        /*string single_vote = get_valid_vote(CANDIDATE_COUNT, "Vote: ");
         for(int j = 0; j < CANDIDATE_COUNT; j++)
         {
             if(strcasecmp(single_vote, candidates[j].name) == 0)
             {
                 candidates[j - 1].votes++;
             }
-        }
+        }*/
     }
 
     //4. Find highest # of votes and return winner candidate
