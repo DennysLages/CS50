@@ -91,8 +91,9 @@ void print_winner(void)
         }
     }
 
-        printf("%s\n", winner.name);
-        }
+    printf("%s\n", winner.name);
+
     return;
 }
 
+Check all candidates, 
