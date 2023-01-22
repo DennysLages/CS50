@@ -129,9 +129,9 @@ bool vote(int voter, int rank, string name)
 {
     for (int i = 0; i < rank; i++)
     {
-        if (strcasecmp(name, candidates[i].name) == 0)
+        if (strcasecmp(name, candidates[voter].name) == 0)
         {
-            candidates[i].votes++;
+            candidates[voter].votes++;
             return true;
         }
     }
