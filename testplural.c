@@ -17,8 +17,8 @@ candidate;
 
 int main(int argc, string argv[])
 {
-    candidate candidates[argc - ];
-    for (int i = 0; i < argc; i++)
+    candidate candidates[argc - 1];
+    for (int i = 0; i < argc - 1; i++)
     {
         candidates[i].votes = 0;
     }
