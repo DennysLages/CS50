@@ -28,9 +28,9 @@ int main(int argc, string argv[])
     }
 
     //1. Create candidates profile with all names and assign start of 0 votes for everyone
-    
-    candidate candidates[argc - 1];
-    for (int i = 0; i < argc - 1; i++)
+    const int CANDIDATE_COUNT = argc - 1;
+    candidate candidates[CANDIDATE_COUNT];
+    for (int i = 0; i < CANDIDATE_COUNT; i++)
     {
         candidates[i].name = argv[i + 1];
         candidates[i].votes = 0;
