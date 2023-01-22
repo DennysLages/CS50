@@ -30,7 +30,7 @@ int main(int argc, string argv[])
     //1. Create candidates profile with all names and assign start of 0 votes for everyone
     const int CANDIDATE_COUNT = argc - 1;
     candidate candidates[CANDIDATE_COUNT];
-    
+
     for (int i = 0; i < CANDIDATE_COUNT; i++)
     {
         candidates[i].name = argv[i + 1];
@@ -43,10 +43,10 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        string single_vote = get_valid_vote(strlen(candidates[].name), "Vote: ");
-        for(int j = 1; j < argc; j++)
+        string single_vote = get_valid_vote(CANDIDATE_COUNT, "Vote: ");
+        for(int j = 0; j < CANDIDATE_COUNT; j++)
         {
-            if(strcasecmp(single_vote, argv[j]) == 0)
+            if(strcasecmp(single_vote, candidates[j].name) == 0)
             {
                 candidates[j - 1].votes++;
             }
@@ -91,14 +91,20 @@ int validate_input(int argc)
     return 0;
 }
 
-string get_valid_vote(int candidates, string phrase)
+string get_valid_vote(int qty, string phrase)
 {
     string valid_vote = '\0';
-    int check;
+    int check = 0;
     do
     {
-        for (int i = 0; )
-        valid_vote = get_string("%s", phrase);
+        for (int i = 0; i < qty; i++)
+        {
+            if(
+            {
+
+            }
+                valid_vote = get_string("%s", phrase);
+        }
     }
     while(val< 1);
 
