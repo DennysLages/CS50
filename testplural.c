@@ -3,7 +3,7 @@
 #include <strings.h>
 
 
-//vote >> string each vote
+//single_vote >> string each vote
 //voters >> int # of voters
 //votes >> string # of votes to each candidate
 //candidate >> type of variable
@@ -34,10 +34,10 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        string vote = get_string("Vote: ");
+        string single_vote = get_string("Vote: ");
         for(int j = 1; j < argc; j++)
         {
-            if(strcasecmp(vote, argv[j]) == 0)
+            if(strcasecmp(single_vote, argv[j]) == 0)
             {
                 candidates[j].votes++;
             }
