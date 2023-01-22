@@ -43,7 +43,7 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        string single_vote = "\0";
+        /*string single_vote = "\0";
         int check = 0;
         do
         {
@@ -58,10 +58,10 @@ int main(int argc, string argv[])
             }
             if (check == 0)
             {
-                printf("V")
+                printf("Insert a valid candidate\n");
             }
         }
-        while (check == 0);
+        while (check == 0);*/
 
 /*2. Check vote if matches candidates
 do
@@ -71,14 +71,14 @@ do sum 1 & check = 1;
 while check = 0 >> check again for input
 */
 
-        /*string single_vote = get_valid_vote(CANDIDATE_COUNT, "Vote: ");
+        string single_vote = get_string("Vote: ");
         for(int j = 0; j < CANDIDATE_COUNT; j++)
         {
             if(strcasecmp(single_vote, candidates[j].name) == 0)
             {
                 candidates[j - 1].votes++;
             }
-        }*/
+        }
     }
 
     //4. Find highest # of votes and return winner candidate
