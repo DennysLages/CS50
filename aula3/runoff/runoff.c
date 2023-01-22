@@ -168,11 +168,8 @@ bool print_winner(void)
     }
     while (check != 0);
 
+    if (candidates[0].votes > )
     printf("%s\n", candidates[0].name);
-    for (int i = 0; candidates[i].votes == candidates[i + 1].votes; i++)
-    {
-        printf("%s\n", candidates[i + 1].name);
-    }
 
     return false;
 }
