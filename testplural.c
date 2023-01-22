@@ -45,7 +45,7 @@ int main(int argc, string argv[])
     {
         string single_vote = "\0";
         int check = 0;
-        do
+        while (check == 0)
         {
             single_vote = get_string("vote: ");
             for(int j = 0; j < CANDIDATE_COUNT; j++)
@@ -56,6 +56,7 @@ int main(int argc, string argv[])
                     check = 1;
                 }
             }
+            if (check == 0)
         }
         while (check == 0);
 
