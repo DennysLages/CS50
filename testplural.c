@@ -115,7 +115,7 @@ int validate_input(int argc)
     return 0;
 }
 
-string get_valid_vote(int qty, string phrase)
+/*string get_valid_vote(int qty, string phrase)
 {
     string valid_vote = '\0';
     int check = 0;
@@ -133,7 +133,7 @@ string get_valid_vote(int qty, string phrase)
     while(val< 1);
 
     return valid_vote;
-}
+}*/
 /*
 1. for each vote , assign +1 to candidates.votes[i]
 being i = argv[defined]
