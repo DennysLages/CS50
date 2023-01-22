@@ -168,8 +168,18 @@ bool print_winner(void)
     }
     while (check != 0);
 
-    if (candidates[0].votes > )
-    printf("%s\n", candidates[0].name);
+    int total_votes = 0;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        total_votes = candidate[i].votes;
+    }
+
+    if (candidates[0].votes / total_votes > 0.5)
+    {
+        printf("%s\n", candidates[0].name);
+        return true;
+    }
 
     return false;
 }
