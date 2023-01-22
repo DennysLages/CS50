@@ -81,7 +81,7 @@ while check = 0 >> check again for input
     candidate winner;
     winner = candidates[0];
 
-    for (int i = 0; i < argc - 1; i++)
+    for (int i = 0; i < CANDIDATE_COUNT; i++)
     {
         if(candidates[i + 1].votes > winner.votes)
         {
