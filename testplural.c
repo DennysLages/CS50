@@ -4,7 +4,10 @@
 
 //vote >> string each vote
 //voters >> int # of voters
-//
+//votes >> string # of votes to each candidate
+//candidate >> type of variable
+//candidates >> string w/ single candidates
+
 typedef struct
 {
     string name;
