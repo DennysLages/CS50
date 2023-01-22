@@ -211,7 +211,10 @@ bool is_tie(int min)
 
     for (int i = 0; candidates_count; i++)
     {
-        total_votes = candidate[i].votes;
+        if (candidates[i].eliminated == false)
+        {
+            total_votes = candidates[i].votes;
+        }
     }
 
     if (candidates[0].votes == total_votes / candidates_count)
