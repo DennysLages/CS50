@@ -43,6 +43,9 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
+        string single_vote = \0;
+        if (single_vote )
+
         string single_vote = get_valid_vote(CANDIDATE_COUNT, "Vote: ");
         for(int j = 0; j < CANDIDATE_COUNT; j++)
         {
@@ -111,6 +114,14 @@ string get_valid_vote(int qty, string phrase)
     return valid_vote;
 }
 /*
-for each vote , assign +1 to candidates.votes[i]
+1. for each vote , assign +1 to candidates.votes[i]
 being i = argv[defined]
-strcasecmp(vote, candidates.name)*/
+strcasecmp(vote, candidates.name)
+
+2. Check vote if matches candidates
+do
+check for vote input
+if vote == candidade[0].name
+do sum 1 & check = 1;
+while check = 0 >> check again for input
+*/
