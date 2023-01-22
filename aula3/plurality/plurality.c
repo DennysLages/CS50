@@ -96,19 +96,14 @@ void print_winner(void)
                 candidates[i] = winner[0];
                 check++;
             }
-            /*else if (candidates[i].votes >= candidates[i + 1].votes)
-            {
-                winner[i] = candidates[i];
-                winner[i + 1] = candidates[i + 1];
-            }*/
         }
     }
     while (check != 0);
 
-    printf("%s\n", winner[0].name);
-    for (int i = 0; winner[i].votes == winner[i + 1].votes; i++)
+    printf("%s\n", candidates[0].name);
+    for (int i = 0; candidates[i].votes == candidates[i + 1].votes; i++)
     {
-        printf("%s\n", winner[i + 1].name);
+        printf("%s\n", candidates[i + 1].name);
     }
 
     return;
