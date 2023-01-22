@@ -17,11 +17,11 @@ typedef struct
 candidate;
 
 int get_positive_int(string phrase);
-int validate_input(void);
+int validate_input(int argc);
 
 int main(int argc, string argv[])
 {
-    //0. Validate input
+    //0. Validate input to receive at least 2 candidates
     if(validate_input(argc) != 0)
     {
         return 1;
@@ -81,9 +81,9 @@ int get_positive_int(string phrase)
 
 int validate_input(int argc)
 {
-    if(argc == 1)
+    if(argc < 3)
     {
-        print("Usage: ./plurality list of candidate names\n");
+        printf("Usage: ./plurality list of candidate names\n");
         return 1;
     }
     return 0;
