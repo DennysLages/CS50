@@ -18,6 +18,7 @@ candidate;
 int main(int argc, string argv[])
 {
     candidate candidates[argc];
+    candidates.votes[] = 0;
 
     int voters = get_int("Number of voters: \n");
 
@@ -33,6 +34,7 @@ int main(int argc, string argv[])
         }
         printf("\n");
     }
+    printf()
 }
 
 for each vote , assign +1 to candidates.votes[i]
