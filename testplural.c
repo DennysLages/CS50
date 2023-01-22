@@ -52,7 +52,7 @@ int main(int argc, string argv[])
             {
                 if(strcasecmp(single_vote, candidates[j].name) == 0)
                 {
-                    candidates[j - 1].votes++;
+                    candidates[j].votes++;
                     check = 1;
                 }
             }
@@ -76,7 +76,7 @@ while check = 0 >> check again for input
         {
             if(strcasecmp(single_vote, candidates[j].name) == 0)
             {
-                candidates[j - 1].votes++;
+                candidates[j].votes++;
             }
         }
     }
