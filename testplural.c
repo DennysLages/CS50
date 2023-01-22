@@ -27,13 +27,24 @@ int main(int argc, string argv[])
         string vote = get_string("Vote: ");
         for(j = 1, j < argc, j++)
         {
-            if(strcasecmp(vote,argv[j]) == 0)
+            if(strcasecmp(vote, argv[j]) == 0)
             {
                 candidates.votes++;
             }
         }
         printf("\n");
     }
+
+    candidate winner = candidates.name[0];
+
+    for (i = 0, i < argc - 1, i++)
+    {
+        if(candidates.votes[i + 1] > winner)
+        {
+            winner = candidates.name[i + 1];
+        }
+    }
+
     printf()
 }
 
