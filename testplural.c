@@ -91,12 +91,12 @@ int validate_input(int argc)
 
 string get_valid_vote(string phrase)
 {
-    string valid_vote;
+    string valid_vote = /0;
     do
     {
-        n = get_string("%s", phrase);
+        valid_vote = get_string("%s", phrase);
     }
-    while(n < 1);
+    while(val< 1);
 
     return valid_vote;
 }
