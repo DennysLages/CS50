@@ -23,10 +23,18 @@ int main(int argc, string argv[])
 
     for (i = 0; i < voters; i++)
     {
-        get_string()
+        string vote = get_string("Vote: ");
+        for(j = 1, j < argc, j++)
+        {
+            if(strcasecmp(vote,argv[j]) == 0)
+            {
+                candidates.votes++;
+            }
+        }
+        printf("\n");
     }
 }
 
 for each vote , assign +1 to candidates.votes[i]
 being i = argv[defined]
-strcmp(vote, candidates.name)
+strcasecmp(vote, candidates.name)
