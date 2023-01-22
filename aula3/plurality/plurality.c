@@ -82,10 +82,11 @@ void print_winner(void)
 {
     candidate winner[candidate_count];
     winner[0] = candidates[0];
+    int check;
 
     do
     {
-        int check = 0;
+        check = 0;
         for (int i = 0; i < candidate_count - 1; i++)
         {
             if (candidates[i].votes < candidates[i + 1].votes)
