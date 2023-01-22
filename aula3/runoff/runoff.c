@@ -149,7 +149,7 @@ void tabulate(void)
         {
             if (candidates[preferences[i][j]].eliminated == false )
             {
-                candidades[preferences[i][j]].vote++;
+                candidates[preferences[i][j]].votes++;
                 j = candidate_count;
             }
         }
@@ -180,7 +180,7 @@ bool print_winner(void)
     }
     while (check != 0);
 
-    for (int i = 0, candidates_count; i++)
+    for (int i = 0; candidate_count; i++)
     {
         if (candidates[i].eliminated == false && candidates[i].votes / voter_count > 0.5)
         {
@@ -196,11 +196,13 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO >> take votes from last candidate on contest and return as min
+    int min = 0;
+
     for (int i = candidate_count - 1; i >= 0; i--)
     {
         if (candidates[i].eliminated == false)
         {
-            int min = candidates[i].votes;
+            min = candidates[i].votes;
         }
     }
 
@@ -211,7 +213,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO >> if candidates[i].votes == candidates[i + 1]
-    for (int i = 0, candidates_count; i++)
+    for (int i = 0; candidate_count; i++)
     {
         if (candidates[i].eliminated == false && candidates[i].votes == min)
         {
