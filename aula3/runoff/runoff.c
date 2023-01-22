@@ -217,10 +217,12 @@ bool is_tie(int min)
         }
     }
 
-    if (candidates[0].votes == total_votes / candidates_count)
+    for (int i = 0, candidates_count; i++)
     {
-        return true;
-    }
+        if (candidates[i].eliminated == false && candidates[i].votes == total_votes / candidates_count)
+        {
+            return true;
+        }
     return false;
 }
 
