@@ -148,7 +148,32 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    candidate winner[1];
+    winner[0] = candidates[0];
+    int check;
+
+    do
+    {
+        check = 0;
+        for (int i = 0; i < candidate_count - 1; i++)
+        {
+            if (candidates[i].votes < candidates[i + 1].votes)
+            {
+                winner[0] = candidates[i + 1];
+                candidates[i + 1] = candidates[i];
+                candidates[i] = winner[0];
+                check++;
+            }
+        }
+    }
+    while (check != 0);
+
+    printf("%s\n", candidates[0].name);
+    for (int i = 0; candidates[i].votes == candidates[i + 1].votes; i++)
+    {
+        printf("%s\n", candidates[i + 1].name);
+    }
+
     return false;
 }
 
