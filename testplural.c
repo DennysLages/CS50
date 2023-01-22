@@ -24,6 +24,7 @@ int main(int argc, string argv[])
     candidate candidates[argc - 1];
     for (int i = 0; i < argc - 1; i++)
     {
+        candidates[i].name = argv[i + 1];
         candidates[i].votes = 0;
     }
 
@@ -55,7 +56,7 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("%s", winner.name);
+    printf("%s\n", winner.name);
     return 0;
 }
 
