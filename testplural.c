@@ -89,9 +89,16 @@ int validate_input(int argc)
     return 0;
 }
 
-int get_valid_vote(void)
+string get_valid_vote(string phrase)
 {
-    
+    int n = 0;
+    do
+    {
+        n = get_int("%s", phrase);
+    }
+    while(n < 1);
+
+    return n;
 }
 /*
 for each vote , assign +1 to candidates.votes[i]
