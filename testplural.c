@@ -16,7 +16,7 @@ typedef struct
 }
 candidate;
 
-int get_positive_int(void);
+int get_positive_int(string phrase);
 
 int main(int argc, string argv[])
 {
@@ -62,9 +62,10 @@ int main(int argc, string argv[])
 
 int get_positive_int(string phrase)
 {
+    int n = 0;
     do
     {
-        n = get_int("%s\n", phrase);
+        n = get_int("%s", phrase);
     }
     while(n < 1);
 
