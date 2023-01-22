@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <cs50.h>
 
+
+//vote >> string each vote
+//voters >> int # of voters
+//
 typedef struct
 {
     string name;
@@ -22,4 +26,4 @@ int main(int argc, string argv[])
 
 for each vote , assign +1 to candidates.votes[i]
 being i = argv[defined]
-strcmp(, candidates.name)
+strcmp(vote, candidates.name)
