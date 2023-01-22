@@ -100,7 +100,7 @@ void print_winner(void)
     while (check != 0);
 
     printf("%s\n", winner[0].name);
-    for (int i = 0, winner[i] == winner[i + 1], i++)
+    for (int i = 0; winner[i].votes == winner[i + 1].votes; i++)
     {
         printf("%s\n", winner[i].name);
     }
