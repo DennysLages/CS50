@@ -22,7 +22,7 @@ int validate_input(int argc);
 int main(int argc, string argv[])
 {
     //0. Validate input to receive at least 2 candidates
-    if(validate_input(argc) != 0)
+    if (validate_input(argc) != 0)
     {
         return 1;
     }
@@ -40,17 +40,17 @@ int main(int argc, string argv[])
     //2. Get # of voters & validate input
     int voters = get_positive_int("Number of voters: ");
 
-    //3. Assign votes to each candidate
+    //3. Assign VALID votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        /*string single_vote = "\0";
+        string single_vote = "\0";
         int check = 0;
         do
         {
             single_vote = get_string("vote: ");
-            for(int j = 0; j < CANDIDATE_COUNT; j++)
+            for (int j = 0; j < CANDIDATE_COUNT; j++)
             {
-                if(strcasecmp(single_vote, candidates[j].name) == 0)
+                if (strcasecmp(single_vote, candidates[j].name) == 0)
                 {
                     candidates[j].votes++;
                     check = 1;
@@ -58,27 +58,28 @@ int main(int argc, string argv[])
             }
             if (check == 0)
             {
-                printf("Insert a valid candidate\n");
+                printf("Invalid vote\n");
             }
         }
-        while (check == 0);*/
+        while (check == 0);
 
-/*2. Check vote if matches candidates
-do
-check for vote input
-if vote == candidade[0].name
-do sum 1 & check = 1;
-while check = 0 >> check again for input
-*/
+        /*2. Check vote if matches candidates
+        do
+        check for vote input
+        if vote == candidade[0].name
+        do sum 1 & check = 1;
+        while check = 0 >> check again for input
+        */
 
-        string single_vote = get_string("Vote: ");
-        for(int j = 0; j < CANDIDATE_COUNT; j++)
+        //3.1 Assign vote to each candidate
+        /*string single_vote = get_string("Vote: ");
+        for (int j = 0; j < CANDIDATE_COUNT; j++)
         {
-            if(strcasecmp(single_vote, candidates[j].name) == 0)
+            if (strcasecmp(single_vote, candidates[j].name) == 0)
             {
                 candidates[j].votes++;
             }
-        }
+        }*/
     }
 
     //4. Find highest # of votes and return winner candidate
@@ -87,7 +88,7 @@ while check = 0 >> check again for input
 
     for (int i = 0; i < CANDIDATE_COUNT; i++)
     {
-        if(candidates[i + 1].votes > winner.votes)
+        if (candidates[i + 1].votes > winner.votes)
         {
             winner.name = candidates[i + 1].name;
         }
@@ -104,14 +105,14 @@ int get_positive_int(string phrase)
     {
         n = get_int("%s", phrase);
     }
-    while(n < 1);
+    while (n < 1);
 
     return n;
 }
 
 int validate_input(int argc)
 {
-    if(argc < 3)
+    if (argc < 3)
     {
         printf("Usage: ./plurality list of candidate names\n");
         return 1;
