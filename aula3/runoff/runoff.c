@@ -132,7 +132,7 @@ bool vote(int voter, int rank, string name)
     {
         if (strcasecmp(name, candidates[i].name) == 0)
         {
-            preference[voter][rank] = i;
+            preferences[voter][rank] = i;
             return true;
         }
     }
@@ -143,9 +143,9 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO : preference >> candidate[i].votes;
-    for (int i = 0, i < voter_count; i++) //each voter
+    for (int i = 0; i < voter_count; i++) //each voter
     {
-        for (int j = 0, j < candidate_count, j++) //each rank (because #rank = #candidates)
+        for (int j = 0; j < candidate_count; j++) //each rank (because #rank = #candidates)
         {
             if (candidates[preference[i][j]].bool == false )
             {
