@@ -18,7 +18,7 @@ candidate;
 int main(int argc, string argv[])
 {
     candidate candidates[argc];
-    for (int i = 0, i < argc, i++)
+    for (int i = 0; i < argc; i++)
     {
         candidates.votes[i] = 0;
     }
@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < voters; i++)
     {
         string vote = get_string("Vote: ");
-        for(int j = 1, j < argc, j++)
+        for(int j = 1; j < argc; j++)
         {
             if(strcasecmp(vote, argv[j]) == 0)
             {
@@ -41,7 +41,7 @@ int main(int argc, string argv[])
     candidate winner[1];
     winner[0] = candidates[0];
 
-    for (int i = 0, i < argc - 1, i++)
+    for (int i = 0; i < argc - 1; i++)
     {
         if(candidates.votes[i + 1] > winner.votes)
         {
