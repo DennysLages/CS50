@@ -17,10 +17,10 @@ candidate;
 
 int main(int argc, string argv[])
 {
-    candidate candidates[argc];
+    candidate candidates[argc - ];
     for (int i = 0; i < argc; i++)
     {
-        candidates.votes[i] = 0;
+        candidates[i].votes = 0;
     }
 
     int voters = get_int("Number of voters: \n");
