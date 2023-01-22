@@ -35,7 +35,8 @@ int main(int argc, string argv[])
         printf("\n");
     }
     // shold I declare its size than assign 1 values first ?
-    candidate winner[0] = candidates[0];
+    candidate winner[1];
+    winner[0] = candidates[0];
 
     for (i = 0, i < argc - 1, i++)
     {
@@ -45,9 +46,10 @@ int main(int argc, string argv[])
         }
     }
 
-    printf()
+    printf("s%", candidates.name);
+    return 0;
 }
-
+/*
 for each vote , assign +1 to candidates.votes[i]
 being i = argv[defined]
-strcasecmp(vote, candidates.name)
+strcasecmp(vote, candidates.name)*/
