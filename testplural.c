@@ -92,8 +92,10 @@ int validate_input(int argc)
 string get_valid_vote(string phrase)
 {
     string valid_vote = '\0';
+    int check;
     do
     {
+        for (int i = 0; )
         valid_vote = get_string("%s", phrase);
     }
     while(val< 1);
