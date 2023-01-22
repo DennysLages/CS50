@@ -41,7 +41,6 @@ int main(int argc, string argv[])
                 candidates[j].votes++;
             }
         }
-        printf("\n");
     }
 
     //4. Find highest # of votes and return winner candidate
