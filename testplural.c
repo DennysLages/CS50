@@ -16,6 +16,8 @@ typedef struct
 }
 candidate;
 
+int get_positive_int(void);
+
 int main(int argc, string argv[])
 {
     //1. Create candidates profile and assign start of 0 votes for everyone
@@ -26,7 +28,7 @@ int main(int argc, string argv[])
     }
 
     //2. Get # of voters & validate input
-    int voters = get_int("Number of voters: ");
+    int voters = get_positive_int("Number of voters: ");
     printf("\n");
 
     //3. Assign votes to each candidate
@@ -57,6 +59,17 @@ int main(int argc, string argv[])
 
     printf("%s\n", winner.name);
     return 0;
+}
+
+int get_positive_int(string phrase)
+{
+    do
+    {
+        n = get_int("%s\n", phrase);
+    }
+    while(n < 1);
+
+    return n;
 }
 /*
 for each vote , assign +1 to candidates.votes[i]
