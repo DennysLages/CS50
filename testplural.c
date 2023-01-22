@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <strings.h>
 
 
 //vote >> string each vote
@@ -49,7 +50,7 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("s%", winner.name);
+    printf("%s\n", winner.name);
     return 0;
 }
 /*
