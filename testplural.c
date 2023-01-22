@@ -41,7 +41,7 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        string single_vote = get_valid_vote("Vote: ");
+        string single_vote = get_valid_vote(argc - 1, "Vote: ");
         for(int j = 1; j < argc; j++)
         {
             if(strcasecmp(single_vote, argv[j]) == 0)
@@ -89,7 +89,7 @@ int validate_input(int argc)
     return 0;
 }
 
-string get_valid_vote(string phrase)
+string get_valid_vote(int candidates, string phrase)
 {
     string valid_vote = '\0';
     int check;
