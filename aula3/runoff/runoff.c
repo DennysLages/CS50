@@ -149,6 +149,7 @@ void tabulate(void)
             if (candidates[preference[i][j]].bool == false )
             {
                 candidades[preference[i][j]].vote++;
+                j = candidate_count;
             }
         }
     }
