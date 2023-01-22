@@ -17,9 +17,16 @@ typedef struct
 candidate;
 
 int get_positive_int(string phrase);
+int validate_input(void);
 
 int main(int argc, string argv[])
 {
+    //0. Validate input
+    if(validate_input(argc) != 0)
+    {
+        return 1;
+    }
+
     //1. Create candidates profile with all names and assign start of 0 votes for everyone
     candidate candidates[argc - 1];
     for (int i = 0; i < argc - 1; i++)
@@ -70,6 +77,16 @@ int get_positive_int(string phrase)
     while(n < 1);
 
     return n;
+}
+
+int validate_input(int argc)
+{
+    if(argc == 1)
+    {
+        print("Usage: ./plurality list of candidate names\n");
+        return 1;
+    }
+    return 0;
 }
 /*
 for each vote , assign +1 to candidates.votes[i]
