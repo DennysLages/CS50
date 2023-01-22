@@ -41,7 +41,7 @@ int main(int argc, string argv[])
     //3. Assign votes to each candidate
     for (int i = 0; i < voters; i++)
     {
-        string single_vote = get_valid_vote(argc - 1, "Vote: ");
+        string single_vote = get_valid_vote(strlen(candidates), "Vote: ");
         for(int j = 1; j < argc; j++)
         {
             if(strcasecmp(single_vote, argv[j]) == 0)
