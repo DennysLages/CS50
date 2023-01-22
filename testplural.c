@@ -24,7 +24,8 @@ int main(int argc, string argv[])
         candidates[i].votes = 0;
     }
 
-    int voters = get_int("Number of voters: \n");
+    int voters = get_int("Number of voters: ");
+    printf("\n");
 
     for (int i = 0; i < voters; i++)
     {
