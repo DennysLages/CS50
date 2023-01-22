@@ -32,24 +32,24 @@ int main(int argc, string argv[])
         {
             if(strcasecmp(vote, argv[j]) == 0)
             {
-                candidates.votes++;
+                candidates[j].votes++;
             }
         }
         printf("\n");
     }
     // shold I declare its size than assign 1 values first ?
-    candidate winner[1];
-    winner[0] = candidates[0];
+    candidate winner;
+    winner = candidates[0];
 
     for (int i = 0; i < argc - 1; i++)
     {
-        if(candidates.votes[i + 1] > winner.votes)
+        if(candidates[i + 1].votes > winner.votes)
         {
-            winner.name = candidates.name[i + 1];
+            winner.name = candidates[i + 1].name;
         }
     }
 
-    printf("s%", candidates.name);
+    printf("s%", winner.name);
     return 0;
 }
 /*
