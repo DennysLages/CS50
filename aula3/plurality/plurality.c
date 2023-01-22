@@ -91,15 +91,16 @@ void print_winner(void)
         {
             if (candidates[i].votes < candidates[i + 1].votes)
             {
-                winner[i] = candidates[i + 1];
-                winner[i + 1] = candidates[i];
+                winner[0] = candidates[i + 1];
+                candidates[i + 1] = candidates[i];
+                candidates[i] = winner[0];
                 check++;
             }
-            else if (candidates[i].votes >= candidates[i + 1].votes)
+            /*else if (candidates[i].votes >= candidates[i + 1].votes)
             {
                 winner[i] = candidates[i];
                 winner[i + 1] = candidates[i + 1];
-            }
+            }*/
         }
     }
     while (check != 0);
