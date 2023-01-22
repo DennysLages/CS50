@@ -98,11 +98,13 @@ void print_winner(void)
     }
     while (check != 0);
 
-    for ()
-
-    printf("%s\n", winner.name);
+    printf("%s\n", winner[0].name);
+    for (int i = 0, winner[i] == winner[i + 1], i++)
+    {
+        printf("%s\n", winner[i].name);
+    }
 
     return;
 }
 
-Check all candidates,
+//Check all candidates,
