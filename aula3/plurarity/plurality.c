@@ -85,18 +85,20 @@ void print_winner(void)
 
     do
     {
-    int check = 0;
-    for (int i = 0; i < candidate_count - 1; i++)
-    {
-        if (candidates[i].votes < candidades[i + 1].votes)
+        int check = 0;
+        for (int i = 0; i < candidate_count - 1; i++)
         {
-            winner[i] = candidates[i + 1];
-            winner[i + 1] = candidates[i];
-            check++;
+            if (candidates[i].votes < candidades[i + 1].votes)
+            {
+                winner[i] = candidates[i + 1];
+                winner[i + 1] = candidates[i];
+                check++;
+            }
         }
     }
-    }
     while (check != 0);
+
+    for ()
 
     printf("%s\n", winner.name);
 
