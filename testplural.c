@@ -2,7 +2,6 @@
 #include <cs50.h>
 #include <strings.h>
 
-
 //single_vote >> string each vote
 //voters >> int # of voters
 //votes >> string # of votes to each candidate
