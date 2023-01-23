@@ -63,6 +63,8 @@ int main(int argc, string argv[])
         return 3;
     }
 
+    preferences[][] = '\0'; //Tudo para dar MERDA
+
     // Keep querying for votes
     for (int i = 0; i < voter_count; i++)
     {
