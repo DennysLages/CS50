@@ -142,6 +142,13 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
+    //For each round iteration candidate[i].votes needs to become 0 again;
+    //Room for improvement if you could only add from the eliminated candidates
+    for (int i = 0; i < candidate_count; i++)
+    {
+        candidates[i].votes = 0;
+    }
+
     // TODO : preference >> candidate[i].votes;
     for (int i = 0; i < voter_count; i++) //each voter
     {
@@ -180,11 +187,11 @@ bool print_winner(void)
     }
     while (check != 0);
 
-    for (int i = 0; candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false && candidates[i].votes / voter_count > 0.5)
         {
-            printf("%s\n", candidates[0].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
@@ -203,6 +210,7 @@ int find_min(void)
         if (candidates[i].eliminated == false)
         {
             min = candidates[i].votes;
+            i = -1;
         }
     }
 
