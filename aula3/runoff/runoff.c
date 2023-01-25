@@ -123,7 +123,7 @@ int main(int argc, string argv[])
         }
     }
     return 0;
-}
+} // END OF MAIN FUNCTION
 
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
