@@ -232,6 +232,9 @@ bool is_tie(int min)
             return false;
         }
     }
+
+    printf("All candidates have being eliminated");
+    return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
