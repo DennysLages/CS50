@@ -223,13 +223,15 @@ bool is_tie(int min)
     // TODO >> if candidates[i].votes == candidates[i + 1]
     for (int i = 0; candidate_count; i++)
     {
-        if (candidates[i].eliminated == false && candidates[i].votes == min)
+        if (candidates[i].eliminated == false)
         {
-            return true;
+            if (candidates[i].votes == min)
+            {
+                return true;
+            }
+            return false;
         }
     }
-
-    return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
