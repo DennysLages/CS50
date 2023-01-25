@@ -202,13 +202,13 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO >> take votes from last candidate on contest and return as min
-    int min_votes = candidate_count + 1;
+    int min = candidate_count + 1;
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidates[i].eliminated && candidates[i].votes < min_votes)
+        if (!candidates[i].eliminated && candidates[i].votes < min)
         {
-            min_votes = candidates[i].votes;
+            min = candidates[i].votes;
         }
     }
 
@@ -221,7 +221,7 @@ int find_min(void)
         }
     }*/
 
-    return min_votes;
+    return min;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
