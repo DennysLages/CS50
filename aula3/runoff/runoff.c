@@ -142,13 +142,6 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
-    //For each round iteration candidate[i].votes needs to become 0 again;
-    //Room for improvement if you could only add from the eliminated candidates
-    for (int i = 0; i < candidate_count; i++)
-    {
-        candidates[i].votes = 0;
-    }
-
     // TODO : preference >> candidate[i].votes;
     for (int i = 0; i < voter_count; i++) //each voter
     {
@@ -233,7 +226,7 @@ bool is_tie(int min)
         }
     }
 
-    printf("All candidates have being eliminated");
+    printf("All candidates have being eliminated"); //To check a bug
     return true;
 }
 
