@@ -204,7 +204,7 @@ int find_min(void)
     // TODO >> take votes from last candidate on contest and return as min
     int min = candidate_count + 1;
 
-    for (int i = 0; i < candidate_count - 1; i++)
+    /*for (int i = 0; i < candidate_count - 1; i++)
     {
         if ((!candidates[i].eliminated) && (candidates[i].votes < candidates[i + 1].votes))
         {
@@ -214,15 +214,15 @@ int find_min(void)
         {
             min = candidates[i + 1].votes;
         }
-    }
+    }*/
 
-    /*for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidates[i].eliminated && candidates[i].votes < min)
+        if ((!candidates[i].eliminated) && (candidates[i].votes < min))
         {
             min = candidates[i].votes;
         }
-    }*/
+    }
 
     /*for (int i = candidate_count - 1; i >= 0; i--)
     {
