@@ -160,7 +160,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    candidate winner[1];
+    /*candidate winner[1];
     winner[0] = candidates[0];
     int check;
 
@@ -184,15 +184,16 @@ bool print_winner(void)
     {
         printf("%s\n", candidates[0].name);
         return true;
-    }
-    /*for (int i = 0; i < candidate_count; i++)
+    }*/
+
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false && candidates[i].votes / voter_count > 0.5)
         {
             printf("%s\n", candidates[i].name);
             return true;
         }
-    }*/
+    }
 
     return false;
 }
@@ -203,14 +204,22 @@ int find_min(void)
     // TODO >> take votes from last candidate on contest and return as min
     int min = 0;
 
-    for (int i = candidate_count - 1; i >= 0; i--)
+    for (int = 0; candidate_count; i++)
+    {
+        if (!candidates[i].eliminated)
+        {
+            if (candid)
+        }
+    }
+
+    /*for (int i = candidate_count - 1; i >= 0; i--)
     {
         if (candidates[i].eliminated == false)
         {
             min = candidates[i].votes;
             i = -1;
         }
-    }
+    }*/
 
     return min;
 }
