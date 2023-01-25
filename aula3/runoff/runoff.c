@@ -230,8 +230,8 @@ bool is_tie(int min)
         //return false;
     }
 
-   // printf("All candidates have being eliminated"); //To check a bug
-    return false;
+    printf("All candidates have being eliminated"); //To check a bug
+    return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
