@@ -228,7 +228,7 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO >> after all rounds, check if it is tied. All candidates are ranked, meaning #rank = #candidates
-    for (int i = 0; candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false)
         {
