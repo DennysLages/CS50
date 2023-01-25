@@ -222,8 +222,8 @@ bool is_tie(int min)
             {
                 return true;
             }
-            return false;
         }
+        return false;
     }
 
    // printf("All candidates have being eliminated"); //To check a bug
