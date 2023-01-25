@@ -213,7 +213,7 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO >> after all rounds, check if it is tied
+    // TODO >> after all rounds, check if it is tied. All candidates are ranked, meaning #rank = #candidates
     for (int i = 0; candidate_count; i++)
     {
         if (candidates[i].eliminated == false)
