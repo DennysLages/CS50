@@ -222,16 +222,16 @@ bool is_tie(int min)
             {
                 return false;
             }
-            else if (candidates[i].votes == min)
+            /*else if (candidates[i].votes == min)
             {
                 return true;
-            }
+            }*/
         }
         //return false;
     }
 
     //printf("All candidates have being eliminated"); //To check a bug
-    //return true;
+    return true;
 }
 
 // Eliminate the candidate (or candidates) in last place
