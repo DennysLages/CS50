@@ -180,14 +180,19 @@ bool print_winner(void)
     }
     while (check != 0);
 
-    for (int i = 0; i < candidate_count; i++)
+    if (candidates[0].votes / voter_count > 0.5)
+    {
+        printf("%s\n", candidates[0].name);
+        return true;
+    }
+    /*for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false && candidates[i].votes / voter_count > 0.5)
         {
             printf("%s\n", candidates[i].name);
             return true;
         }
-    }
+    }*/
 
     return false;
 }
