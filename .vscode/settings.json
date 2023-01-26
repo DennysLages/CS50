@@ -5,6 +5,7 @@
         "typeinfo": "c",
         "random": "c",
         "limits": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "tuple": "c"
     }
 }
