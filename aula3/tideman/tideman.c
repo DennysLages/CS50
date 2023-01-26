@@ -202,7 +202,8 @@ void lock_pairs(void)
     {
         for (int j = 0; j < pairs_count; j++) //maybe
         {
-            if(pairs[i].loser != XXXX) //needs to add without creating any loop
+            //check in every pair if the loser on this iteration pair has already lost, ie, locked[i][j] become true
+            if(locked[pairs[i].loser][j] == false) //needs to add without creating any loop
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
             }
