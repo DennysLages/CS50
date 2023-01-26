@@ -200,13 +200,19 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pairs_count; i++)
     {
+        bool closed_loop = false;
         for (int j = 0; j < pairs_count; j++) //maybe
         {
-            //check in every pair if the loser cand on this iteration pair has already lost (or haven`t), ie, locked[loser][j] become true
-            if(locked[pairs[i].loser][j] == false) //needs to add without creating any loop
+            //check in every pair if the loser cand. on this iteration pair has already lost (or haven`t), ie, locked[loser][j] become true
+            //needs to be checked for all before change to true in i loop
+            if(locked[pairs[i].loser][j]) //needs to add without creating any loop (meaning it returns true)
             {
-                locked[pairs[i].winner][pairs[i].loser] = true;
+                closed_loop = true;
             }
+        }
+        if (!closed_loop)
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
     return;
