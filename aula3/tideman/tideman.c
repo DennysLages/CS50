@@ -216,6 +216,7 @@ void lock_pairs(void)
         }
     } // Pensar melhor, como checar se o loop concluiu.
     // Não considerar como perdedor, se não houver mais nenhum invicto.
+    // Olhar todos os candidatos, quando #loser for cand_count - 1, it is over.
     return;
 }
 
