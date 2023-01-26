@@ -207,17 +207,20 @@ void lock_pairs(void)
 
     for (int i = 0; i < pairs_count; i++)
     {
-        //bool closed_loop = false;
+        /*bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
-        {
+        {*/
             if (qty_losers < candidate_count)
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
-                if (!candidate_lost[pairs[i].loser])
+                if (!candidate_lost[pairs[i].loser]) // Will only enter here if it is 1st time losing
                 {
                     candidate_lost[pairs[i].loser] = true;
+                    qty_losers++;
                 }
             }
+            // check how many cand lost and input to qty_losers;
+
             //check in every pair if the loser cand. on this iteration pair has already lost (or haven`t), ie, locked[loser][j] become true
             //needs to be checked for all before change to true in i loop
             /*if(locked[pairs[i].loser][j]) //needs to add without creating any loop (meaning it returns true)
@@ -225,11 +228,11 @@ void lock_pairs(void)
                 closed_loop = true;
             }*/
 
-        }
+        /*}
         if (!closed_loop)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
-        }
+        }*/
     } // Pensar melhor, como checar se o loop concluiu.
     // Não considerar como perdedor, se não houver mais nenhum invicto.
     // Olhar todos os candidatos, quando #loser for cand_count - 1, it is over.
