@@ -209,7 +209,7 @@ void lock_pairs(void)
         //bool closed_loop = false;
         for (int j = 0; j < pairs_count; j++) //maybe
         {
-            if (!candidate_lost[pairs[i].loser])
+            if (candidate_lost[j] < candidate_count - 1)
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
             }
