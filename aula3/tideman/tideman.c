@@ -198,8 +198,8 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    bool candidate_lost[candidate_count];
-    int qty_losers = 0;
+    bool candidate_lost[candidate_count]; //To keep track who has lost
+    int qty_losers = 0; //To count how many has lost and stop before all lost
     for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
