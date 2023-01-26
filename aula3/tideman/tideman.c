@@ -151,6 +151,9 @@ void add_pairs(void)
                 for (int k; k < pair_count; k++)
                 {
                     if (pairs[k] != 0)
+                    {
+                        pairs[k].winner = i
+                    }
             }
     return;
 }
