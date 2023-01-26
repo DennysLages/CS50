@@ -201,7 +201,7 @@ void lock_pairs(void)
     for (int i = 0; i < pairs_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
-    }
+    } //needs to add without creating any loop
     return;
 }
 
