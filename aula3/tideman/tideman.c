@@ -200,9 +200,12 @@ void lock_pairs(void)
 {
     for (int i = 0; i < pairs_count; i++)
     {
-        if(pairs[i].loser != XXXX) //needs to add without creating any loop
+        for (int j = 0; j < pairs_count; j++) //maybe
         {
-            locked[pairs[i].winner][pairs[i].loser] = true;
+            if(pairs[i].loser != XXXX) //needs to add without creating any loop
+            {
+                locked[pairs[i].winner][pairs[i].loser] = true;
+            }
         }
     }
     return;
