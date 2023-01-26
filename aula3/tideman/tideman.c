@@ -210,9 +210,13 @@ void lock_pairs(void)
         //bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
         {
-            if ((qty_losers < candidate_count) && (candidate_lost[j] == false))
+            if (qty_losers < candidate_count)
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
+                if (!candidate_lost[pairs[i].loser])
+                {
+                    candidate_lost[pairs[i].loser] = true;
+                }
             }
             //check in every pair if the loser cand. on this iteration pair has already lost (or haven`t), ie, locked[loser][j] become true
             //needs to be checked for all before change to true in i loop
