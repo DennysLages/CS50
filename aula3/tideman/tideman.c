@@ -151,7 +151,7 @@ void add_pairs(void)
         {
             if ((i != j) && (preferences[i][j] > preferences[j][i]))
             {
-                for (int k; k < pair_count; k++)
+                for (int k = 0; k < pair_count; k++)
                 {
                     if (pairs[k] != 0)
                     {
@@ -163,7 +163,7 @@ void add_pairs(void)
             }
             else if ((i != j) && (preferences[i][j] < preferences[j][i]))
             {
-                for (int k; k < pair_count; k++)
+                for (int k = 0; k < pair_count; k++)
                 {
                     if (pairs[k] != 0)
                     {
@@ -183,7 +183,7 @@ void sort_pairs(void)
 {
     pair change[1];
 
-    for (int i; i < pair_count - 1; i++)
+    for (int i = 0; i < pair_count - 1; i++)
     {
         if ((pairs[i].winner - pairs[i].loser) < (pairs[i + 1].winner - pairs[i + 1].loser))
         {
@@ -198,7 +198,10 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // TODO
+    for (int i = 0; i < pairs_count; i++)
+    {
+        locked[pairs[i].winner][pairs[i].loser] = true;
+    }
     return;
 }
 
