@@ -115,21 +115,23 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     //preferences counts # of "wins" each candidate has 2 by 2 against other candidates
-    if (int k = 0; k < candidate_count; k++)
-    {
-        k[0] = 2 >> preferences[2][j] += 1; // Para todos menos o própro ranks[0]
-        k[1] = 0 >> preferences[0][j] += 1; // Menos para ranks[2 & 0] >> i = 2 & i = 0
+   /*k[0] = 2 >> preferences[2][j] += 1; // Para todos menos o própro ranks[0]
+   k[1] = 0 >> preferences[0][j] += 1; // Menos para ranks[2 & 0] >> i = 2 & i = 0*/
         //Percorrer j , aumentando todos menos rank[k passados] think merge sort
-        for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
         {
-            for (int j = 0; j < candidate_count; j++)
+            if (ranks[i] > ranks[j]) // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
             {
-                if (i  ranks[j]) // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
-                {
-                    preferences[rank[k]][j]++;
-                }
+                preferences[ranks[i]][ranks[j]]++;
+            }
+            else if (ranks[i] > ranks[j])
+            {
+                preferences[ranks[j]][ranks[i]]
             }
         }
+    }
     return;
 }
 
