@@ -214,7 +214,8 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
-    } // Pensar melhor, como checar se o loop concluiu
+    } // Pensar melhor, como checar se o loop concluiu.
+    // Não considerar como perdedor, se não houver mais nenhum invicto.
     return;
 }
 
