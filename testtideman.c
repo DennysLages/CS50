@@ -69,3 +69,8 @@ if ((i != j) && ( ))
 
 sort_pairs >> to get strengh of vote needs to look in preference, not pairs
 pairs only gives you final outcome of who has more votes 2by2
+
+
+Function lock_pairs
+Go pairs by pairs locking true , cmp winner,loser.
+Need to skip when finding last cand to lose
