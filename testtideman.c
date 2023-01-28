@@ -60,5 +60,6 @@ for (int i = 0; i < candidate_count; i++)
     }
 
 Function add_pairs
+if winner - loser != 0 , record pair[i]{winner,loser}
 
 
