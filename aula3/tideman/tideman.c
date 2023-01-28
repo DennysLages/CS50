@@ -126,23 +126,23 @@ void record_preferences(int ranks[])
         for (int j = 0; j < candidate_count; j++)
         {
             //inside preferences loop, para entrar no array ranks[]
-        for (int k = 0; k < candidates_count; k++)
-        {
-            if (candidate[i] == ranks[k])
+            for (int k = 0; k < candidates_count; k++)
             {
-                rank_i = k;
+                if (candidate[i] == ranks[k])
+                {
+                    rank_i = k;
+                }
             }
-        }
-        for (int k = 0; k < candidates_count; k++)
-        {
-            if (candidate[j] == ranks[k])
+            for (int k = 0; k < candidates_count; k++)
             {
-                rank_j = k;
+                if (candidate[j] == ranks[k])
+                {
+                    rank_j = k;
+                }
             }
-        }
-        
+
             // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
-            if (ranks[i] > ranks[j])
+            if (rank_i < rank_j)
             {
                 preferences[ranks[i]][ranks[j]]++;
             }
