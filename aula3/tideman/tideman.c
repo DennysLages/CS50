@@ -142,13 +142,13 @@ void record_preferences(int ranks[])
 
     if (i > j)
     {
-        
+
     }
 
         //inside preferences loop
         for (int k = 0; k < candidates_count; k++)
         {
-            if (candidate[k] == rank[i])
+            if (rank[i] == candidate[k])
             {
 
             }
