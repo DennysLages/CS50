@@ -62,5 +62,7 @@ for (int i = 0; i < candidate_count; i++)
 Function add_pairs
 preferences[i][j] can be used
 if winner - loser != 0 , record pair[i]{winner,loser}
+loop i
+loop j
 
 
