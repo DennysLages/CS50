@@ -215,11 +215,11 @@ void lock_pairs(void)
         {*/
             if (!candidate_lost[pairs[i].loser]) // 5.3 Will only enter here if it is 1st time losing
             {
-                candidate_lost[pairs[i].loser] = true;
                 qty_losers++;
 
                 if (qty_losers == candidate_count - 1)
                 {
+                    candidate_lost[pairs[i].loser] = true;
                     i++;
                 }
             }
