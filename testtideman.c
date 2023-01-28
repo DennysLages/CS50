@@ -22,3 +22,6 @@ i. candidate[k] (k)
 1. Alice (0)
 2. Charlie (2)
 3. Bob (1)
+
+i and j are to check inside ranks[]
+k is to compare and return the position of candidate[i]or[j]
