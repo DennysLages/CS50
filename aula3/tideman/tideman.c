@@ -157,24 +157,24 @@ void add_pairs(void)
             {
                 for (int k = 0; k < pair_count; k++)
                 {
-                    if (pairs[k] != 0)
-                    {
+                    //if (pairs[k] != 0) // Nao entendi o que seria
+                    //{
                         pairs[k].winner = i;
                         pairs[k].loser = j;
                         k = pair_count;
-                    }
+                    //}
                 }
             }
             else if ((i != j) && (preferences[i][j] < preferences[j][i]))
             {
                 for (int k = 0; k < pair_count; k++)
                 {
-                    if (pairs[k] != 0)
-                    {
+                    //if (pairs[k] != 0)
+                    //{
                         pairs[k].winner = j;
                         pairs[k].loser = i;
                         k = pair_count;
-                    }
+                    //}
                 }
             }
         }
@@ -209,7 +209,7 @@ void lock_pairs(void)
         candidate_lost[i] = false;
     }
 
-    for (int i = 0; i < pairs_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         /*bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
