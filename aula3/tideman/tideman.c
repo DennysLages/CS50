@@ -123,16 +123,18 @@ void record_preferences(int ranks[])
     //Need to go through each candidate and compare his position to next
     for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            //inside preferences loop, para entrar no array ranks[]
-            for (int k = 0; k < candidate_count; k++)
+        for (int k = 0; k < candidate_count; k++)
             {
                 if (i == ranks[k]) //i meaning candidate[i]
                 {
                     rank_i = k;
                 }
             }
+
+        for (int j = 0; j < candidate_count; j++)
+        {
+            //inside preferences loop, para entrar no array ranks[]
+
             for (int k = 0; k < candidate_count; k++)
             {
                 if (j == ranks[k])
