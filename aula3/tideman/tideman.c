@@ -128,6 +128,7 @@ void record_preferences(int ranks[])
                 if (i == ranks[k]) //i meaning candidate[i]
                 {
                     rank_i = k;
+                    k = candidate_count;
                 }
             }
 
@@ -140,6 +141,7 @@ void record_preferences(int ranks[])
                 if (j == ranks[k])
                 {
                     rank_j = k;
+                    k = candidate_count;
                 }
             }
 
