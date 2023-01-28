@@ -2,3 +2,8 @@
 //Meaning Rank 1 cmp to rank 2, 3
 //Rank 2 cmp rank 3
 //Always recording on preferences[rank[i]][rank[j]]
+
+for (int k = 0; k < candidate_count; k++)
+{
+    
+}
