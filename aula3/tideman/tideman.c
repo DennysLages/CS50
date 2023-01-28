@@ -26,6 +26,10 @@ pair pairs[MAX * (MAX - 1) / 2]; //C(Candidates) 2 by 2 = C!/((C-2)!*2!)
 int pair_count;
 int candidate_count;
 
+//Variables added by ME to be used on lock_pairs & print_winner
+bool candidate_lost[candidate_count]; //To keep track who has lost
+int qty_losers = 0; //To count how many has lost and stop before all lost
+
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
 void record_preferences(int ranks[]);
@@ -198,8 +202,6 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    bool candidate_lost[candidate_count]; //To keep track who has lost
-    int qty_losers = 0; //To count how many has lost and stop before all lost
     for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
