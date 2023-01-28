@@ -244,7 +244,7 @@ void print_winner(void)
 {
     for (int i = 0; i < pair_count; i++)
     {
-        
+        if (pairs[i])
     }
     return;
 }
