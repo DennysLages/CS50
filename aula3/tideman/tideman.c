@@ -148,7 +148,7 @@ void record_preferences(int ranks[])
             // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
             if (rank_i < rank_j)
             {
-                preferences[i][j]]++;
+                preferences[i][j]++;
             }
             /*else if (ranks[i] > ranks[j])
             {
