@@ -186,7 +186,7 @@ void sort_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
-        if ((preference[pairs[i].winner][pairs[i].loser] - ) < (pairs[i + 1].winner - pairs[i + 1].loser))
+        if ((preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]) < (preferences[pairs[i + 1].winner][pairs[i + 1].loser] - preferences[pairs[i + 1].loser][pairs[i + 1].winner]))
         {
             change[0] = pairs[i];
             pairs[i] = pairs[i + 1];
