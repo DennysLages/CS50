@@ -213,7 +213,7 @@ void lock_pairs(void)
         int qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
         for (int j = 0; j < candidate_count; j++)
         {
-            if (!candidate_lost)
+            if (!candidate_lost[j])
             {
                 qty_losers++;
             }
