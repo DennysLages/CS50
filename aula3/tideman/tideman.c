@@ -28,7 +28,7 @@ int candidate_count;
 
 //Variables added by ME to be used on lock_pairs & print_winner
 bool candidate_lost[MAX]; //To keep track who has lost
-int qty_losers = 0; //To count how many has lost and stop before all lost
+int qty_losers; //To count how many has lost and stop before all lost
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -202,7 +202,8 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    
+    //candidate_lost[candidate_count]; //To keep track who has lost
+    qty_losers = 0; //To count how many has lost and stop before all lost
     for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
@@ -245,9 +246,12 @@ void lock_pairs(void)
 // Print the winner of the election
 void print_winner(void)
 {
-    for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if (pairs[i])
+        if (candidate_lost[i] == false)
+        {
+            printf("%s\n", candidates[i]);
+        }
     }
     return;
 }
