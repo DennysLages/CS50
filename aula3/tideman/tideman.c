@@ -217,8 +217,13 @@ void lock_pairs(void)
             {
                 candidate_lost[pairs[i].loser] = true;
                 qty_losers++;
+
+                if (qty_losers = candidate_count - 1)
+                {
+                    i++;
+                }
             }
-            
+
             if (candidate_lost[pairs[i].loser])
             {
             locked[pairs[i].winner][pairs[i].loser] = true;
