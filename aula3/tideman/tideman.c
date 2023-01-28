@@ -211,12 +211,12 @@ void lock_pairs(void)
                     candidate_lost[pairs[i].loser] = true;
                     qty_losers++;
                 }
-
-                if (candidate_lost)
-                {
-                    locked[pairs[i].winner][pairs[i].loser] = true;
-                }
             }
+            if (candidate_lost)
+            {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+            }
+
             // check how many cand lost and input to qty_losers;
 
             //check in every pair if the loser cand. on this iteration pair has already lost (or haven`t), ie, locked[loser][j] become true
