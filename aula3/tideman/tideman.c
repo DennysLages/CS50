@@ -122,7 +122,8 @@ void record_preferences(int ranks[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (ranks[i] > ranks[j]) // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
+            // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
+            if (ranks[i] > ranks[j])
             {
                 preferences[ranks[i]][ranks[j]]++;
             }
