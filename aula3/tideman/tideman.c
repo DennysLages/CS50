@@ -150,7 +150,11 @@ void record_preferences(int ranks[])
             {
                 preferences[i][j]++;
             }
-            /*else if (ranks[i] > ranks[j])
+            /*if (ranks[i] < ranks[j])
+            {
+                preferences[ranks[i]][ranks[j]]++;
+            }
+            else if (ranks[i] > ranks[j])
             {
                 preferences[ranks[j]][ranks[i]]++;
             }
