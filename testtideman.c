@@ -1,3 +1,4 @@
+Function record_preferences
 //To record preferences checking by rank[] order
 //Meaning Rank 1 cmp to rank 2, 3
 //Rank 2 cmp rank 3
@@ -57,5 +58,7 @@ for (int i = 0; i < candidate_count; i++)
             }
         }
     }
+
+Function add_pairs
 
 

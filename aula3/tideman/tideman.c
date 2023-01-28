@@ -118,6 +118,7 @@ bool vote(int rank, string name, int ranks[])
 // 2. Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
+    // Look 1by1 on ranks[] twice (k & l), when meets searched candidate (i & j), add to correspond matrix[i][j] preferences
     for (int i = 0; i < candidate_count; i++)
     {
         for (int k = 0; k < candidate_count; k++)
@@ -148,51 +149,6 @@ void record_preferences(int ranks[])
             }
         }
     }
-    /*int rank_i;
-    int rank_j;
-    //Need to go through each candidate and compare his position to next
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int k = 0; k < candidate_count; k++)
-            {
-                if (i == ranks[k]) //i meaning candidate[i]
-                {
-                    rank_i = k;
-                    k = candidate_count;
-                }
-            }
-
-        for (int j = 0; j < candidate_count; j++)
-        {
-            //inside preferences loop, para entrar no array ranks[]
-
-            for (int k = 0; k < candidate_count; k++)
-            {
-                if (j == ranks[k])
-                {
-                    rank_j = k;
-                    k = candidate_count;
-                }
-            }
-
-            // tenho que olhar dentro do resultado de ranks para saber se a posicao (i) será menor (acima no rank) e somar voto em preferencias 2 a 2.
-            if (rank_i < rank_j)
-            {
-                preferences[i][j]++;
-            }
-            if (ranks[i] < ranks[j])
-            {
-                preferences[ranks[i]][ranks[j]]++;
-            }
-            else if (ranks[i] > ranks[j])
-            {
-                preferences[ranks[j]][ranks[i]]++;
-            }
-            else if (ranks[i] == ranks[j])
-            {
-                preferences[ranks[i]][ranks[j]] = 0;
-            }*/
-
     return;
 }
 
