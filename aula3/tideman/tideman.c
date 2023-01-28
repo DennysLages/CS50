@@ -126,9 +126,9 @@ void record_preferences(int ranks[])
         for (int j = 0; j < candidate_count; j++)
         {
             //inside preferences loop, para entrar no array ranks[]
-            for (int k = 0; k < candidates_count; k++)
+            for (int k = 0; k < candidate_count; k++)
             {
-                if (candidate[i] == ranks[k])
+                if (candidates[i] == ranks[k])
                 {
                     rank_i = k;
                 }
@@ -146,14 +146,14 @@ void record_preferences(int ranks[])
             {
                 preferences[ranks[i]][ranks[j]]++;
             }
-            else if (ranks[i] > ranks[j])
+            /*else if (ranks[i] > ranks[j])
             {
                 preferences[ranks[j]][ranks[i]]++;
             }
             else if (ranks[i] == ranks[j])
             {
                 preferences[ranks[i]][ranks[j]] = 0;
-            }
+            }*/
         }
     }
     return;
