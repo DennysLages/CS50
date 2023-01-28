@@ -227,7 +227,7 @@ void lock_pairs(void)
             }
 
 
-            else if (candidate_lost[pairs[i].loser])
+            if (candidate_lost[pairs[i].loser])
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
             }
