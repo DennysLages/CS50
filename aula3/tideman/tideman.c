@@ -184,7 +184,7 @@ void sort_pairs(void)
 {
     pair change[1];
 
-    for (int i = 0; i < pair_count - 1; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         if ((pairs[i].winner - pairs[i].loser) < (pairs[i + 1].winner - pairs[i + 1].loser))
         {
