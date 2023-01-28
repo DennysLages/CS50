@@ -169,6 +169,7 @@ void add_pairs(void)
                 //{
                         pairs[k].winner = i;
                         pairs[k].loser = j;
+                        k++;
                 //}
             }
             else if ((i != j) && (preferences[i][j] < preferences[j][i]))
@@ -177,9 +178,9 @@ void add_pairs(void)
                 //{
                         pairs[k].winner = j;
                         pairs[k].loser = i;
+                        k++;
                 //}
             }
-            k++;
         }
     }
     return;
