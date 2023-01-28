@@ -3,7 +3,10 @@
 //Rank 2 cmp rank 3
 //Always recording on preferences[rank[i]][rank[j]]
 
-for (int k = 0; k < candidate_count; k++)
+for (int i = 0; i < candidate_count; i++)
 {
-    
+    for (int j = 0; j < candidate_count; j++)
+    {
+        if (ranks[i])
+    }
 }
