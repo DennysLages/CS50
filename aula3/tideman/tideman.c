@@ -26,7 +26,7 @@ pair pairs[MAX * (MAX - 1) / 2]; //C(Candidates) 2 by 2 = C!/((C-2)!*2!)
 int pair_count;
 int candidate_count;
 
-//Variables added by ME to be used on lock_pairs & print_winner
+//0. Variables added by ME to be used on lock_pairs & print_winner
 bool candidate_lost[MAX]; //To keep track who has lost
 int qty_losers; //To count how many has lost and stop before all lost
 
@@ -101,7 +101,7 @@ int main(int argc, string argv[])
     return 0;
 } // END OF MAIN FUNCTION
 
-// Update ranks given a new vote
+// 1. Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
     for (int i = 0; i < candidate_count; i++)
@@ -115,13 +115,9 @@ bool vote(int rank, string name, int ranks[])
     return false;
 }
 
-// Update preferences given one voter's ranks
+// 2. Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    //preferences counts # of "wins" each candidate has 2 by 2 against other candidates
-    /*k[0] = 2 >> preferences[2][j] += 1; // Para todos menos o própro ranks[0]
-    k[1] = 0 >> preferences[0][j] += 1; // Menos para ranks[2 & 0] >> i = 2 & i = 0*/
-        //Percorrer j , aumentando todos menos rank[k passados] think merge sort
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -143,7 +139,7 @@ void record_preferences(int ranks[])
     return;
 }
 
-// Record pairs of candidates where one is preferred over the other
+// 3. Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
     //Get number of pairs depending #cand 2 by 2
@@ -182,7 +178,7 @@ void add_pairs(void)
     return;
 }
 
-// Sort pairs in decreasing order by strength of victory
+// 4. Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
     pair change[1];
@@ -199,11 +195,11 @@ void sort_pairs(void)
     return;
 }
 
-// Lock pairs into the candidate graph in order, without creating cycles
+// 5. Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    //candidate_lost[candidate_count]; //To keep track who has lost
-    qty_losers = 0; //To count how many has lost and stop before all lost
+    //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
+    qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
     for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
@@ -217,7 +213,7 @@ void lock_pairs(void)
             if (qty_losers < candidate_count - 1)
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
-                if (!candidate_lost[pairs[i].loser]) // Will only enter here if it is 1st time losing
+                if (!candidate_lost[pairs[i].loser]) // 5.3 Will only enter here if it is 1st time losing
                 {
                     candidate_lost[pairs[i].loser] = true;
                     qty_losers++;
@@ -243,7 +239,7 @@ void lock_pairs(void)
     return;
 }
 
-// Print the winner of the election
+// 6. Print the winner of the election
 void print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
