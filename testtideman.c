@@ -65,5 +65,5 @@ if winner - loser != 0 , record pair[i]{winner,loser}
 loop i
 loop j
 
-i != j &&
+if ((i != j) && ( ))
 
