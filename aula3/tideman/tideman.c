@@ -118,6 +118,7 @@ bool vote(int rank, string name, int ranks[])
 // 2. Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
+    //Need to go through each candidate and compare his position to next
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -138,6 +139,15 @@ void record_preferences(int ranks[])
         }
     }
     return;
+
+        //inside preferences loop
+        for (int k = 0; k < candidates_count; k++)
+        {
+            if (candidate[k] == rank[i])
+            {
+                
+            }
+        }
 }
 
 // 3. Record pairs of candidates where one is preferred over the other
