@@ -206,11 +206,15 @@ void lock_pairs(void)
         {*/
             if (qty_losers < candidate_count - 1)
             {
-                candidate_lost[pairs[i].loser] = true;
-                locked[pairs[i].winner][pairs[i].loser] = true;
                 if (!candidate_lost[pairs[i].loser]) // 5.3 Will only enter here if it is 1st time losing
                 {
+                    candidate_lost[pairs[i].loser] = true;
                     qty_losers++;
+                }
+
+                if (candidate_lost)
+                {
+                    locked[pairs[i].winner][pairs[i].loser] = true;
                 }
             }
             // check how many cand lost and input to qty_losers;
