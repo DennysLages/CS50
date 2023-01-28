@@ -6,6 +6,10 @@
         "random": "c",
         "limits": "c",
         "algorithm": "c",
-        "tuple": "c"
+        "tuple": "c",
+        "array": "c",
+        "memory": "c",
+        "functional": "c",
+        "utility": "c"
     }
 }
