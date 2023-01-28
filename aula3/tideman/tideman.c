@@ -28,7 +28,6 @@ int candidate_count;
 
 //0. Variables added by ME to be used on lock_pairs & print_winner
 bool candidate_lost[MAX]; //To keep track who has lost
-int qty_losers; //To count how many has lost and stop before all lost
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -202,7 +201,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
-    qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
+
     for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
@@ -210,10 +209,25 @@ void lock_pairs(void)
 
     for (int i = 0; i < pair_count; i++)
     {
+        //int qty_losers; //To count how many has lost and stop before all lost
+        int qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (!candidate_lost)
+            {
+                qty_losers++;
+            }
+
+            if (qty_losers < candidate_count - 1)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = true;
+                candidate_lost[pairs[i].loser] = true;
+            }
+        }
         /*bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
         {*/
-            if (candidate_lost[pairs[i].loser] == false && qty_losers < candidate_count - 1)
+            /*if (candidate_lost[pairs[i].loser] == false && qty_losers < candidate_count - 1)
             {
                     locked[pairs[i].winner][pairs[i].loser] = true;
             }
@@ -235,7 +249,7 @@ void lock_pairs(void)
             if (candidate_lost[pairs[i].loser])
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
-            }
+            }*/
 
             // check how many cand lost and input to qty_losers;
 

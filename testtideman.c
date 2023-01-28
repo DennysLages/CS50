@@ -78,6 +78,16 @@ Need to skip when finding last cand to lose
 Look every pairs and lock loser.
 if loser is false, check first if all others have lost already and skip 1 and did not lock true
 
-Only if 
+
+1o pair >>
+
+Rodar tds os candidate_lost e checar se tem +2 em disputa (false).
+Se tiver
 pairs[i].loser >> true
+candidate_lost[pairs[i].loser] = true
+
+Se n tiver (tem apenas 1 em disputa (true))
+i++; (Go to next pairs)
+
+
 
