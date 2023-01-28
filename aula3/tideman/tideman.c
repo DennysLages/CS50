@@ -145,12 +145,12 @@ void record_preferences(int ranks[])
 
     }
 
-        //inside preferences loop
+        //inside preferences loop, para entrar no array ranks[]
         for (int k = 0; k < candidates_count; k++)
         {
             if (candidate[i] == rank[k])
             {
-                
+
             }
         }
 }
