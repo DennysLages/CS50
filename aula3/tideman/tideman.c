@@ -147,7 +147,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     //Get number of pairs depending #cand 2 by 2
-    pair_count = (candidate_count * (candidate_count - 1)) / 2);
+    pair_count = (candidate_count * (candidate_count - 1)) / 2;
 
     for (int i = 0; i < candidate_count; i++)
     {
