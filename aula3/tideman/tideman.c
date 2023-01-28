@@ -212,7 +212,7 @@ void lock_pairs(void)
                     qty_losers++;
                 }
             }
-            if (candidate_lost)
+            if (candidate_lost[pairs[i].loser])
             {
             locked[pairs[i].winner][pairs[i].loser] = true;
             }
