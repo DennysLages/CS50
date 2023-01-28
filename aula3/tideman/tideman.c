@@ -158,6 +158,7 @@ void add_pairs(void)
     //Get number of pairs depending #cand 2 by 2
     pair_count = (candidate_count * (candidate_count - 1)) / 2;
 
+    int k = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -168,7 +169,6 @@ void add_pairs(void)
                 {
                         pairs[k].winner = i;
                         pairs[k].loser = j;
-                        k = pair_count;
                 }
             }
             else if ((i != j) && (preferences[i][j] < preferences[j][i]))
@@ -177,7 +177,7 @@ void add_pairs(void)
                 {
                         pairs[k].winner = j;
                         pairs[k].loser = i;
-                        k = pair_count;
+                        k++;
                 }
             }
         }
