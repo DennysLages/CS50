@@ -35,11 +35,9 @@ for (int i = 0; i < candidate_count; i++)
                 {
                     for (int j = 0; j < candidate_count; j++)
                     {
-                        //inside preferences loop, para entrar no array ranks[]
-
-                        for (int k = 0; k < candidate_count; k++)
+                        for (int l = 0; l < candidate_count; l++)
                         {
-                            if (j == ranks[k])
+                            if (j == ranks[l])
                             {
                                 rank_j = k;
                                 k = candidate_count;
@@ -52,5 +50,5 @@ for (int i = 0; i < candidate_count; i++)
                         }
             }
     }
-    
+
 
