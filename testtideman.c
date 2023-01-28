@@ -74,3 +74,6 @@ pairs only gives you final outcome of who has more votes 2by2
 Function lock_pairs
 Go pairs by pairs locking true , cmp winner,loser.
 Need to skip when finding last cand to lose
+
+Look every pairs and lock loser.
+if loser is false, check first if all others have lost already and skip 1
