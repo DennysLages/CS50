@@ -150,6 +150,13 @@ void record_preferences(int ranks[])
         {
             if (candidate[i] == rank[k])
             {
+                
+            }
+        }
+        for (int k = 0; k < candidates_count; k++)
+        {
+            if (candidate[j] == rank[k])
+            {
 
             }
         }
