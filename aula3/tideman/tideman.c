@@ -210,7 +210,7 @@ void lock_pairs(void)
         /*bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
         {*/
-            if (qty_losers < candidate_count)
+            if (qty_losers < candidate_count - 1)
             {
                 locked[pairs[i].winner][pairs[i].loser] = true;
                 if (!candidate_lost[pairs[i].loser]) // Will only enter here if it is 1st time losing
