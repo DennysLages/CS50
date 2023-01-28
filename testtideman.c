@@ -11,8 +11,14 @@ for (int i = 0; i < candidate_count; i++)
         {
             if (k == ranks[i])
             {
-                
+
             }
         }
     }
 }
+
+i. candidate[k] (k)
+
+1. Alice (0)
+2. Charlie (2)
+3. Bob (1)
