@@ -213,7 +213,7 @@ void lock_pairs(void)
         /*bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
         {*/
-            if (qty_loses < candidate_count - 1)
+            if (qty_losers < candidate_count - 1)
             {
                     locked[pairs[i].winner][pairs[i].loser] = true;
             }
@@ -225,7 +225,7 @@ void lock_pairs(void)
                     candidate_lost[pairs[i].loser] = true;
                     qty_losers++;
                 }
-                else if (qty_loses = candidate_count - 1)
+                else if (qty_losers == candidate_count - 1)
                 {
                     i++;
                 }
