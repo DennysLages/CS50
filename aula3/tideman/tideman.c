@@ -156,24 +156,23 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     //Get number of pairs depending #cand 2 by 2
-    pair_count = (candidate_count * (candidate_count - 1)) / 2;
+    pair_count = 0;
 
-    int k = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
             {
-                        pairs[k].winner = i;
-                        pairs[k].loser = j;
-                        k++;
+                        pairs[pair_count].winner = i;
+                        pairs[pair_count].loser = j;
+                        pair_count++;
             }
             else if (preferences[i][j] < preferences[j][i])
             {
-                        pairs[k].winner = j;
-                        pairs[k].loser = i;
-                        k++;
+                        pairs[pair_count].winner = j;
+                        pairs[pair_count].loser = i;
+                        pair_count++;
             }
         }
     }
