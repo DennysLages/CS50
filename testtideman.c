@@ -76,4 +76,4 @@ Go pairs by pairs locking true , cmp winner,loser.
 Need to skip when finding last cand to lose
 
 Look every pairs and lock loser.
-if loser is false, check first if all others have lost already and skip 1
+if loser is false, check first if all others have lost already and skip 1 and did not lock true
