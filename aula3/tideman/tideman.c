@@ -213,13 +213,13 @@ void lock_pairs(void)
         int qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
         for (int j = 0; j < candidate_count; j++)
         {
-            if (!candidate_lost[j])
-            {
-                qty_losers++;
-            }
-
             if (qty_losers < candidate_count - 1)
             {
+                if (!candidate_lost[pairs[i].loser])
+                {
+                    qty_losers++;
+                }
+                
                 locked[pairs[i].winner][pairs[i].loser] = true;
                 candidate_lost[pairs[i].loser] = true;
             }

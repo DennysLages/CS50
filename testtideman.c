@@ -89,5 +89,25 @@ candidate_lost[pairs[i].loser] = true
 Se n tiver (tem apenas 1 em disputa (true))
 i++; (Go to next pairs)
 
+Locked trava o pairs, não o loser
 
+Go through each pairs, locked [i][j] (there will be pairs that do not exist)
+check if there is a pair for this match locked[i][j]
+loop k & l
+loop i
+loop k
+if pairs[k].winner == i
+{
+loop j
+loop l
+if pairs[l].loser == j
+{
+    
+}
+}
+check if candidade_lost[pairs[i].loser] is true
+if no,
+locked pairs & make candidade_lost[pairs[i].loser] true
+
+if yes,
 
