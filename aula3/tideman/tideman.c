@@ -203,7 +203,6 @@ void lock_pairs(void)
     int qty_losers = 0;
 
     //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
-
     for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
