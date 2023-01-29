@@ -201,6 +201,14 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     int qty_losers = 0;
+
+    //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        candidate_lost[i] = false;
+    }
+
     for (int k = 0; k < pair_count; k++)
     {
         for (int i = 0; i < candidate_count; i++)
@@ -226,14 +234,9 @@ void lock_pairs(void)
             }
         }
     }
-    //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
 
-    /*for (int i = 0; i < candidate_count; i++)
-    {
-        candidate_lost[i] = false;
-    }
 
-    for (int i = 0; i < pair_count; i++)
+    /*for (int i = 0; i < pair_count; i++)
     {
         //int qty_losers; //To count how many has lost and stop before all lost
         int qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
