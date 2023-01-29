@@ -93,16 +93,19 @@ Locked trava o pairs, não o loser
 
 Go through each pairs, locked [i][j] (there will be pairs that do not exist)
 check if there is a pair for this match locked[i][j]
-loop k & l
-loop i
+
 loop k
+loop i
 if pairs[k].winner == i
 {
 loop j
-loop l
-if pairs[l].loser == j
+if pairs[k].loser == j
 {
-    
+    locked[i][j] = true;
+    if candidade_lost[j]
+    {
+        
+    }
 }
 }
 check if candidade_lost[pairs[i].loser] is true
