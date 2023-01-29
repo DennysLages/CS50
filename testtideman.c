@@ -101,13 +101,17 @@ if pairs[k].winner == i
 loop j
 if pairs[k].loser == j
 {
-    locked[i][j] = true;
-    if (!candidade_lost[j] && qty_losers < candidate_count - 1)
+    if (!candidate_lost[j] && qty_losers < candidate_count - 1)
     {
         candidade_lost[pairs[i].loser] = true
         qty_losers++;
     }
-    quero locked mas 1o confirmar se n é o último lost
+
+    if (candidate_lost[j]) //can be done after checking and converting candidate_lost to true
+    {
+        locked[i][j] = true;
+    }
+    quero locked mas 1o confirmar se n é o último lost ou se candidate_lost pode ser transformado em true
     * quero lost = true mas 1o confirmar se n é o último lost
     quero que locked possa ser feito sem que obrigatório o lost estar false
 }
