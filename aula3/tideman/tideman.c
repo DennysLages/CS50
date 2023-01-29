@@ -205,7 +205,7 @@ void lock_pairs(void)
     {
         for (int i = 0; i < candidate_count; i++)
         {
-            if (pairs[k].winner = i)
+            if (pairs[k].winner == i)
             {
                 for (int j = 0; j < candidate_count; j++)
                 {
@@ -291,7 +291,7 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }*/
-    } // Pensar melhor, como checar se o loop concluiu.
+    // Pensar melhor, como checar se o loop concluiu.
     // Não considerar como perdedor, se não houver mais nenhum invicto.
     // Olhar todos os candidatos, quando #loser for cand_count - 1, it is over.
     return;
