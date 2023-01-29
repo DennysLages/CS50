@@ -234,68 +234,6 @@ void lock_pairs(void)
         }
     }
 
-
-    /*for (int i = 0; i < pair_count; i++)
-    {
-        //int qty_losers; //To count how many has lost and stop before all lost
-        int qty_losers = 0; // 5.2 To count how many has lost and stop before all lost
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (qty_losers < candidate_count - 1)
-            {
-                if (!candidate_lost[pairs[i].loser])
-                {
-                    qty_losers++;
-                }
-
-                locked[pairs[i].winner][pairs[i].loser] = true;
-                candidate_lost[pairs[i].loser] = true;
-            }
-        }*/
-        /*bool closed_loop = false;
-        for (int j = 0; j < candidate_count; j++) //maybe
-        {*/
-            /*if (candidate_lost[pairs[i].loser] == false && qty_losers < candidate_count - 1)
-            {
-                    locked[pairs[i].winner][pairs[i].loser] = true;
-            }
-
-            if (!candidate_lost[pairs[i].loser]) // 5.3 Will only enter here if it is 1st time losing
-            {
-                if (qty_losers < candidate_count - 1)
-                {
-                    candidate_lost[pairs[i].loser] = true;
-                    qty_losers++;
-                }
-                else if (qty_losers == candidate_count - 1)
-                {
-                    i++;
-                }
-            }
-
-
-            if (candidate_lost[pairs[i].loser])
-            {
-                locked[pairs[i].winner][pairs[i].loser] = true;
-            }*/
-
-            // check how many cand lost and input to qty_losers;
-
-            //check in every pair if the loser cand. on this iteration pair has already lost (or haven`t), ie, locked[loser][j] become true
-            //needs to be checked for all before change to true in i loop
-            /*if(locked[pairs[i].loser][j]) //needs to add without creating any loop (meaning it returns true)
-            {
-                closed_loop = true;
-            }*/
-
-        /*}
-        if (!closed_loop)
-        {
-            locked[pairs[i].winner][pairs[i].loser] = true;
-        }*/
-    // Pensar melhor, como checar se o loop concluiu.
-    // Não considerar como perdedor, se não houver mais nenhum invicto.
-    // Olhar todos os candidatos, quando #loser for cand_count - 1, it is over.
     return;
 }
 
