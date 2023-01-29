@@ -102,10 +102,14 @@ loop j
 if pairs[k].loser == j
 {
     locked[i][j] = true;
-    if (!candidade_lost[j])
+    if (!candidade_lost[j] && qty_losers < candidate_count - 1)
     {
         candidade_lost[pairs[i].loser] = true
+        qty_losers++;
     }
+    quero locked mas 1o confirmar se n é o último lost
+    * quero lost = true mas 1o confirmar se n é o último lost
+    quero que locked possa ser feito sem que obrigatório o lost estar false
 }
 }
 check if candidade_lost[pairs[i].loser] is true
