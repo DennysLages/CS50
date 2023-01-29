@@ -200,9 +200,10 @@ void sort_pairs(void)
 // 5. Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
+    for (int k = 0; k < candidate)
     //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
 
-    for (int i = 0; i < candidate_count; i++)
+    /*for (int i = 0; i < candidate_count; i++)
     {
         candidate_lost[i] = false;
     }
@@ -219,11 +220,11 @@ void lock_pairs(void)
                 {
                     qty_losers++;
                 }
-                
+
                 locked[pairs[i].winner][pairs[i].loser] = true;
                 candidate_lost[pairs[i].loser] = true;
             }
-        }
+        }*/
         /*bool closed_loop = false;
         for (int j = 0; j < candidate_count; j++) //maybe
         {*/
