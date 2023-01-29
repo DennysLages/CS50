@@ -102,9 +102,9 @@ loop j
 if pairs[k].loser == j
 {
     locked[i][j] = true;
-    if candidade_lost[j]
+    if (!candidade_lost[j])
     {
-        
+        candidade_lost[pairs[i].loser] = true
     }
 }
 }
