@@ -261,10 +261,10 @@ void lock_pairs(void)
                             locked[i][j] = true;
                         }
 
-                        /*if (i == j)
-                        {
-                            locked[i][j] = true;
-                        }*/
+                        //if (i == j)
+                        //{
+                            //locked[i][j] = true;
+                        //}
                     }
                 }
             }
