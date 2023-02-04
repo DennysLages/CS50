@@ -36,7 +36,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-//bool cycle_checker(int, int);
+bool cycle_checker(int, int);
 
 int main(int argc, string argv[])
 {
@@ -199,7 +199,7 @@ void sort_pairs(void)
 }
 
 //5.0 Checks for cycles in the graph
-/*bool cycle_checker(int w, int l)
+bool cycle_checker(int w, int l)
 {
     if (w == l)
     {
@@ -217,12 +217,12 @@ void sort_pairs(void)
         }
     }
     return false;
-}*/
+}
 
 // 5. Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    /*for (int i = 0; i < pair_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         if (!cycle_checker(pairs[i].winner, pairs[i].loser))
         {
@@ -230,9 +230,9 @@ void lock_pairs(void)
         }
     }
 
-    return;*/
+    return;
 
-    int qty_losers = 0;
+    /*int qty_losers = 0;
 
     //candidate_lost[candidate_count]; // 5.1 To keep track who has lost
     for (int i = 0; i < candidate_count; i++)
@@ -261,17 +261,17 @@ void lock_pairs(void)
                             locked[i][j] = true;
                         }
 
-                        if (i == j)
+                        /*if (i == j)
                         {
                             locked[i][j] = true;
-                        }
+                        }*/
                     }
                 }
             }
         }
     }
 
-    return;
+    return;*/
 }
 
 // 6. Print the winner of the election
