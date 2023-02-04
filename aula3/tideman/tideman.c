@@ -201,10 +201,10 @@ void sort_pairs(void)
 //5.0 Checks for cycles in the graph
 bool cycle_checker(int w, int l)
 {
-    /*if (w == l)
+    if (w == l)
     {
         return true;
-    }*/
+    }
 
     for (int i = 0; i < candidate_count; i++)
     {
@@ -222,7 +222,7 @@ bool cycle_checker(int w, int l)
 // 5. Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    int count_false;
+    //int count_false;
     for (int i = 0; i < pair_count; i++)
     {
         if (!cycle_checker(pairs[i].winner, pairs[i].loser))
