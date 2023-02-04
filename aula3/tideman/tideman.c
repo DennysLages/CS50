@@ -218,7 +218,7 @@ void lock_pairs(void)
                 {
                     if (pairs[k].loser == j)
                     {
-                        if (!candidate_lost[j] && qty_losers < candidate_count - 1)
+                        if (!candidate_lost[j] && i != j && qty_losers < candidate_count - 1)
                         {
                             candidate_lost[j] = true;
                             qty_losers++;
