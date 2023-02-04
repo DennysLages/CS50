@@ -203,7 +203,7 @@ bool cycle_checker(int w, int l)
 {
     if (w == l)
     {
-        return true;
+        return true; //if closing loop and return to same candidate (original winner), it configures a loop and exit to lock original pairs.
     }
 
     for (int i = 0; i < candidate_count; i++)
