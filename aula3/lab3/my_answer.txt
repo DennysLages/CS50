@@ -1,0 +1,24 @@
+reverser than sorted
+
+sort1 - bubble
+real    0m6.474s
+user    0m5.489s
+sys     0m0.176s
+
+real    0m1.002s
+user    0m0.042s
+sys     0m0.157s
+
+sort2 - merge
+real    0m1.067s
+user    0m0.032s
+sys     0m0.172s
+
+sort3 - selection
+real    0m4.135s
+user    0m3.064s
+sys     0m0.174s
+
+real    0m3.912s
+user    0m2.854s
+sys     0m0.164s
