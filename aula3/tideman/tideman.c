@@ -208,7 +208,7 @@ bool cycle_checker(int w, int l)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[l][i] == true) //Where the loser has already a locked arrow, check if the winner close loop  with any other candidate has already lost to someone, enter.
+        if (locked[l][i] == true) //Where the loser has already a locked arrow, check if the winner close loop with following loser.
         {
             if (cycle_checker(w, i)) //Check winner against loser from the loser,
 
