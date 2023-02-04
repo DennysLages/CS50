@@ -201,10 +201,10 @@ void sort_pairs(void)
 //5.0 Checks for cycles in the graph
 bool cycle_checker(int w, int l)
 {
-    if (w == l)
+    /*if (w == l)
     {
         return true;
-    }
+    }*/
 
     for (int i = 0; i < candidate_count; i++)
     {
