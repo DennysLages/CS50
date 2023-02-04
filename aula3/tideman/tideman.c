@@ -208,7 +208,7 @@ bool cycle_checker(int w, int l)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (locked[l][i] == true)
+        if (locked[l][i] == true) //If loser with any other candidate has already lost to someone, enter.
         {
             if (cycle_checker(w, i))
             {
