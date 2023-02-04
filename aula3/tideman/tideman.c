@@ -210,7 +210,7 @@ bool cycle_checker(int w, int l)
     {
         if (locked[l][i] == true) //If loser with any other candidate has already lost to someone, enter.
         {
-            if (cycle_checker(w, i)) //Check winner against loser from the loser, 
+            if (cycle_checker(w, i)) //Check winner against loser from the loser,
             {
                 return true;
             }
@@ -260,11 +260,6 @@ void lock_pairs(void)
                         {
                             locked[i][j] = true;
                         }
-
-                        //if (i == j)
-                        //{
-                            //locked[i][j] = true;
-                        //}
                     }
                 }
             }
