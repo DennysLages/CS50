@@ -211,7 +211,7 @@ bool cycle_checker(int w, int l)
         if (locked[l][i] == true) //Where the loser has already a locked arrow, check if the winner close loop with following loser.
         {
             if (cycle_checker(w, i)) //Check winner against loser from the loser,
-
+            {
                 return true;
             }
         }
