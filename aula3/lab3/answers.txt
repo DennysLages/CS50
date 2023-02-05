@@ -8,4 +8,4 @@ How do you know?: Has shortest time on reverse lists
 
 sort3 uses: selection
 
-How do you know?: TODO
+How do you know?: Long time no matter which list
