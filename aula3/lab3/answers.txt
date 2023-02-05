@@ -1,10 +1,10 @@
 sort1 uses: bubble
 
-How do you know?: TODO
+How do you know?: Has time comparable with merge sort on sorted lists
 
 sort2 uses: merge
 
-How do you know?: TODO
+How do you know?: Has shortest time on reverse lists
 
 sort3 uses: selection
 
