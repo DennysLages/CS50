@@ -14,5 +14,5 @@
     },
     "editor.guides.bracketPairs": false,
     "editor.guides.indentation": true,
-    "editor.foldingStrategy": "indentation"
+    "editor.foldingStrategy": "auto"
 }
