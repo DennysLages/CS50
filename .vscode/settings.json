@@ -13,5 +13,6 @@
         "utility": "c"
     },
     "editor.guides.bracketPairs": false,
-    "editor.guides.indentation": true
+    "editor.guides.indentation": true,
+    "editor.foldingStrategy": "indentation"
 }
