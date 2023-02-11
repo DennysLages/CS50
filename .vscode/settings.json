@@ -11,5 +11,6 @@
         "memory": "c",
         "functional": "c",
         "utility": "c"
-    }
+    },
+    "editor.guides.bracketPairs": true
 }
