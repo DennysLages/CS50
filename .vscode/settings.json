@@ -12,5 +12,6 @@
         "functional": "c",
         "utility": "c"
     },
-    "editor.guides.bracketPairs": true
+    "editor.guides.bracketPairs": false,
+    "editor.guides.indentation": false
 }
