@@ -13,5 +13,5 @@
         "utility": "c"
     },
     "editor.guides.bracketPairs": false,
-    "editor.guides.indentation": false
+    "editor.guides.indentation": true
 }
