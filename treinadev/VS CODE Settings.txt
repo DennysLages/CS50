@@ -1,0 +1,4 @@
+VS CODE Settings.txt
+
+Colocar cores no icone dos arquivos de acordo com a linguagem
+Definir Quais extensões estaram ativas de acordo com a linguagem
