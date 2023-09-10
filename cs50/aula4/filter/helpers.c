@@ -1,6 +1,6 @@
 #include "helpers.h"
 
-copy(int *a, int *b)
+copy(int *a, BYTE *b)
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -16,9 +16,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for(int w = 0, w < width, w++)
         {
             int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
-            copy(&avrg, &image[h][w].rgbtBlue);
-            copy(&avrg, &image[h][w].rgbtGreen);
-            copy(&avrg, &image[h][w].rgbtRed);
+            copy(&avrg, &image[h][w]);
+            // copy(&avrg, &image[h][w].rgbtGreen);
+            // copy(&avrg, &image[h][w].rgbtRed);
             // image[h][w].rgbtBlue = avrg;
             // image[h][w].rgbtGreen = avrg;
             // image[h][w].rgbtRed = avrg;
@@ -52,7 +52,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void copy(int *avrg, int *rgbt)
+void copy(int *avrg, BYTE *rgbt)
 {
-    *rgbt = *avrg;
+    *rgbt.rgbtBlue = *avrg;
+    *rgbt.rgbtGreen = *avrg;
+    *rgbt.rgbtRed = *avrg;
 }
