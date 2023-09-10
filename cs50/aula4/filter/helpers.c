@@ -60,6 +60,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE row_blur[width];
     RGBTRIPLE column_blur[height];
+    RGBTRIPLE avrg_blur;
     RGBTRIPLE group_blur[2][2];
     int h = height;
 
@@ -68,14 +69,27 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    blur(h-1, width-1, image);
-    h=2;
-    w=2;
-
-    for(i = 0; i < 2, i++)
+    blur(int h-1, width-1, image);
+    // h=2;
+    // w=2;
+    for(int w = 0; w < width; w++)
     {
+        avrg_blur.rgbtBlue = 0; avrg_blur.rgbtGreen = 0; avrg_blur.rgbtRed = 0; //Setting zero to start a new group
 
+        for(int i = 0; i < 2; i++)
+        {
+            for(int j=0; j < 2; j++)
+            {
+                avrg_blur.rgbtBlue += image[h][w];
+                avrg_blur.rgbtGreen += image[h][w];
+                avrg_blur.rgbtRed += image[h][w];
+            }
+        }
+        avrg_blur.rgbtBlue = round(avrg_blur.rgbtBlue / 9);
+        avrg_blur.rgbtGreen = round(avrg_blur.rgbtGreen / 9);
+        avrg_blur.rgbtRed = round(avrg_blur.rgbtRed / 9);
     }
+    image[h][w] = avrg_blur; // Should be copy in entire row at once ?s
 
     return;
 }
