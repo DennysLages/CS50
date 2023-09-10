@@ -17,6 +17,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         {
             int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
             copy(&avrg, &image[h][w].rgbtBlue);
+            copy(&avrg, &image[h][w].rgbtGreen);
+            copy(&avrg, &image[h][w].rgbtRed);
             // image[h][w].rgbtBlue = avrg;
             // image[h][w].rgbtGreen = avrg;
             // image[h][w].rgbtRed = avrg;
@@ -52,7 +54,5 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 void copy(int *avrg, int *rgbt)
 {
-    tmp = *a;
-    *a = *b;
-    *b = tmp;
+    *rgbt = *avrg;
 }
