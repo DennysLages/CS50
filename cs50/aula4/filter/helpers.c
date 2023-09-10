@@ -1,8 +1,6 @@
 #include "helpers.h"
-#include "stdio.h"
-#include "math.h"
-
-void copying(DWORD avrg, RGBTRIPLE *rgbt);
+// #include "stdio.h"
+// #include "math.h"
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -50,20 +48,3 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
 }
-
-// void copying(DWORD avrg, RGBTRIPLE *rgbt)
-// {
-//     // *rgbt = *avrg;
-//     *rgbt.rgbtBlue = avrg;
-//     *rgbt.rgbtGreen = avrg;
-//     *rgbt.rgbtRed = avrg;
-// }
-
-// int averageBYTE(BYTE a, BYTE b, BYTE c)
-// {
-//     avrg = 0;
-//     for(int i = 0; i < strlen(BYTE); i++)
-// }
-
-
-// THINK ABOUT IT bf.bfType != 0x4d42
