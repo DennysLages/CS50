@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtRed = round(avrg_Red / 6);
             }
 
-            if (h == height)
+            if (h == height-1)
             {
                     for(int i = -1; i < 0; i++)
                     {
