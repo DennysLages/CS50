@@ -88,8 +88,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         avrg_blur.rgbtBlue = round(avrg_blur.rgbtBlue / 9);
         avrg_blur.rgbtGreen = round(avrg_blur.rgbtGreen / 9);
         avrg_blur.rgbtRed = round(avrg_blur.rgbtRed / 9);
+
+        image[h][w] = avrg_blur; // Should be copy in entire row at once ?s
     }
-    image[h][w] = avrg_blur; // Should be copy in entire row at once ?s
 
     return;
 }
