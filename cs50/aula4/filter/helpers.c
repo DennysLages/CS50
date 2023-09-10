@@ -8,30 +8,27 @@ void copying(DWORD avrg, RGBTRIPLE *rgbt);
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     int h = height;
-    
+    int avrg = 0;
+
     if(h == 0)
     {
         return;
     }
 
-    int avrg = 0;
-
-    for(int h = 0; h < height; h++)
+    grayscale(h-1, width, image);
+    for(int w = 0; w < width; w++)
     {
-        for(int w = 0; w < width; w++)
-        {
-            avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
-            image[h][w].rgbtBlue = avrg;
-            image[h][w].rgbtGreen = avrg;
-            image[h][w].rgbtRed = avrg;
-        }
+        avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
+        image[h][w].rgbtBlue = avrg;
+        image[h][w].rgbtGreen = avrg;
+        image[h][w].rgbtRed = avrg;
     }
 
     //grayscale(h, width, image);
-    printf("%i\n", image[height-1][width-1].rgbtBlue);
-    printf("%i\n", image[height-1][width-1].rgbtGreen);
-    printf("%i\n", image[height-1][width-1].rgbtRed);
-    printf("%i\n", avrg);
+    // printf("%i\n", image[height-1][width-1].rgbtBlue);
+    // printf("%i\n", image[height-1][width-1].rgbtGreen);
+    // printf("%i\n", image[height-1][width-1].rgbtRed);
+    // printf("%i\n", avrg);
 
     return;
 }
