@@ -1,5 +1,6 @@
 #include "helpers.h"
 #include "stdio.h"
+#include "math.h"
 
 void copying(DWORD avrg, RGBTRIPLE *rgbt);
 
@@ -12,12 +13,14 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         return;
     }*/
 
-            int avrg = (image[0][0].rgbtBlue + image[0][0].rgbtGreen + image[0][0].rgbtRed) / 3; // it will colapse 255 byte of 8 bits. need a long byte, if it exists.
-    /*for(int h = 0; h < height; h++)
+    int avrg = 0;
+
+            // int avrg = round((image[0][0].rgbtBlue + image[0][0].rgbtGreen + image[0][0].rgbtRed)) / 3; // it will colapse 255 byte of 8 bits. need a long byte, if it exists.
+    for(int h = 0; h < height; h++)
     {
         for(int w = 0; w < width; w++)
         {
-            int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3; // it will colapse 255 byte of 8 bits. need a long byte, if it exists.
+            avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3; // it will colapse 255 byte of 8 bits. need a long byte, if it exists.
             // copying(avrg, &image[h][w]);
             // copy(&avrg, &image[h][w].rgbtGreen);
             // copy(&avrg, &image[h][w].rgbtRed);
@@ -29,12 +32,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             //w++;
         }
         //h++;
-    }*/
+    }
 
     //grayscale(h, width, image);
-    printf("%i\n", image[0][0].rgbtBlue);
-    printf("%i\n", image[0][0].rgbtGreen);
-    printf("%i\n", image[0][0].rgbtRed);
+    printf("%i\n", image[height-1][width-1].rgbtBlue);
+    printf("%i\n", image[height-1][width-1].rgbtGreen);
+    printf("%i\n", image[height-1][width-1].rgbtRed);
     printf("%i\n", avrg);
 
     return;
