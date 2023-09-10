@@ -73,7 +73,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    blur(h-1, width, image);
+    //blur(h-1, width, image); It can`t be recursive because everytime you call it, it will have a new height, then changing boudaries.
 
     for(int w = 0; w < width; w++)
     {
