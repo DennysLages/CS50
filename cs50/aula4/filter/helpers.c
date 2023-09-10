@@ -1,6 +1,6 @@
 #include "helpers.h"
 
-copying(int *avrg, BYTE *rgbt)
+void copying(int *avrg, BYTE *rgbt);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
