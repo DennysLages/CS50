@@ -3,7 +3,14 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    while()
+    h = 0;
+    w = 0;
+    while(h < heigh; h++)
+    {
+        while(w < width, w++)
+        {
+            image[h][w].rgbt
+        }
     return;
 }
 
