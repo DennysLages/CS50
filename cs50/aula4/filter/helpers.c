@@ -1,17 +1,18 @@
 #include "helpers.h"
 
+swap()
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    int h = 0;
-    int w = 0;
-    if(h > height)
+    //int h = 0;
+    /*if(h > height)
     {
         return;
-    }
+    }*/
 
-    /*while(h < height)
-    {*/
+    for(int h = 0, h < height, h++)
+    {
         for(int w = 0, w < width, w++)
         {
             int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
@@ -22,8 +23,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             //Need to change data in image.rgbt, not to be lost. Maybe use pointers somehow.
             //w++;
         }
-        h++;
-    //}
+        //h++;
+    }
 
     //grayscale(h, width, image);
 
