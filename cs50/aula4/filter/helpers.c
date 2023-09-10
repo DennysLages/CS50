@@ -85,9 +85,26 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for(int j=-1; j < 1; j++)
                     {
-                        avrg_Blue = image[h][w].rgbtBlue;
-                        avrg_Green = image[h][w].rgbtGreen;
-                        avrg_Red = image[h][w].rgbtRed;
+                        avrg_Blue += image[h+i][w+j].rgbtBlue;
+                        avrg_Green += image[h+i][w+j].rgbtGreen;
+                        avrg_Red += image[h+i][w+j].rgbtRed;
+                    }
+                }
+
+        image[h][w].rgbtBlue = round(avrg_Blue / 6);
+        image[h][w].rgbtGreen = round(avrg_Green / 6);
+        image[h][w].rgbtRed = round(avrg_Red / 6);
+        }
+
+        if (h == height)
+        {
+                for(int i = -1; i < 0; i++)
+                {
+                    for(int j=-1; j < 1; j++)
+                    {
+                        avrg_Blue += image[h+i][w+j].rgbtBlue;
+                        avrg_Green += image[h+i][w+j].rgbtGreen;
+                        avrg_Red += image[h+i][w+j].rgbtRed;
                     }
                 }
 
@@ -109,9 +126,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             for(int j = -1; j < 1; j++)
             {
-                avrg_Blue = image[h][w].rgbtBlue;
-                avrg_Green = image[h][w].rgbtGreen;
-                avrg_Red = image[h][w].rgbtRed;
+                avrg_Blue = image[h+i][w+j].rgbtBlue;
+                avrg_Green = image[h+i][w+j].rgbtGreen;
+                avrg_Red = image[h+i][w+j].rgbtRed;
             }
         }
 
