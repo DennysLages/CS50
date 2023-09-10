@@ -16,9 +16,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for(int w = 0, w < width, w++)
         {
             int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
-            image[h][w].rgbtBlue = avrg;
+            /*image[h][w].rgbtBlue = avrg;
             image[h][w].rgbtGreen = avrg;
-            image[h][w].rgbtRed = avrg;
+            image[h][w].rgbtRed = avrg;*/
 
             //Need to change data in image.rgbt, not to be lost. Maybe use pointers somehow.
             //w++;
