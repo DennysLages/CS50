@@ -58,8 +58,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE row_blur = image[width];
+    RGBTRIPLE row_blur [width];
     RGBTRIPLE column_blur = image[height];
+    RGBTRIPLE group_blur = image
     int h = height;
 
     if(h == 0)
@@ -68,9 +69,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     blur(h-1, width-1, image);
-    
+    h=2;
+    w=2;
 
-    for(w = 0; w < 2)
+    for(i = 0; i < 2, i++)
+    {
+
+    }
 
     return;
 }
