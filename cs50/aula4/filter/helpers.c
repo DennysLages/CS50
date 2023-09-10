@@ -8,13 +8,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     int h = height;
     int avrg = 0;
 
-    if(h == 0) //End case
+    if (h == 0) //End case
     {
         return;
     }
 
     grayscale(h-1, width, image); // Do the grayscale for only 1 row, and repeat to the next.
-    for(int w = 0; w < width; w++)
+    for (int w = 0; w < width; w++)
     {
         avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3; //Average of each RGBTRIPLE and assign to all bytes (BGR)
         image[h][w].rgbtBlue = avrg;
@@ -37,17 +37,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE row_reflect[width];
     int h = height;
 
-    if(h == 0) //End case
+    if (h == 0) //End case
     {
         return;
     }
 
     reflect(h-1, width, image); // Do the reflect for only 1 row, and repeat to the next.
-    for(int w = 0; w < width; w++) //Copy row inverted to a new array.
+    for (int w = 0; w < width; w++) //Copy row inverted to a new array.
     {
         row_reflect[width-w] = image[h][w];
     }
-    for(int w = 0; w < width; w++) //Reassign to the image itself.
+    for (int w = 0; w < width; w++) //Reassign to the image itself.
     {
         image[h][w]=row_reflect[w];
     }
@@ -68,15 +68,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     int avrg_Red;
     int h = 1;
 
-    if(h == 0)
+    if (h == 0)
     {
         return;
     }
 
     //blur(h-1, width, image); It can`t be recursive because everytime you call it, it will have a new height, then changing boudaries.
-    for(h = 0; h < height; h++)
+    for (h = 0; h < height; h++)
     {
-        for(int w = 0; w < width; w++)
+        for (int w = 0; w < width; w++)
         {
             avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
 
@@ -158,9 +158,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             //     break;
             // }
 
-            for(int i = -1; i < 1; i++)
+            for (int i = -1; i < 1; i++)
             {
-                for(int j = -1; j < 1; j++)
+                for (int j = -1; j < 1; j++)
                 {
                     avrg_Blue = image[h+i][w+j].rgbtBlue;
                     avrg_Green = image[h+i][w+j].rgbtGreen;
