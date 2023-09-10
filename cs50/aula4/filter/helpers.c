@@ -63,7 +63,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // RGBTRIPLE group_blur[2][2];
 
     RGBTRIPLE avrg_blur;
-    int avrg_Blue;
+    // int avrg_Blue;
     int avrg_Green;
     int avrg_Red;
     int h = 1;
