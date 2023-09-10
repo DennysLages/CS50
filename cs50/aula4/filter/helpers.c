@@ -5,14 +5,14 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     int h = 0;
     int w = 0;
-    /*if(h > height)
+    if(h > height)
     {
         return;
-    }*/
+    }
 
-    while(h < height)
-    {
-        while(w < width)
+    /*while(h < height)
+    {*/
+        for(int w = 0, w < width, w++)
         {
             int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
             image[h][w].rgbtBlue = avrg;
@@ -20,10 +20,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             image[h][w].rgbtRed = avrg;
 
             //Need to change data in image.rgbt, not to be lost. Maybe use pointers somehow.
-            w++;
+            //w++;
         }
         h++;
-    }
+    //}
 
     //grayscale(h, width, image);
 
