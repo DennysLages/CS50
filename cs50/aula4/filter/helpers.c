@@ -11,9 +11,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         return;
     }*/
 
-    for(int h = 0, h < height, h++)
+    for(int h = 0; h < height; h++)
     {
-        for(int w = 0, w < width, w++)
+        for(int w = 0; w < width; w++)
         {
             int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
             copying(&avrg, &image[h][w]);
