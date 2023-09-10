@@ -59,3 +59,6 @@ void copying(DWORD avrg, RGBTRIPLE *rgbt)
     *rgbt.rgbtGreen = avrg;
     *rgbt.rgbtRed = avrg;
 }
+
+
+// THINK ABOUT IT bf.bfType != 0x4d42
