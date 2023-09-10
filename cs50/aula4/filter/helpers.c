@@ -42,19 +42,15 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    // for(w = 0; w < width; w++)
-    // {
-    //     row_reflect(w).rgbtBlue
-    // }
-
     reflect(h-1, width, image);
     for(int w = 0; w < width; w++)
     {
         row_reflect[width-w] = image[h][w];
     }
-    
-    h--;
-
+    for(int w = 0; w < width; w++)
+    {
+        image[h][w]=row_reflect[w];
+    }
 
     return;
 }
