@@ -58,13 +58,14 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE row_blur[width];
-    RGBTRIPLE column_blur[height];
+    // RGBTRIPLE row_blur[width];
+    // RGBTRIPLE column_blur[height];
+    // RGBTRIPLE group_blur[2][2];
+
     RGBTRIPLE avrg_blur;
     int avrg_Blue;
     int avrg_Green;
     int avrg_Red;
-    RGBTRIPLE group_blur[2][2];
     int h = height;
 
     if(h == 0)
@@ -73,11 +74,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     blur(h-1, width, image);
-    // h=2;
-    // w=2;
+
     for(int w = 0; w < width; w++)
     {
         avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
+
+        if (h = height)
+        {
+            break;
+        }
 
         for(int i = 0; i < 2; i++)
         {
