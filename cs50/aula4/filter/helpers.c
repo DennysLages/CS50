@@ -68,8 +68,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     blur(h-1, width-1, image);
+    
 
-    for(h=1)
+    for(w = 0; w < 2)
 
     return;
 }
