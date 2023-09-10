@@ -79,12 +79,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
 
-        if(h == 0) || (h == height)
+        if(h == 0 || h == height)
         {
             break;
         }
 
-        if(w == 0) || (w == width)
+        if(w == 0 || w == width)
         {
             break;
         }
