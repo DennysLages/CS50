@@ -4,16 +4,22 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     h = 0;
-    w = 0;
-    while(h < heigh; h++)
+    if(h > height)
+    {
+        return;
+    }
+
+    grayscale(int h, int width, RGBTRIPLE image[height][width])
     {
         while(w < width, w++)
         {
+            w = 0;
             avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
             image[h][w].rgbtBlue = avrg;
             image[h][w].rgbtGreen = avrg;
             image[h][w].rgbtRed = avrg;
         }
+        h++;
     return;
 }
 
