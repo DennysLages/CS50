@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    grayscale(h, width, image[h][width])
+    grayscale(h, width, image);
     {
         while(w < width, w++)
         {
