@@ -60,9 +60,10 @@ void copying(DWORD avrg, RGBTRIPLE *rgbt)
     *rgbt.rgbtRed = avrg;
 }
 
-void averageBYTE(BYTE a, BYTE b, BYTE c)
+int averageBYTE(BYTE a, BYTE b, BYTE c)
 {
-    for int i()
+    avrg = 0;
+    for(int i = 0; i < strlen(BYTE); i++)
 }
 
 
