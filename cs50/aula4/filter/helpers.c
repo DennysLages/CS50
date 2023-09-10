@@ -30,7 +30,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     }*/
 
     //grayscale(h, width, image);
-    printf("%i",image[0][0].rgbtGreen);
+    printf("%i\n",image[0][0].rgbtGreen);
 
     return;
 }
