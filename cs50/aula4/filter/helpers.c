@@ -52,6 +52,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         row_reflect[width-w] = image[h][w];
     }
+    
     h--;
 
 
