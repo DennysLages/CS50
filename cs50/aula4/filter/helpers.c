@@ -60,5 +60,10 @@ void copying(DWORD avrg, RGBTRIPLE *rgbt)
     *rgbt.rgbtRed = avrg;
 }
 
+void averageBYTE(BYTE a, BYTE b, BYTE c)
+{
+    for int i()
+}
+
 
 // THINK ABOUT IT bf.bfType != 0x4d42
