@@ -81,6 +81,41 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
 
+
+            for (int i = -1; i < 1; i++)
+            {
+                for (int j = -1; j < 1; j++)
+                {
+                    count = 0;
+                    if (h+i > 0 && h+i < height && w+j > 0 && w+j < width)
+                    {
+                    avrg_Blue = image[h+i][w+j].rgbtBlue;
+                    avrg_Green = image[h+i][w+j].rgbtGreen;
+                    avrg_Red = image[h+i][w+j].rgbtRed;
+                    count++;
+                    }
+                }
+            }
+
+            image[h][w].rgbtBlue = round(avrg_Blue / count);
+            image[h][w].rgbtGreen = round(avrg_Green / count);
+            image[h][w].rgbtRed = round(avrg_Red / count);
+
+            // avrg_Blue = round(avrg_Blue / 9);
+            // avrg_Green = round(avrg_Green / 9);
+            // avrg_Red = round(avrg_Red / 9);
+
+            // image[h][w] = avrg_blur; // Should be copy in entire row at once ?s
+        }
+    }
+    return;
+}
+
+// Detect edges
+void edges(int height, int width, RGBTRIPLE image[height][width])
+{
+    return;
+}
             /*if (h == 0)
             {
                     for(int i = 0; i < 1; i++)
@@ -158,38 +193,3 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             // {
             //     break;
             // }
-
-            for (int i = -1; i < 1; i++)
-            {
-                for (int j = -1; j < 1; j++)
-                {
-                    count = 0;
-                    if (h+i > 0 && h+i < height && w+j > 0 && w+j < width)
-                    {
-                    avrg_Blue = image[h+i][w+j].rgbtBlue;
-                    avrg_Green = image[h+i][w+j].rgbtGreen;
-                    avrg_Red = image[h+i][w+j].rgbtRed;
-                    count++;
-                    }
-                }
-            }
-
-            image[h][w].rgbtBlue = round(avrg_Blue / count);
-            image[h][w].rgbtGreen = round(avrg_Green / count);
-            image[h][w].rgbtRed = round(avrg_Red / count);
-
-            // avrg_Blue = round(avrg_Blue / 9);
-            // avrg_Green = round(avrg_Green / 9);
-            // avrg_Red = round(avrg_Red / 9);
-
-            // image[h][w] = avrg_blur; // Should be copy in entire row at once ?s
-        }
-    }
-    return;
-}
-
-// Detect edges
-void edges(int height, int width, RGBTRIPLE image[height][width])
-{
-    return;
-}
