@@ -11,7 +11,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         return;
     }*/
 
-    for(int h = 0; h < height; h++)
+    /*for(int h = 0; h < height; h++)
     {
         for(int w = 0; w < width; w++)
         {
@@ -27,9 +27,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
             //w++;
         }
         //h++;
-    }
+    }*/
 
     //grayscale(h, width, image);
+    printf(image[0][0].rgbtGreen)
 
     return;
 }
@@ -52,19 +53,19 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void copying(DWORD avrg, RGBTRIPLE *rgbt)
-{
-    // *rgbt = *avrg;
-    *rgbt.rgbtBlue = avrg;
-    *rgbt.rgbtGreen = avrg;
-    *rgbt.rgbtRed = avrg;
-}
+// void copying(DWORD avrg, RGBTRIPLE *rgbt)
+// {
+//     // *rgbt = *avrg;
+//     *rgbt.rgbtBlue = avrg;
+//     *rgbt.rgbtGreen = avrg;
+//     *rgbt.rgbtRed = avrg;
+// }
 
-int averageBYTE(BYTE a, BYTE b, BYTE c)
-{
-    avrg = 0;
-    for(int i = 0; i < strlen(BYTE); i++)
-}
+// int averageBYTE(BYTE a, BYTE b, BYTE c)
+// {
+//     avrg = 0;
+//     for(int i = 0; i < strlen(BYTE); i++)
+// }
 
 
 // THINK ABOUT IT bf.bfType != 0x4d42
