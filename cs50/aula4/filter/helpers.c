@@ -9,12 +9,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    grayscale(int h, int width, RGBTRIPLE image[height][width])
+    grayscale(h, width, image[h][width])
     {
         while(w < width, w++)
         {
             int w = 0;
-            avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
+            int avrg = (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3;
             image[h][w].rgbtBlue = avrg;
             image[h][w].rgbtGreen = avrg;
             image[h][w].rgbtRed = avrg;
