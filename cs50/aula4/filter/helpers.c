@@ -60,7 +60,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // RGBTRIPLE row_blur[width];
     // RGBTRIPLE column_blur[height];
-    // RGBTRIPLE group_blur[2][2];
+    RGBTRIPLE group_blur;
 
     // RGBTRIPLE avrg_blur;
     int avrg_Blue;
@@ -99,9 +99,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // if (count != 0)
             // {
-                image[h][w].rgbtBlue = round(avrg_Blue / count);
-                image[h][w].rgbtGreen = round(avrg_Green / count);
-                image[h][w].rgbtRed = round(avrg_Red / count);
+                // image[h][w].rgbtBlue = round(avrg_Blue / count);
+                // image[h][w].rgbtGreen = round(avrg_Green / count);
+                // image[h][w].rgbtRed = round(avrg_Red / count);
             // }
 
             // avrg_Blue = round(avrg_Blue / 9);
