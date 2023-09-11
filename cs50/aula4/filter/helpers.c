@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            if (count <> 0)
+            if (count != 0)
             {
                 image[h][w].rgbtBlue = round(avrg_Blue / count);
                 image[h][w].rgbtGreen = round(avrg_Green / count);
