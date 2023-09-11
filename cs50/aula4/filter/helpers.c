@@ -60,7 +60,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // RGBTRIPLE row_blur[width];
     // RGBTRIPLE column_blur[height];
-    RGBTRIPLE group_blur;
+    RGBTRIPLE group_Blur;
 
     // RGBTRIPLE avrg_blur;
     int avrg_Blue;
@@ -79,9 +79,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++) // Setting position to calculate blur. //It is gicing segmentation fault because of boundaries. There is no h = -1.
         {
-            avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
+            // avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
+            group_Blur.rgbtBlue = 0; group_Blur.rgbtGreen = 0; group_Blur.rgbtRed = 0;
 
-                    count = 0;
+            count = 0;
 
             for (int i = -1; i <= 1; i++) // Iterating surroundings on each position. // Está como se a ordem dos loops estivesse errada. Confere?
             {
@@ -89,13 +90,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width)
                     {
-                    avrg_Blue = image[h+i][w+j].rgbtBlue;
-                    avrg_Green = image[h+i][w+j].rgbtGreen;
-                    avrg_Red = image[h+i][w+j].rgbtRed;
+                    group_Blur.rgbtBlue += image[h+i][w+j].rgbtBlue;
+                    group_Blur.rgbtGreen += image[h+i][w+j].rgbtGreen;
+                    group_Blur.rgbtRed += image[h+i][w+j].rgbtRed;
+
+                    // avrg_Blue = image[h+i][w+j].rgbtBlue;
+                    // avrg_Green = image[h+i][w+j].rgbtGreen;
+                    // avrg_Red = image[h+i][w+j].rgbtRed;
                     count++;
                     }
                 }
             }
+
+            image[h][w] = group_Blur;
 
             // if (count != 0)
             // {
