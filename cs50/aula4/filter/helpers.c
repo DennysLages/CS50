@@ -81,12 +81,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
 
-            count = 0;
 
             for (int i = -1; i < 1; i++) // Está como se a ordem dos loops estivesse errada. Confere?
             {
                 for (int j = -1; j < 1; j++)
                 {
+                    count = 0;
                     if (h+i > 0 && h+i < height && w+j > 0 && w+j < width)
                     {
                     avrg_Blue = image[h+i][w+j].rgbtBlue;
