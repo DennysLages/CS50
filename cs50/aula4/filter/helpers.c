@@ -83,9 +83,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                     count = 0;
 
-            for (int i = -1; i < 1; i++) // Está como se a ordem dos loops estivesse errada. Confere?
+            for (int i = -1; i <= 1; i++) // Está como se a ordem dos loops estivesse errada. Confere?
             {
-                for (int j = -1; j < 1; j++)
+                for (int j = -1; j <= 1; j++)
                 {
                     if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width)
                     {
