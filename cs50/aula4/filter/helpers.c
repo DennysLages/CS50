@@ -63,9 +63,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE group_Blur;
 
     // RGBTRIPLE avrg_blur;
-    int avrg_Blue;
-    int avrg_Green;
-    int avrg_Red;
+    // int avrg_Blue;
+    // int avrg_Green;
+    // int avrg_Red;
     int h = 1;
     int count;
 
@@ -94,15 +94,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     group_Blur.rgbtGreen += image[h+i][w+j].rgbtGreen;
                     group_Blur.rgbtRed += image[h+i][w+j].rgbtRed;
 
-                    // avrg_Blue = image[h+i][w+j].rgbtBlue;
-                    // avrg_Green = image[h+i][w+j].rgbtGreen;
-                    // avrg_Red = image[h+i][w+j].rgbtRed;
+                    // avrg_Blue += image[h+i][w+j].rgbtBlue;
+                    // avrg_Green += image[h+i][w+j].rgbtGreen;
+                    // avrg_Red += image[h+i][w+j].rgbtRed;
                     count++;
                     }
                 }
             }
 
-            image[h][w] = group_Blur;
+            image[h][w] = group_Blur / count;
 
             // if (count != 0)
             // {
