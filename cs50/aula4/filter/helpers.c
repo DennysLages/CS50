@@ -58,11 +58,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    // RGBTRIPLE row_blur[width];
-    // RGBTRIPLE column_blur[height];
     // RGBTRIPLE group_Blur;
 
-    // RGBTRIPLE avrg_blur;
     int avrg_Blue;
     int avrg_Green;
     int avrg_Red;
@@ -104,18 +101,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // image[h][w] = group_Blur / count;
 
-            // if (count != 0)
-            // {
                 image[h][w].rgbtBlue = round(avrg_Blue / count);
                 image[h][w].rgbtGreen = round(avrg_Green / count);
                 image[h][w].rgbtRed = round(avrg_Red / count);
-            // }
-
-            // avrg_Blue = round(avrg_Blue / 9);
-            // avrg_Green = round(avrg_Green / 9);
-            // avrg_Red = round(avrg_Red / 9);
-
-            // image[h][w] = avrg_blur; // Should be copy in entire row at once ?s
         }
     }
     return;
@@ -126,80 +114,3 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
 }
-            /*if (h == 0)
-            {
-                    for(int i = 0; i < 1; i++)
-                    {
-                        for(int j = -1; j < 1; j++)
-                        {
-                            avrg_Blue += image[h+i][w+j].rgbtBlue;
-                            avrg_Green += image[h+i][w+j].rgbtGreen;
-                            avrg_Red += image[h+i][w+j].rgbtRed;
-                        }
-                    }
-
-            image[h][w].rgbtBlue = round(avrg_Blue / 6);
-            image[h][w].rgbtGreen = round(avrg_Green / 6);
-            image[h][w].rgbtRed = round(avrg_Red / 6);
-            }
-
-            if (h == height-1)
-            {
-                    for(int i = -1; i < 0; i++)
-                    {
-                        for(int j = -1; j < 1; j++)
-                        {
-                            avrg_Blue += image[h+i][w+j].rgbtBlue;
-                            avrg_Green += image[h+i][w+j].rgbtGreen;
-                            avrg_Red += image[h+i][w+j].rgbtRed;
-                        }
-                    }
-
-            image[h][w].rgbtBlue = round(avrg_Blue / 6);
-            image[h][w].rgbtGreen = round(avrg_Green / 6);
-            image[h][w].rgbtRed = round(avrg_Red / 6);
-            }*/
-
-            /*if (w == 0)
-            {
-                    for(int i = -1; i < 1; i++)
-                    {
-                        for(int j = -1; j < 1; j++)
-                        {
-                            avrg_Blue += image[h+i][w+j].rgbtBlue;
-                            avrg_Green += image[h+i][w+j].rgbtGreen;
-                            avrg_Red += image[h+i][w+j].rgbtRed;
-                        }
-                    }
-
-            image[h][w].rgbtBlue = round(avrg_Blue / 6);
-            image[h][w].rgbtGreen = round(avrg_Green / 6);
-            image[h][w].rgbtRed = round(avrg_Red / 6);
-            }
-
-            if (w == width-1)
-            {
-                    for(int i = -1; i < 0; i++)
-                    {
-                        for(int j = -1; j < 1; j++)
-                        {
-                            avrg_Blue += image[h+i][w+j].rgbtBlue;
-                            avrg_Green += image[h+i][w+j].rgbtGreen;
-                            avrg_Red += image[h+i][w+j].rgbtRed;
-                        }
-                    }
-
-            image[h][w].rgbtBlue = round(avrg_Blue / 6);
-            image[h][w].rgbtGreen = round(avrg_Green / 6);
-            image[h][w].rgbtRed = round(avrg_Red / 6);
-            }*/
-
-            // if(h == 0 || h == height)
-            // {
-            //     break;
-            // }
-
-            // if(w == 0 || w == width)
-            // {
-            //     break;
-            // }
