@@ -54,9 +54,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE group_Blur;
+    RGBTRIPLE copyimage;
     // As it changes image[height][width] (that is already a copy), it changes input for next calculation.
     // Therefore we need a second image[height][width] to be used as a non-changed image.
+
+    for (int h = 0; h < height; h++)
+    {
+        for (int w = 0; w < width; w++)
+        {
+            copyimage[h][w] = image[h][w]
+        }
+    }
 
     float avrg_Blue;
     float avrg_Green;
