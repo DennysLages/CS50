@@ -130,8 +130,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int j = -1; j <= 1; j++)
                 {
-                    sumgx = gx[i][j] * copyimage[h+i][w+j];
-                    sumgy = gy[i][j] * copyimage[h+i][w+j];
+                    sumgx += gx[i][j] * copyimage[h+i][w+j];
+                    sumgy += gy[i][j] * copyimage[h+i][w+j];
                 }
             }
             
