@@ -59,10 +59,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     float avrg_Blue;
     float avrg_Green;
     float avrg_Red;
-    int h = 1;
+    int h = height;
     int count;
 
-    if (h == 0)
+    if (h < 0)
     {
         return;
     }
