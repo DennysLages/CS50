@@ -124,7 +124,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            sumgx = 0; sumgy = 0;
+            int sumgx = 0; int sumgy = 0;
 
             for (int i = -1; i <= 1; i++)
             {
@@ -134,7 +134,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sumgy += gy[i][j] * copyimage[h+i][w+j];
                 }
             }
-            
+            image[h][w]. = sqrt(sumgx 2 + sumgy 2);
         }
     }
     return;
