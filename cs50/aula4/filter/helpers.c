@@ -54,7 +54,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE copyimage;
+    RGBTRIPLE copyimage[height][width];
     // As it changes image[height][width] (that is already a copy), it changes input for next calculation.
     // Therefore we need a second image[height][width] to be used as a non-changed image.
 
@@ -62,7 +62,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            copyimage[h][w] = image[h][w]
+            copyimage[h][w] = image[h][w];
         }
     }
 
