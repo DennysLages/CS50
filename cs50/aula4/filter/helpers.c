@@ -134,7 +134,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sumgy += gy[i][j] * copyimage[h+i][w+j];
                 }
             }
-            image[h][w]. = sqrt(sumgx 2 + sumgy 2);
+            image[h][w]. = sqrt(sumgx 2 + sumgy 2); //Ver raiz quadrada e elevado
         }
     }
     return;
