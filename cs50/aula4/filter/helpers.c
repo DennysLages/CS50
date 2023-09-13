@@ -124,7 +124,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++)
         {
-            int sumgx = 0; int sumgy = 0;
+            int sumgx = 0; int sumgy = 0; //Ou torna RGBTRIPLE e zera todos os rgb ou cria novos sumgx para cada um do rgb.
 
             for (int i = -1; i <= 1; i++)
             {
