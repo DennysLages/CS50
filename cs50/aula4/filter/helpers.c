@@ -108,9 +108,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // image[h][w] = group_Blur / count;
 
-                image[h][w].rgbtBlue = (int) round(avrg_Blue / (float) count);
-                image[h][w].rgbtGreen = (int) round(avrg_Green / (float) count);
-                image[h][w].rgbtRed = (int) round(avrg_Red / (float) count);
+                image[h][w].rgbtBlue = (int) round(sumBlue / count);
+                image[h][w].rgbtGreen = (int) round(sumGreen / count);
+                image[h][w].rgbtRed = (int) round(sumRed / count);
         }
     }
     return;
