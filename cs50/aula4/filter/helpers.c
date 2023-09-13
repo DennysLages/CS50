@@ -55,7 +55,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copyimage[height][width];
-    // As it changes image[height][width] (that is already a copy), it changes input for next calculation.
+    // As it changes image[height][width] (that is already a copy), it changes input for next calculation. Because I`m using same loop to change them.
     // Therefore we need a second image[height][width] to be used as a non-changed image.
 
     for (int h = 0; h < height; h++)
