@@ -59,16 +59,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     float avrg_Blue;
     float avrg_Green;
     float avrg_Red;
-    int h = height;
+
+    // int h = height;
     int count;
 
-    if (h < 0)
-    {
-        return;
-    }
+    // if (h < 0)
+    // {
+    //     return;
+    // }
 
     //blur(h-1, width, image); It can`t be recursive because everytime you call it, it will have a new height, then changing boudaries.
-    for (h = 0; h < height; h++)
+    for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++) // Setting position to calculate blur. //It is gicing segmentation fault because of boundaries. There is no h = -1.
         {
