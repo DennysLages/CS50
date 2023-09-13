@@ -109,6 +109,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copyimag[h][w] = image[h][w];
+
     
     return;
 }
