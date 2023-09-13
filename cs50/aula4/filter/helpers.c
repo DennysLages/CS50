@@ -16,7 +16,11 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     grayscale(h-1, width, image); // Do the grayscale for only 1 row, and repeat to the next.
     for (int w = 0; w < width; w++)
     {
-        avrg = round(image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3; //Average of each RGBTRIPLE and assign to all bytes (BGR)
+        int b = image[h][w].rgbtBlue;
+        int g = image[h][w].rgbtGreen;
+        int r = image[h][w].rgbtRed;
+        avrg = round ((b + g + r)/3);
+        // avrg = round (image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3; //Average of each RGBTRIPLE and assign to all bytes (BGR)
         image[h][w].rgbtBlue = avrg;
         image[h][w].rgbtGreen = avrg;
         image[h][w].rgbtRed = avrg;
