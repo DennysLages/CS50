@@ -6,31 +6,23 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     int h = height;
-    int avrg = 0;
+    float avrg = 0;
 
-    if (h == 0) //End case // Why h ??
+    if (h < 0) //End case
     {
         return;
     }
 
     grayscale(h-1, width, image); // Do the grayscale for only 1 row, and repeat to the next.
+
     for (int w = 0; w < width; w++)
     {
-        // int b = image[h][w].rgbtBlue;
-        // int g = image[h][w].rgbtGreen;
-        // int r = image[h][w].rgbtRed;
-        // avrg = round ((b + g + r)/3);
-        avrg = round ((image[h][w].rgbtBlue + image[h][w].rgbtGreen + image[h][w].rgbtRed) / 3);; //Average of each RGBTRIPLE and assign to all bytes (BGR)
-        image[h][w].rgbtBlue = avrg;
-        image[h][w].rgbtGreen = avrg;
-        image[h][w].rgbtRed = avrg;
-    }
+        avrg = round(((float)image[h][w].rgbtBlue + (float)image[h][w].rgbtGreen + (float)image[h][w].rgbtRed) / 3);; //Average of each RGBTRIPLE and assign to all bytes (BGR) + Casting
 
-    //grayscale(h, width, image);
-    // printf("%i\n", image[height-1][width-1].rgbtBlue);
-    // printf("%i\n", image[height-1][width-1].rgbtGreen);
-    // printf("%i\n", image[height-1][width-1].rgbtRed);
-    // printf("%i\n", avrg);
+        image[h][w].rgbtBlue = (int) avrg;
+        image[h][w].rgbtGreen = (int) avrg;
+        image[h][w].rgbtRed = (int) avrg;
+    }
 
     return;
 }
@@ -41,7 +33,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE row_reflect[width];
     int h = height;
 
-    if (h == 0) //End case
+    if (h < 0) //End case
     {
         return;
     }
@@ -49,7 +41,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     reflect(h-1, width, image); // Do the reflect for only 1 row, and repeat to the next.
     for (int w = 0; w < width; w++) //Copy row inverted to a new array.
     {
-        row_reflect[width-w] = image[h][w];
+        row_reflect[width-1-w] = image[h][w];
     }
     for (int w = 0; w < width; w++) //Reassign to the image itself.
     {
@@ -64,9 +56,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // RGBTRIPLE group_Blur;
 
-    int avrg_Blue;
-    int avrg_Green;
-    int avrg_Red;
+    float avrg_Blue;
+    float avrg_Green;
+    float avrg_Red;
     int h = 1;
     int count;
 
@@ -105,9 +97,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             // image[h][w] = group_Blur / count;
 
-                image[h][w].rgbtBlue = round(avrg_Blue / count);
-                image[h][w].rgbtGreen = round(avrg_Green / count);
-                image[h][w].rgbtRed = round(avrg_Red / count);
+                image[h][w].rgbtBlue = (int) round(avrg_Blue / (float) count);
+                image[h][w].rgbtGreen = (int) round(avrg_Green / (float) count);
+                image[h][w].rgbtRed = (int) round(avrg_Red / (float) count);
         }
     }
     return;
