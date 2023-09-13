@@ -95,6 +95,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 for (int j = -1; j <= 1; j++)
                 {
                     if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width) //bounderies wrongly set. One case excludes the other wrongly.
+                    // if (!(h+i < 0 || h+i >= height || w+j < 0 || w+j >= width))
                     {
                     // group_Blur.rgbtBlue += image[h+i][w+j].rgbtBlue;
                     // group_Blur.rgbtGreen += image[h+i][w+j].rgbtGreen;
