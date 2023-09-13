@@ -66,9 +66,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    float avrg_Blue;
-    float avrg_Green;
-    float avrg_Red;
+    float sumBlue;
+    float sumGreen;
+    float sumRed;
 
     // int h = height;
     int count;
@@ -83,7 +83,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int w = 0; w < width; w++) // Setting position to calculate blur. //It is gicing segmentation fault because of boundaries. There is no h = -1.
         {
-            avrg_Blue = 0; avrg_Green = 0; avrg_Red = 0; //Setting zero to start a new group
+            sumBlue = 0; sumGreen = 0; sumRed = 0; //Setting zero to start a new group
             // group_Blur.rgbtBlue = 0; group_Blur.rgbtGreen = 0; group_Blur.rgbtRed = 0;
 
             count = 0;
