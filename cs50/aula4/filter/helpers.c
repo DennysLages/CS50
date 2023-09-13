@@ -108,10 +108,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    //Variáveis Globais
     RGBTRIPLE copyimage[height][width];
     gx = [-1,0,1][-2,0,2][-1,0,1];
     gy = [-1,-2,-1][0,0,0][1,2,1];
 
+    RGBTRIPLE sumgx;
+    RGBTRIPLE sumgy;
+
+    //Loop passando entre cada Pixel e copiando para nova cópia de imagem.
     for (int h; h < height; h++)
     {
         for (int w; w < width; w++)
@@ -120,21 +125,29 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    ////Loop passando entre cada Pixel para dps calcular os edges.
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
         {
-            int sumgx = 0; int sumgy = 0; //Ou torna RGBTRIPLE e zera todos os rgb ou cria novos sumgx para cada um do rgb.
+            // int sumgx = 0; int sumgy = 0; //Ou torna RGBTRIPLE e zera todos os rgb ou cria novos sumgx para cada um do rgb.
+            sumgx.rgbtBlue = 0; sumgy.rgbtBlue = 0;
+            sumgx.rgbtGreen = 0; sumgy.rgbtGreen = 0;
+            sumgx.rgbtRed = 0; sumgy.rgbtRed = 0;
 
+            //Loop calculando gx e gy de cada pixel
             for (int i = -1; i <= 1; i++)
             {
                 for (int j = -1; j <= 1; j++)
                 {
-                    sumgx += gx[i][j] * copyimage[h+i][w+j];
-                    sumgy += gy[i][j] * copyimage[h+i][w+j];
+                    sumgx += gx[i][j] * copyimage[h+i][w+j].rgbtBlue; sumgy += gy[i][j] * copyimage[h+i][w+j].rgbtBlue;
+                    sumgx += gx[i][j] * copyimage[h+i][w+j].rgbtGreen; sumgy += gy[i][j] * copyimage[h+i][w+j].rgbtGreen;
+                    sumgx += gx[i][j] * copyimage[h+i][w+j].rgbtRed; sumgy += gy[i][j] * copyimage[h+i][w+j].rgbtRed;
                 }
             }
-            image[h][w]. = sqrt(sumgx 2 + sumgy 2); //Ver raiz quadrada e elevado
+            image[h][w].rgbtBlue = sqrt(sumgx 2 + sumgy 2); //Ver raiz quadrada e elevado
+            image[h][w].rgbtGreen = sqrt(sumgx 2 + sumgy 2);
+            image[h][w].rgbtRed = sqrt(sumgx 2 + sumgy 2);
         }
     }
     return;
