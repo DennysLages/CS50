@@ -69,14 +69,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     float sumBlue;
     float sumGreen;
     float sumRed;
-
-    // int h = height;
     int count;
-
-    // if (h < 0)
-    // {
-    //     return;
-    // }
 
     //blur(h-1, width, image); It can`t be recursive because everytime you call it, it will have a new height, then changing boudaries.
 
@@ -86,8 +79,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int w = 0; w < width; w++) // Setting position to calculate blur. //It is gicing segmentation fault because of boundaries. There is no h = -1.
         {
             sumBlue = 0; sumGreen = 0; sumRed = 0; //Setting zero to start a new group
-            // group_Blur.rgbtBlue = 0; group_Blur.rgbtGreen = 0; group_Blur.rgbtRed = 0;
-
             count = 0;
 
             for (int i = -1; i <= 1; i++) // Iterating surroundings on each position. // Está como se a ordem dos loops estivesse errada. Confere?
@@ -97,10 +88,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width) //bounderies wrongly set. One case excludes the other wrongly.
                     // if (!(h+i < 0 || h+i >= height || w+j < 0 || w+j >= width))
                     {
-                    // group_Blur.rgbtBlue += image[h+i][w+j].rgbtBlue;
-                    // group_Blur.rgbtGreen += image[h+i][w+j].rgbtGreen;
-                    // group_Blur.rgbtRed += image[h+i][w+j].rgbtRed;
-
                     sumBlue += copyimage[h+i][w+j].rgbtBlue;
                     sumGreen += copyimage[h+i][w+j].rgbtGreen;
                     sumRed += copyimage[h+i][w+j].rgbtRed;
@@ -109,8 +96,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
 
-            // image[h][w] = group_Blur / count;
-
+                //Changing image inside same loop. This is why we have a copy.
                 image[h][w].rgbtBlue = (int) round(sumBlue / count);
                 image[h][w].rgbtGreen = (int) round(sumGreen / count);
                 image[h][w].rgbtRed = (int) round(sumRed / count);
