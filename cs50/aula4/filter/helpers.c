@@ -145,9 +145,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     sumgx += gx[i][j] * copyimage[h+i][w+j].rgbtRed; sumgy += gy[i][j] * copyimage[h+i][w+j].rgbtRed;
                 }
             }
-            image[h][w].rgbtBlue = sqrt(sumgx 2 + sumgy 2); //Ver raiz quadrada e elevado
-            image[h][w].rgbtGreen = sqrt(sumgx 2 + sumgy 2);
-            image[h][w].rgbtRed = sqrt(sumgx 2 + sumgy 2);
+            image[h][w].rgbtBlue = sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2)); //Ver raiz quadrada e elevado
+            image[h][w].rgbtGreen = sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2));
+            image[h][w].rgbtRed = sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2));
         }
     }
     return;
