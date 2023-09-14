@@ -110,7 +110,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     //Variáveis Globais
     RGBTRIPLE copyimage[height][width];
-    int gx = (-1,0,1),(-2,0,2),(-1,0,1);
+    int [,,] gx = {{-1,0,1},{-2,0,2},{-1,0,1}};
     int gy = [-1,-2,-1][0,0,0][1,2,1];
 
     RGBTRIPLE sumgx;
