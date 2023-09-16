@@ -136,9 +136,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             sumgx.rgbtRed = 0; sumgy.rgbtRed = 0;
 
             //Loop calculando gx e gy de cada pixel
-            for (int i = -1; i <= 1; i++)
+            for (int i = 0; i <= 2; i++)
             {
-                for (int j = -1; j <= 1; j++)
+                for (int j = 0; j <= 2; j++)
                 {
                     sumgy.rgbtBlue += gx[i][j] * copyimage[h+i][w+j].rgbtBlue;
                     sumgy.rgbtGreen += gx[i][j] * copyimage[h+i][w+j].rgbtGreen;
