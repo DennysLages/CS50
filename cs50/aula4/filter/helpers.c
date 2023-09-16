@@ -125,7 +125,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    ////Loop passando entre cada Pixel para dps calcular os edges.
+    //Loop passando entre cada Pixel para dps calcular os edges.
     for (int h = 0; h < height; h++)
     {
         for (int w = 0; w < width; w++)
