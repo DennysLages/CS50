@@ -110,8 +110,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     //Variáveis Globais
     RGBTRIPLE copyimage[height][width];
-    int gx[3][3] = [[-1,0,1],[-2,0,2],[-1,0,1]];//Ver como escreve uma matriz
-    int gy[3][3] = [[-1,-2,-1],[0,0,0],[1,2,1]];
+    int gx[3][3] = {{-1,0,1},{-2,0,2},{-1,0,1}};//Ver como escreve uma matriz
+    int gy[3][3] = {{-1,-2,-1},{0,0,0},{1,2,1}};
 
     RGBTRIPLE sumgx;
     RGBTRIPLE sumgy;
