@@ -148,9 +148,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            image[h][w].rgbtBlue = (int) sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2)); //Ver raiz quadrada e elevado
-            image[h][w].rgbtGreen = (int) sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2));
-            image[h][w].rgbtRed = (int) sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2));
+            image[h][w].rgbtBlue = (int) round(sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2))); //Ver raiz quadrada e elevado
+            image[h][w].rgbtGreen = (int) round(sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2)));
+            image[h][w].rgbtRed = (int) round(sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2)));
+
+            if ()
         }
     }
     return;
