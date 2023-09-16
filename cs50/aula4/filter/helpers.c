@@ -140,9 +140,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int j = 0; j <= 2; j++)
                 {
+                    if (h+i > 0 && h+i < height && w+j >= 0 && w+j < width)
+                    {
                     sumgx.rgbtBlue += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue;
                     sumgx.rgbtGreen += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen; sumgy.rgbtGreen += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen;
                     sumgx.rgbtRed += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtRed; sumgy.rgbtRed += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtRed;
+                    }
                 }
             }
             image[h][w].rgbtBlue = sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2)); //Ver raiz quadrada e elevado
