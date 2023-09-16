@@ -136,15 +136,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             sumgx.rgbtRed = 0; sumgy.rgbtRed = 0;
 
             //Loop calculando gx e gy de cada pixel
-            for (int i = 0; i <= 2; i++)
+            for (int i = -1; i <= 1; i++)
             {
-                for (int j = 0; j <= 2; j++)
+                for (int j = -1; j <= 1; j++)
                 {
-                    if (h+i > 0 && h+i < height - 1 && w+j > 0 && w+j < width - 1)
+                    if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width)
                     {
-                    sumgx.rgbtBlue += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue;
-                    sumgx.rgbtGreen += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen; sumgy.rgbtGreen += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen;
-                    sumgx.rgbtRed += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtRed; sumgy.rgbtRed += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtRed;
+                    sumgx.rgbtBlue += gx[i + 1][j + 1] * copyimage[h+i-1][w+j-1].rgbtBlue; sumgy.rgbtBlue += gy[i + 1][j + 1] * copyimage[h+i-1][w+j-1].rgbtBlue;
+                    sumgx.rgbtGreen += gx[i + 1][j + 1] * copyimage[h+i-1][w+j-1].rgbtGreen; sumgy.rgbtGreen += gy[i + 1][j + 1] * copyimage[h+i-1][w+j-1].rgbtGreen;
+                    sumgx.rgbtRed += gx[i + 1][j + 1] * copyimage[h+i-1][w+j-1].rgbtRed; sumgy.rgbtRed += gy[i + 1][j + 1] * copyimage[h+i-1][w+j-1].rgbtRed;
                     }
                 }
             }
