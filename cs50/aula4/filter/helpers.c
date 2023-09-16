@@ -117,9 +117,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE sumgy;
 
     //Loop passando entre cada Pixel e copiando para nova cópia de imagem.
-    for (int h; h < height; h++)
+    for (int h = 0; h < height; h++)
     {
-        for (int w; w < width; w++)
+        for (int w = 0; w < width; w++)
         {
             copyimage[h][w] = image[h][w];
         }
@@ -140,9 +140,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int j = -1; j <= 1; j++)
                 {
-                    sumgy.rgbtBlue += gx[i][j] * copyimage[h+i][w+j].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i][w+j].rgbtBlue;
-                    sumgy.rgbtGreen += gx[i][j] * copyimage[h+i][w+j].rgbtGreen; sumgy.rgbtGreen += gy[i][j] * copyimage[h+i][w+j].rgbtGreen;
-                    sumgy.rgbtRed += gx[i][j] * copyimage[h+i][w+j].rgbtRed; sumgy.rgbtRed += gy[i][j] * copyimage[h+i][w+j].rgbtRed;
+                    sumgy.rgbtBlue += gx[i][j] * copyimage[h+i][w+j].rgbtBlue;
+                    sumgy.rgbtGreen += gx[i][j] * copyimage[h+i][w+j].rgbtGreen;
+                    sumgy.rgbtRed += gx[i][j] * copyimage[h+i][w+j].rgbtRed;
                 }
             }
             image[h][w].rgbtBlue = sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2)); //Ver raiz quadrada e elevado
