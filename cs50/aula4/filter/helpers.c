@@ -142,9 +142,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if (h+i > 0 && h+i < height - 1 && w+j > 0 && w+j < width - 1)
                     {
-                    sumgx.rgbtBlue += gx[i][j] * copyimage[h+i][w+j].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue;
-                    sumgx.rgbtGreen += gx[i][j] * copyimage[h+i][w+j].rgbtGreen; sumgy.rgbtGreen += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen;
-                    sumgx.rgbtRed += gx[i][j] * copyimage[h+i][w+j].rgbtRed; sumgy.rgbtRed += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtRed;
+                    sumgx.rgbtBlue += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue;
+                    sumgx.rgbtGreen += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen; sumgy.rgbtGreen += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen;
+                    sumgx.rgbtRed += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtRed; sumgy.rgbtRed += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtRed;
                     }
                 }
             }
