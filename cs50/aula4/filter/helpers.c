@@ -151,7 +151,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     // sumgx.rgbtRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; sumgy.rgbtRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
                     gxBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; gyBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
                     gxGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; gyGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
-                    gxRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed; gyRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
+                    gxRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; gyRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
 
                     }
                 }
@@ -163,18 +163,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int green = round(sqrt(pow(gxGreen, 2) + pow(gyGreen, 2)));
             int red = round(sqrt(pow(gxRed, 2) + pow(gyRed, 2)));
 
-            // if (blue > 255)
-            // {
-            //     blue = 255;
-            // }
-            // if (green > 255)
-            // {
-            //     green = 255;
-            // }
-            // if (red < 255)
-            // {
-            //     red = 255;
-            // }
+            if (blue > 255)
+            {
+                blue = 255;
+            }
+            if (green > 255)
+            {
+                green = 255;
+            }
+            if (red < 255)
+            {
+                red = 255;
+            }
                 image[h][w].rgbtBlue = blue;
                 image[h][w].rgbtGreen = green;
                 image[h][w].rgbtRed = red;
