@@ -163,18 +163,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int green = round(sqrt(pow(gxGreen, 2) + pow(gyGreen, 2)));
             int red = round(sqrt(pow(gxRed, 2) + pow(gyRed, 2)));
 
-            if (blue > 255)
-            {
-                blue = 255;
-            }
-            if (green > 255)
-            {
-                green = 255;
-            }
-            if (red < 255)
-            {
-                red = 255;
-            }
+            // if (blue > 255)
+            // {
+            //     blue = 255;
+            // }
+            // if (green > 255)
+            // {
+            //     green = 255;
+            // }
+            // if (red < 255)
+            // {
+            //     red = 255;
+            // }
                 image[h][w].rgbtBlue = blue;
                 image[h][w].rgbtGreen = green;
                 image[h][w].rgbtRed = red;
