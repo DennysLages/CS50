@@ -150,9 +150,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
-            int blue = (int) round(sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2))); //Ver raiz quadrada e elevado
-            int green = (int) round(sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2)));
-            int red = (int) round(sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2)));
+            int blue = round(sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2))); //Ver raiz quadrada e elevado
+            int green = round(sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2)));
+            int red = round(sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2)));
 
             if (blue > 255)
             {
