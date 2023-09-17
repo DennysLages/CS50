@@ -3,6 +3,12 @@
 
 int main(int argc, char *argv[])
 {
-    fopen()
+    FILE *file = fopen("card.raw", "r");
+    if (file == NULL)
+    {
+        return 1;
+    }
+
+    fread(file, 512, )
 
 }
