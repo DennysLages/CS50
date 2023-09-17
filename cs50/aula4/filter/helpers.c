@@ -142,7 +142,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int k = i + 2; //Posicoes das matrizes gx gy para cada pixel da matriz original.
                     int l = j + 2;
-                    if (h+i > 0 && h+i < height && w+j > 0 && w+j < width) //Removing outside bounderies
+                    if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width) //Removing outside bounderies by only calculating inside
                     {
                     sumgx.rgbtBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; sumgy.rgbtBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
                     sumgx.rgbtGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; sumgy.rgbtGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
