@@ -39,24 +39,23 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     sepia (h-1, width, image);
 
     for (int w = 0; w < width; w--)
-        {
-            //Sepia formula numbers
-            float sepiaRed = round(0.393 * image[h][w].rgbtRed + 0.769 * image[h][w].rgbtGreen + 0.189 * image[h][w].rgbtBlue);
-            float sepiaGreen = round(0.349 * image[h][w].rgbtRed + 0.686 * image[h][w].rgbtGreen + 0.168 * image[h][w].rgbtBlue);
-            float sepiaBlue = round(0.272 * image[h][w].rgbtRed + 0.534 * image[h][w].rgbtGreen + 0.131 * image[h][w].rgbtBlue);
+    {
+        //Sepia formula numbers
+        float sepiaRed = round(0.393 * image[h][w].rgbtRed + 0.769 * image[h][w].rgbtGreen + 0.189 * image[h][w].rgbtBlue);
+        float sepiaGreen = round(0.349 * image[h][w].rgbtRed + 0.686 * image[h][w].rgbtGreen + 0.168 * image[h][w].rgbtBlue);
+        float sepiaBlue = round(0.272 * image[h][w].rgbtRed + 0.534 * image[h][w].rgbtGreen + 0.131 * image[h][w].rgbtBlue);
 
-            if (sepiaRed > 255)
-            {
-                sepiaRed = 255;
-            }
-            if (sepiaGreen > 255)
-            {
-                sepiaGreen = 255;
-            }
-            if (sepiaBlue > 255)
-            {
-                sepiaBlue = 255;
-            }
+        if (sepiaRed > 255)
+        {
+            sepiaRed = 255;
+        }
+        if (sepiaGreen > 255)
+        {
+            sepiaGreen = 255;
+        }
+        if (sepiaBlue > 255)
+        {
+            sepiaBlue = 255;
         }
     }
     return;
