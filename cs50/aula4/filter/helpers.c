@@ -36,7 +36,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         return;
     }
 
-    sepia (h-1, width, image[height][width]);
+    sepia (h-1, width, image);
 
     for (int w = 0; w < width; w--)
         {
