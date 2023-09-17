@@ -135,11 +135,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             sumgx.rgbtGreen = 0; sumgy.rgbtGreen = 0;
             sumgx.rgbtRed = 0; sumgy.rgbtRed = 0;
 
-            //Loop calculando gx e gy de cada pixel
-            for (int i = 0; i <= 2; i++)
+            //Loop calculando gx e gy de cada pixel; No loop mudancas no local do pixel da imagem, dentro mudancas no local do pixel de gx gy.
+            for (int i = -1; i <= 1; i++)
             {
-                for (int j = 0; j <= 2; j++)
+                for (int j = -1; j <= 1; j++)
                 {
+                    int k = i + 2; //Posicoes das matrizes gx gy para cada pixel da matriz original.
+                    int l = j + 2;
                     if (h+i > 0 && h+i < height - 1 && w+j > 0 && w+j < width - 1)
                     {
                     sumgx.rgbtBlue += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue;
