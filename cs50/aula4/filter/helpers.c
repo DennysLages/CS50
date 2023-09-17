@@ -113,8 +113,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     int gx[3][3] = {{-1,0,1},{-2,0,2},{-1,0,1}};//Ver como escreve uma matriz
     int gy[3][3] = {{-1,-2,-1},{0,0,0},{1,2,1}};
 
-    // RGBTRIPLE sumgx;
-    // RGBTRIPLE sumgy;
+    RGBTRIPLE sumgx;
+    RGBTRIPLE sumgy;
 
     //Loop passando entre cada Pixel e copiando para nova cópia de imagem.
     for (int h = 0; h < height; h++)
@@ -131,11 +131,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         for (int w = 0; w < width; w++)
         {
             // int sumgx = 0; int sumgy = 0; //Ou torna RGBTRIPLE e zera todos os rgb ou cria novos sumgx para cada um do rgb.
-            // sumgx.rgbtBlue = 0; sumgy.rgbtBlue = 0;
-            // sumgx.rgbtGreen = 0; sumgy.rgbtGreen = 0;
-            // sumgx.rgbtRed = 0; sumgy.rgbtRed = 0;
-            float gxBlue ; float gxGreen; float gxRed; float gyBlue; float gyGreen; float gyRed;
-            gxBlue = gxGreen = gxRed = gyBlue = gyGreen = gyRed = 0;
+            sumgx.rgbtBlue = 0; sumgy.rgbtBlue = 0;
+            sumgx.rgbtGreen = 0; sumgy.rgbtGreen = 0;
+            sumgx.rgbtRed = 0; sumgy.rgbtRed = 0;
+            // float gxBlue ; float gxGreen; float gxRed; float gyBlue; float gyGreen; float gyRed;
+            // gxBlue = gxGreen = gxRed = gyBlue = gyGreen = gyRed = 0;
 
             //Loop calculando gx e gy de cada pixel; No loop mudancas no local do pixel da imagem, dentro mudancas no local do pixel de gx gy.
             for (int i = -1; i <= 1; i++)
@@ -146,22 +146,22 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int l = j + 1;
                     if (h+i >= 0 && h+i < height && w+j >= 0 && w+j < width) //Removing outside bounderies by only calculating inside
                     {
-                    // sumgx.rgbtBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; sumgy.rgbtBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
-                    // sumgx.rgbtGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; sumgy.rgbtGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
-                    // sumgx.rgbtRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; sumgy.rgbtRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
-                    gxBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; gyBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
-                    gxGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; gyGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
-                    gxRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; gyRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
+                    sumgx.rgbtBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; sumgy.rgbtBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
+                    sumgx.rgbtGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; sumgy.rgbtGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
+                    sumgx.rgbtRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; sumgy.rgbtRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
+                    // gxBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; gyBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
+                    // gxGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; gyGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
+                    // gxRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; gyRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
 
                     }
                 }
             }
-            // int blue = round(sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2))); //Ver raiz quadrada e elevado
-            // int green = round(sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2)));
-            // int red = round(sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2)));
-            int blue = round(sqrt(pow(gxBlue, 2) + pow(gyBlue, 2))); //Ver raiz quadrada e elevado
-            int green = round(sqrt(pow(gxGreen, 2) + pow(gyGreen, 2)));
-            int red = round(sqrt(pow(gxRed, 2) + pow(gyRed, 2)));
+            int blue = round(sqrt(pow(sumgx.rgbtBlue, 2) + pow(sumgy.rgbtBlue, 2))); //Ver raiz quadrada e elevado
+            int green = round(sqrt(pow(sumgx.rgbtGreen, 2) + pow(sumgy.rgbtGreen, 2)));
+            int red = round(sqrt(pow(sumgx.rgbtRed, 2) + pow(sumgy.rgbtRed, 2)));
+            // int blue = round(sqrt(pow(gxBlue, 2) + pow(gyBlue, 2))); //Ver raiz quadrada e elevado
+            // int green = round(sqrt(pow(gxGreen, 2) + pow(gyGreen, 2)));
+            // int red = round(sqrt(pow(gxRed, 2) + pow(gyRed, 2)));
 
             if (blue > 255)
             {
@@ -171,7 +171,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 green = 255;
             }
-            if (red < 255)
+            if (red > 255)
             {
                 red = 255;
             }
