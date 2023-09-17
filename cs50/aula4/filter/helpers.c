@@ -142,11 +142,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     int k = i + 2; //Posicoes das matrizes gx gy para cada pixel da matriz original.
                     int l = j + 2;
-                    if (h+i > 0 && h+i < height - 1 && w+j > 0 && w+j < width - 1)
+                    if (h+i > 0 && h+i < height && w+j > 0 && w+j < width) //Removing outside bounderies
                     {
-                    sumgx.rgbtBlue += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue; sumgy.rgbtBlue += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtBlue;
-                    sumgx.rgbtGreen += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen; sumgy.rgbtGreen += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtGreen;
-                    sumgx.rgbtRed += gx[i][j] * copyimage[h+i-1][w+j-1].rgbtRed; sumgy.rgbtRed += gy[i][j] * copyimage[h+i-1][w+j-1].rgbtRed;
+                    sumgx.rgbtBlue += gx[k][l] * copyimage[h+i][w+j].rgbtBlue; sumgy.rgbtBlue += gy[k][l] * copyimage[h+i][w+j].rgbtBlue;
+                    sumgx.rgbtGreen += gx[k][l] * copyimage[h+i][w+j].rgbtGreen; sumgy.rgbtGreen += gy[k][l] * copyimage[h+i][w+j].rgbtGreen;
+                    sumgx.rgbtRed += gx[k][l] * copyimage[h+i][w+j].rgbtRed; sumgy.rgbtRed += gy[k][l] * copyimage[h+i][w+j].rgbtRed;
                     }
                 }
             }
