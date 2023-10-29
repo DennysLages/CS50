@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h> //Necessary for uint8_t and creation of BYTE
+
+typedef uint8_t BYTE;
+const int BLOCK = 512;
 
 int main(int argc, char *argv[])
 {
