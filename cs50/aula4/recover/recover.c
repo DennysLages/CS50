@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
             //Function to create a String that will be used as name
             sprintf(name_img, "%03i.jpg", i);
 
-            //Create a file img with name name_img and Write a file (image) for that 1 block
+            //Create a file "img" with name "name_img" and Write that 1 block
             img = fopen(name_img, "w");
             fwrite(buffer, 1, BLOCK, img);
             i++;
