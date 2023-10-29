@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
         {
             if (i > 0)
             {
-                fwrite(buffer, 1, BLOCK, name_img);
+                fwrite(buffer, 1, BLOCK, img);
             }
         }
 
@@ -66,4 +66,5 @@ int main(int argc, char *argv[])
         fclose(file);
 
         return 0;
+    }
 }
