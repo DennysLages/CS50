@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     // Read first three bytes
     BYTE buffer[BLOCK];
-    fread(buffer, sizeof(BYTE), 3, file);
+    fread(buffer, BLOCK, 3, file);
 
     // Check first three bytes
     if ( bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
