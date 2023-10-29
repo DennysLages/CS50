@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
     }
 
     //fread(file, 512, )
+    buffer[512];
 
-    fread(file, 512, 255, )
+    fread(buffer, 512, 255, file)
 }
