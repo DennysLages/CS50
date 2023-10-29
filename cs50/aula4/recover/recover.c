@@ -7,6 +7,7 @@ const int BLOCK = 512;
 
 int main(int argc, char *argv[])
 {
+    // [0. Check]
     // Check number of arguments and return if not 2
     if (argc != 2)
     {
@@ -21,9 +22,18 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Read first three bytes
+    // [1. Variable Creation]
+    //Creation of buffer of size 512 bytes
     BYTE buffer[BLOCK];
 
+    // Creation of Destination file
+    FILE *img;
+
+    // Creation of variable to track # of images
+    int i = 0;
+
+
+    // [2. Iterations / Hard coding]
     //While not end of file, do
     //Read all BLOCKS of 512 bytes each
     while(fread(buffer, BLOCK, 255, file))
