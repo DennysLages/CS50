@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     BYTE buffer[BLOCK];
 
     // Creation of Destination file
-    FILE *img;
+    FILE *img = NULL;
 
     // String for Destination Name Creation
     char *name_img = malloc(8); //###.jpg\0
