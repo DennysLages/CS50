@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if (i > 0)
+            if (i > 0) //If already started writing & is not a new image, just keep appending to current image
             {
                 fwrite(buffer, 1, BLOCK, img);
             }
