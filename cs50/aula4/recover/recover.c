@@ -53,6 +53,13 @@ int main(int argc, char *argv[])
             fwrite(buffer, 1, BLOCK, img);
             i++;
         }
+        else
+        {
+            if (c > 0)
+            {
+                fwrite(buffer, 1, BLOCK, name_img);
+            }
+        }
 
     buffer[512];
 
