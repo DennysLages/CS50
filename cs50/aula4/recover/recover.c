@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     // [2. Iterations / Hard coding]
     //While not end of file, do
     //Read all BLOCKS of 512 bytes each
-    while (fread(buffer, BLOCK, 255, file))
+    while (fread(&buffer, 1, BLOCK, file))
     {
         // Check first bytes if it is a jpeg and start printing
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
