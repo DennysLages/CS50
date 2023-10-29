@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         //printf("Use: ./recover card.raw");
-        return 2;
+        return 1;
     }
 
     FILE *file = fopen(argv[1], "r");
