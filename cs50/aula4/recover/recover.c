@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     fread(buffer, BLOCK, 255, file);
 
     // Check first three bytes
-    if ( bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
+    if ( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && )
     {
 
     }
