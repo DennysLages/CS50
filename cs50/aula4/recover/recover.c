@@ -23,11 +23,15 @@ int main(int argc, char *argv[])
     }
 
     // [1. Variable Creation]
+    // Buffer / Destination / Destination_Name / Track#
     //Creation of buffer of size 512 bytes
     BYTE buffer[BLOCK];
 
     // Creation of Destination file
     FILE *img;
+
+    // String for Destination Name Creation
+    char *name_img = malloc(8); //###.jpg\0
 
     // Creation of variable to track # of images
     int i = 0;
@@ -36,12 +40,17 @@ int main(int argc, char *argv[])
     // [2. Iterations / Hard coding]
     //While not end of file, do
     //Read all BLOCKS of 512 bytes each
-    while(fread(buffer, BLOCK, 255, file))
+    while (fread(&buffer, BLOCK, 255, file))
     {
         // Check first bytes if it is a jpeg and start printing
-        if ( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            sprintf(filename, "%03i.jpg", 2);
+            //Function to create a String that will be used as name
+            sprintf(name_img, "%03i.jpg", i);
+
+            //Write a file (image) for that 1 block
+            img = fopen(name_img, "w");
+            fwrite(&buffer, )
         }
     }
 
