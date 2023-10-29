@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if (c > 0)
+            if (i > 0)
             {
                 fwrite(buffer, 1, BLOCK, name_img);
             }
