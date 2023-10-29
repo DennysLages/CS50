@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     // Check number of arguments and return if not 2
     if (argc != 2)
     {
-        //printf("Use: only name of file to recovery");
+        //printf("Use: ./recover name.jpg");
         return 2;
     }
 
