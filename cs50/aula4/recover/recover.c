@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    fread(file, 512, )
+    //fread(file, 512, )
 
+    fread(file, 512, 255, )
 }
