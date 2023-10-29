@@ -61,7 +61,9 @@ int main(int argc, char *argv[])
             }
         }
 
-    buffer[512];
+        fclose(img);
+        free(name_img);
+        fclose(file);
 
-    fread(buffer, 512, 255, file)
+        return 0;
 }
