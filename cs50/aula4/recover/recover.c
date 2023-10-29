@@ -60,11 +60,11 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, BLOCK, img);
             }
         }
-
-        fclose(img);
-        free(name_img);
-        fclose(file);
-
-        return 0;
     }
+
+    fclose(img);
+    free(name_img);
+    fclose(file);
+
+    return 0;
 }
