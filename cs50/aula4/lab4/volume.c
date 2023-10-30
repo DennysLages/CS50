@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *output = fopen(argv[2], "w"); //This line creates new file
+    FILE *output = fopen(argv[2], "w"); // This line creates new file
     if (output == NULL)
     {
         printf("Could not open file.\n");
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     int16_t buffer;
-    while(fread(&buffer, 1, 2, input))
+    while (fread(&buffer, 1, 2, input))
     {
         buffer *= factor;
         fwrite(&buffer, 1, 2, output);
