@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     int16_t buffer;
     while(fread(&buffer, 1, 2, input))
     {
-        fwrite(buffer, 1, 2, output);
+        fwrite(&buffer, 1, 2, output);
     }
 
     // Close files
