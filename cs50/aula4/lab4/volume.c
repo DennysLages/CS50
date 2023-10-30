@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *output = fopen(argv[2], "w");
+    FILE *output = fopen(argv[2], "w"); //This line creates new file
     if (output == NULL)
     {
         printf("Could not open file.\n");
