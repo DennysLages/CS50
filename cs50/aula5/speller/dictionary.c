@@ -1,6 +1,7 @@
 // Implements a dictionary's functionality
 
 #include <stdbool.h>
+#include <stdio.h> // fscanf
 
 #include "dictionary.h"
 
@@ -44,9 +45,9 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    // 2. Read file and record to an array
+    // 2. Read file and record to a Linked List
     char word[LENGHT +1]; // Buffer for each word
-    while (fscanf(d_txt, "%c", word))
+    while (fscanf(d_txt, "%c", word) != EOF) // Read and record on word, while not End of File
     {
 
     }
