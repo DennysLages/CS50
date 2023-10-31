@@ -49,7 +49,12 @@ bool load(const char *dictionary)
     char word[LENGHT +1]; // Buffer for each word
     while (fscanf(d_txt, "%c", word) != EOF) // Read and record on word, while not End of File
     {
-
+        node *n = malloc(sizeof(node));
+        if(n == NULL)
+        {
+            return 1;
+        }
+        
     }
     return false;
 }
