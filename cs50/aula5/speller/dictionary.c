@@ -37,6 +37,13 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *words = fopen(dictionary, "r");
+    if (words == NULL)
+    {
+        printf("Could not open dictionary.\n");
+        return 1;
+    }
+
+    
     return false;
 }
 
