@@ -36,13 +36,14 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *words = fopen(dictionary, "r");
-    if (words == NULL)
+    FILE *d_txt = fopen(dictionary, "r"); // Dictionary text
+    if (d_txt == NULL)
     {
         printf("Could not open dictionary.\n");
         return 1;
     }
 
+    
     while (fscanf(words, ))
     {
 
