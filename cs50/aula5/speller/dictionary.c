@@ -43,8 +43,8 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    
-    while (fscanf(words, ))
+
+    while (fscanf(d_txt, "%c",  ))
     {
 
     }
