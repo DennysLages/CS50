@@ -43,7 +43,10 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    
+    while(fread(words, ))
+    {
+        
+    }
     return false;
 }
 
