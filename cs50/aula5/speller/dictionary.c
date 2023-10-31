@@ -55,6 +55,7 @@ bool load(const char *dictionary)
             printf("Memory Allocation Error\n");
             return false;
         }
+        // Entender como copiar as palavras no linked list e seguir com o desmembramento. Rever a aula
 
     }
     return false; //If done correctly, should not reach false
