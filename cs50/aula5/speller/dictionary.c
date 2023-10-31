@@ -1,7 +1,7 @@
 // Implements a dictionary's functionality
 
 #include <stdbool.h>
-#include <stdio.h> // fscanf
+//#include <stdio.h> // fscanf, The Constante EOF,
 
 #include "dictionary.h"
 
