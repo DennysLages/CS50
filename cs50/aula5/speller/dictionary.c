@@ -45,18 +45,19 @@ bool load(const char *dictionary)
         return 1;
     }
 
-    // 2. Read file and record to a Linked List
+    // 2. Read file and record letter? to a Linked List
     char word[LENGHT +1]; // Buffer for each word
     while (fscanf(d_txt, "%c", word) != EOF) // Read and record on word, while not End of File
     {
         node *n = malloc(sizeof(node));
         if(n == NULL)
         {
-            return 1;
+            printf("Memory Allocation Error\n");
+            return false;
         }
-        
+
     }
-    return false;
+    return false; //If done correctly, should not reach false
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
