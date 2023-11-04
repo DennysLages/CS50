@@ -57,6 +57,7 @@ bool load(const char *dictionary)
         }
         // Entender como copiar as palavras no linked list e seguir com o desmembramento. Rever a aula
 
+        strcpy(n->word, word);
     }
     return false; //If done correctly, should not reach false
 }
