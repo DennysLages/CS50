@@ -60,10 +60,10 @@ bool load(const char *dictionary)
         // Copying each word of the dictionary to a linked list
         // 2.2 1st word from node and 2nd word from main code created just before while loop
         strcpy(n->word, word);
-        n->next = NULL;
 
         // 2.3 A Hash Table is an Array of Linked Lists. Now is to connect to an array (Hash Table). It will be done by Hash Function to be created. It takes a String and Returns a number (Index).
-        
+        //n->next = NULL;
+        n->next = hash(word);
     }
     return false; //If done correctly, should not reach false
 }
