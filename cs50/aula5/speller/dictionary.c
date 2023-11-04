@@ -47,7 +47,7 @@ bool load(const char *dictionary)
 
     // 2. Read file and record letter? to a Linked List
     char word[LENGHT +1]; // Buffer for each word
-    while (fscanf(d_txt, "%c", word) != EOF) // Read and record on word, while not End of File
+    while (fscanf(d_txt, "%s", word) != EOF) // Read and record on word, while not End of File
     {
         node *n = malloc(sizeof(node));
         if(n == NULL)
