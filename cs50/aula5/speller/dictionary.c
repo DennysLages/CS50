@@ -69,7 +69,7 @@ bool load(const char *dictionary)
         // 2.3 A Hash Table is an Array of Linked Lists. Now is to connect to an array (Hash Table). It will be done by Hash Function to be created. It takes a String and Returns a number (Index).
         hash_value = hash(word);
         n->next = table[hash_value]; //Set new node to point to same place as Head Node
-        table[hash_value] = n; //Define Head Node to Start with new 
+        table[hash_value] = n; //Define Head Node to Start with new Value and Point 
         word_count++;
     }
     return false; //If done correctly, should not reach false
