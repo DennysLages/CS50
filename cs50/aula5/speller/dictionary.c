@@ -62,7 +62,7 @@ bool load(const char *dictionary)
         strcpy(n->word, word);
         n->next = NULL;
 
-        // 2.3 A Hash Table is an Array of Linked Lists. Now is to connect to an array (Hash Table)
+        // 2.3 A Hash Table is an Array of Linked Lists. Now is to connect to an array (Hash Table). It will be done by Hash Function to be created. It takes a String and Returns a number (Index).
         
     }
     return false; //If done correctly, should not reach false
