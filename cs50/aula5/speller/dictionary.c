@@ -39,7 +39,7 @@ bool load(const char *dictionary)
     // TODO
     // 1. Open Dictionary file
     FILE *d_txt = fopen(dictionary, "r"); // Dictionary text
-    if (d_txt == NULL)
+    if (dic_file == NULL)
     {
         printf("Could not open dictionary.\n");
         return 1;
@@ -47,7 +47,7 @@ bool load(const char *dictionary)
 
     // 2. Read file and record letter? to a Linked List
     char word[LENGHT +1]; // Buffer for each word
-    while (fscanf(d_txt, "%s", word) != EOF) // 2.1 Read and record on word, while not End of File
+    while (fscanf(dic_file, "%s", word) != EOF) // 2.1 Read and record on word, while not End of File
     {
         node *n = malloc(sizeof(node));
         if(n == NULL)
