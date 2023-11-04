@@ -17,7 +17,7 @@ node;
 const unsigned int N = 1;
 
 // Hash table
-node *table[N];
+node *table[N]; // Array of Nodes (Head Nodes)
 
 //variables
 unsigned int word_count;
