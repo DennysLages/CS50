@@ -72,6 +72,8 @@ bool load(const char *dictionary)
         table[hash_value] = n; //Define Head Node to Start with Value of new Node and keep Pointing to same place. Should not point to new node instead?
         word_count++;
     }
+
+    fclose
     return false; //If done correctly, should not reach false
 }
 
