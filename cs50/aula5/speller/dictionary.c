@@ -57,7 +57,10 @@ bool load(const char *dictionary)
         }
         // Entender como copiar as palavras no linked list e seguir com o desmembramento. Rever a aula
 
+        //Copying each word of the dictionary to the linked list
+        // 1st word from node and 2nd word from main code created just before while loop
         strcpy(n->word, word);
+        n->next = NULL;
     }
     return false; //If done correctly, should not reach false
 }
