@@ -42,7 +42,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // 1. Open Dictionary file
-    FILE *d_txt = fopen(dictionary, "r"); // Dictionary text
+    FILE *dic_file = fopen(dictionary, "r"); // Dictionary text
     if (dic_file == NULL)
     {
         printf("Could not open dictionary.\n");
@@ -73,8 +73,8 @@ bool load(const char *dictionary)
         word_count++;
     }
 
-    fclose
-    return false; //If done correctly, should not reach false
+    fclose(dic_file)
+    return true; //If done correctly, should not reach false
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
