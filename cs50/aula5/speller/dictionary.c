@@ -13,7 +13,7 @@ typedef struct node
 }
 node;
 
-// Number of buckets in hash table
+// Number of buckets in hash table //TableSize
 const unsigned int N = 199933; //Prime Number close to 70% of full dictionary with 143.091 words
 
 // Hash table
