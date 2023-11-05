@@ -127,7 +127,7 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
-        free(cursor);
+        free(cursor); //Is it necessary?
     }
     return false;
 }
