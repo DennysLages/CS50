@@ -35,8 +35,11 @@ unsigned int hash(const char *word)
 {
     // TODO
     // sum the ASCII values of the characters in the word and then use modulo to map it to a hash table index
-
-    return 0;
+    unsigned int hashValue = 0;
+    for (int i = 0; word[i] != '\0'; i++) {
+        hashValue += word[i];
+    }
+    return hashValue % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
