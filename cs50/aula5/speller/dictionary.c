@@ -14,7 +14,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = 1;
+const unsigned int N = 199933; //Prime Number close to 70% of full dictionary with 143.091 words
 
 // Hash table
 node *table[N]; // Array of Nodes (Head Nodes)
@@ -35,7 +35,7 @@ unsigned int hash(const char *word)
 {
     // TODO
     // sum the ASCII values of the characters in the word and then use modulo to map it to a hash table index
-    
+
     return 0;
 }
 
