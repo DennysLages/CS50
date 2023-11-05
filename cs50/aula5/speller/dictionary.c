@@ -33,14 +33,14 @@ bool check(const char *word)
 {
     // TODO
     hash_value = hash(word);
-    node *cursor = malloc(sizeof(node));
-    if(cursor == NULL)
-    {
-        printf("Memory Allocation Error for Cursor\n");
-        return false;
-    }
+    // node *cursor = malloc(sizeof(node));
+    // if(cursor == NULL)
+    // {
+    //     printf("Memory Allocation Error for Cursor\n");
+    //     return false;
+    // }
 
-    cursor = table[hash_value];
+    node *cursor = table[hash_value];
     while (cursor != 0)
     {
         if (strcasecmp(word, cursor->word) == 0)
