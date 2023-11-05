@@ -20,7 +20,7 @@ const unsigned int N = 199933; //Prime Number close to 70% of full dictionary wi
 node *table[N]; // Array of Nodes (Head Nodes)
 
 //variables
-unsigned int word_count;
+unsigned int word_count = 0;
 unsigned int hash_value;
 
 // Returns true if word is in dictionary, else false
