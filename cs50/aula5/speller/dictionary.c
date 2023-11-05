@@ -2,7 +2,11 @@
 
 #include <stdbool.h>
 //#include <stdio.h> // fscanf, The Constante EOF,
-
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <strings.h>
+#include <ctype.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
