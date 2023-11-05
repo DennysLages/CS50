@@ -9,8 +9,6 @@
 #include <ctype.h>
 #include "dictionary.h"
 
-#define LENGTH 45
-
 // Represents a node in a hash table
 typedef struct node
 {
