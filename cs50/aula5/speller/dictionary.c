@@ -133,7 +133,7 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
-        free(cursor); //Is it necessary?
+        //free(cursor); //Is it necessary?
         return true;
     }
     printf("Could not unload\n");
