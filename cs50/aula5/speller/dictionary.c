@@ -50,7 +50,6 @@ bool check(const char *word)
         }
         cursor = cursor->next;
     }
-    free(cursor);
     return false;
 }
 
@@ -135,9 +134,6 @@ bool unload(void)
             cursor = cursor->next;
             free(tmp);
         }
-        //free(cursor); //Is it necessary?
-        return true;
     }
-    printf("Could not unload\n");
-    return false;
+    return true;
 }
