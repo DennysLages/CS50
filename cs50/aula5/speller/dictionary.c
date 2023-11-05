@@ -111,16 +111,23 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    
+    node *tmp = malloc(sizeof(node));
+    if(tmp == NULL)
+    {
+        printf("Memory Allocation Error for node tmp\n");
+        return false;
+    }
+
     for (int i = 0; i < N; i++)
     {
         cursor = table[i];
         while (cursor)
         {
-            node *tmp = cursor;
+            tmp = cursor;
             cursor = cursor->next;
             free(tmp);
         }
+        free(cursor);
     }
     return false;
 }
