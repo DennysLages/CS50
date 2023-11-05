@@ -2,30 +2,29 @@
 
 #include <stdbool.h>
 //#include <stdio.h> // fscanf, The Constante EOF,
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <strings.h>
-#include <ctype.h>
 #include "dictionary.h"
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
 
 // Represents a node in a hash table
 typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // Number of buckets in hash table //TableSize
-//const unsigned int N = 199933; //Prime Number close to 70% of full dictionary with 143.091 words
+// const unsigned int N = 199933; //Prime Number close to 70% of full dictionary with 143.091 words
 #define N 199933
 // #define N 26
 
 // Hash table
 node *table[N]; // Array of Nodes (Head Nodes)
 
-//variables
+// variables
 unsigned int word_count = 0;
 unsigned int hash_value;
 
@@ -59,7 +58,8 @@ unsigned int hash(const char *word)
     // TODO
     // sum the ASCII values of the characters in the word and then use modulo to map it to a hash table index
     unsigned int hashValue = 0;
-    for (int i = 0; word[i] != '\0'; i++) {
+    for (int i = 0; word[i] != '\0'; i++)
+    {
         hashValue += tolower(word[i]);
     }
     return hashValue % N;
@@ -78,11 +78,11 @@ bool load(const char *dictionary)
     }
 
     // 2. Read file and record letter? to a Linked List
-    char word[LENGTH +1]; // Buffer for each word
+    char word[LENGTH + 1];                      // Buffer for each word
     while (fscanf(dic_file, "%s", word) != EOF) // 2.1 Read and record on word, while not End of File
     {
         node *n = malloc(sizeof(node));
-        if(n == NULL)
+        if (n == NULL)
         {
             printf("Memory Allocation Error\n");
             return false;
@@ -92,18 +92,20 @@ bool load(const char *dictionary)
         // Copying each word of the dictionary to a linked list
         // 2.2 1st word from node and 2nd word from main code created just before while loop
         strcpy(n->word, word);
-        //n->next = NULL;
+        // n->next = NULL;
 
-        // 2.3 A Hash Table is an Array of Linked Lists. Now is to connect to an array (Hash Table). It will be done by Hash Function to be created. It takes a String and Returns a number (Index).
+        // 2.3 A Hash Table is an Array of Linked Lists. Now is to connect to an array (Hash Table). It will be done by Hash
+        // Function to be created. It takes a String and Returns a number (Index).
         hash_value = hash(word);
-        n->next = table[hash_value]; //Set new node to point to same place as Head Node
-        table[hash_value] = n; //Define Head Node to Start with Value of new Node and keep Pointing to same place. Should not point to new node instead?
-        //It will point to n node rather to where n is pointing
+        n->next = table[hash_value]; // Set new node to point to same place as Head Node
+        table[hash_value] = n; // Define Head Node to Start with Value of new Node and keep Pointing to same place. Should not point
+                               // to new node instead?
+        // It will point to n node rather to where n is pointing
         word_count++;
     }
 
     fclose(dic_file);
-    return true; //If done correctly, should not reach false
+    return true; // If done correctly, should not reach false
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
