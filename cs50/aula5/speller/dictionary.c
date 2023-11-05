@@ -27,6 +27,10 @@ unsigned int hash_value;
 bool check(const char *word)
 {
     // TODO
+    node cursor = NULL;
+    while (cursor != NULL) {
+        strcasecmp(cursor->word, word)
+    }
     return false;
 }
 
