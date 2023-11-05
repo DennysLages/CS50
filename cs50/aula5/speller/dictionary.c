@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
     // sum the ASCII values of the characters in the word and then use modulo to map it to a hash table index
     unsigned int hashValue = 0;
     for (int i = 0; word[i] != '\0'; i++) {
-        hashValue += word[i];
+        hashValue += tolower(word[i]);
     }
     return hashValue % N;
 }
