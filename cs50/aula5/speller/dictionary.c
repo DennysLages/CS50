@@ -34,6 +34,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
+    
     return 0;
 }
 
