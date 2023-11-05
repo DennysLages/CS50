@@ -135,5 +135,6 @@ bool unload(void)
         }
         free(cursor); //Is it necessary?
     }
+    printf("Could not unload\n");
     return false;
 }
