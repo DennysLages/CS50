@@ -103,7 +103,6 @@ bool load(const char *dictionary)
     }
 
     fclose(dic_file);
-    free(n);
     return true; //If done correctly, should not reach false
 }
 
