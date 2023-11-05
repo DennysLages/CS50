@@ -100,7 +100,7 @@ bool load(const char *dictionary)
         word_count++;
     }
 
-    fclose(dic_file)
+    fclose(dic_file);
     return true; //If done correctly, should not reach false
 }
 
