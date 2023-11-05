@@ -43,7 +43,7 @@ person *create_family(int generations)
     person *p = malloc(sizeof(person));
     if (p)
     {
-        
+        return NULL;
     }
     // Generation with parent data
     if (generations > 1)
