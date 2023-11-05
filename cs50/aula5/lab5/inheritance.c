@@ -61,10 +61,6 @@ person *create_family(int generations)
     else
     {
         // TODO: Set parent pointers to NULL
-        // p->parents[0]->alleles[0] = NULL;
-        // p->parents[0]->alleles[1] = NULL;
-        // p->parents[1]->alleles[0] = NULL;
-        // p->parents[1]->alleles[1] = NULL;
         p->parents[0] = NULL;
         p->parents[1] = NULL;
 
@@ -74,7 +70,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return p;
 }
 
 // Free `p` and all ancestors of `p`.
