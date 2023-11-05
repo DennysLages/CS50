@@ -116,7 +116,8 @@ bool unload(void)
 {
     // TODO
     node *tmp = malloc(sizeof(node));
-    if(tmp == NULL)
+    node *cursor = malloc(sizeof(node));
+    if(tmp == NULL || cursor == NULL)
     {
         printf("Memory Allocation Error for node tmp\n");
         return false;
