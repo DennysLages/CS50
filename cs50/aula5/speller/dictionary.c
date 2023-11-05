@@ -34,6 +34,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
+    // sum the ASCII values of the characters in the word and then use modulo to map it to a hash table index
     
     return 0;
 }
