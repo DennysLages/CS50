@@ -85,6 +85,7 @@ bool load(const char *dictionary)
         hash_value = hash(word);
         n->next = table[hash_value]; //Set new node to point to same place as Head Node
         table[hash_value] = n; //Define Head Node to Start with Value of new Node and keep Pointing to same place. Should not point to new node instead?
+        //It will point to n node rather to where n is pointing
         word_count++;
     }
 
