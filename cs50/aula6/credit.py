@@ -3,7 +3,8 @@ from cs50 import get_string
 
 def main():
     sum = 0
-    card = get_string("Number: ")
+    card_int = get_int("Number: ")
+    card = str(card)
     if len(card) < 13 or len(card) > 16
         print("INVALID")
         return 0
@@ -12,7 +13,7 @@ def main():
         number.append(int(card[i]))
 
     if valid(number):
-        if 
+        if
 
 def valid(number):
 
