@@ -5,7 +5,7 @@ def main():
     sum = 0
     card_int = get_int("Number: ")
     card = str(card)
-    if len(card) < 13 or len(card) > 16:
+    if len(card) == 13, 15, 16 #< 13 or len(card) > 16:
         print("INVALID")
         return 0
 
