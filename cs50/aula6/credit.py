@@ -5,5 +5,6 @@ def main():
     number = get_string("Number: ")
     if len(number) < 13 or len(number) > 16
         print("INVALID")
-        
+        return 0
+    
 
