@@ -1,7 +1,10 @@
-from CS50 import get_int
+from cs50 import get_int
 
 def main():
     height = get_int("Height: ")
-    for i in range(1, height)
-        for j in range(i, 0, -1)
-            print("#", end=" ")
+    for i in range(1, height):
+        for j in range(i, 0, -1):
+            print("#", end="")
+        print()
+
+main()
