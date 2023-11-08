@@ -8,6 +8,8 @@ def main():
         if change > 0:
             coins += change // coin
             change -= (change // coin) * coin
+            print(change)
+            print(coins)
     print(coins)
 
 main()
