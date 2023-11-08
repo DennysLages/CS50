@@ -5,9 +5,9 @@ def main():
     coins = 0
     change = get_float("Change owed: ")
     for coin in [0.25, 0.1, 0.05, 0.01]:
-        if change % coin == 0:
-            coins += change // coins
-            change = change % coins
+        if change / coin > 0:
+            coins += change // coin
+            change = change % coin
     print(coins)
 
 main()
