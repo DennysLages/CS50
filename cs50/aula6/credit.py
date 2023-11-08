@@ -7,5 +7,5 @@ def main():
         print("INVALID")
         return 0
 
-    
+    for number in range[]
 
