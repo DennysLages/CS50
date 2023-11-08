@@ -7,5 +7,5 @@ def main():
         print("INVALID")
         return 0
 
-    if number(1) == 
+    
 
