@@ -31,7 +31,7 @@ def valid(number):
     for i in range[0, len(card), 2]:
         if number[i] * 2 // 10 == 0:
             sum += number[i] * 2
-        elsif i * 2 // 10 == 1:
+        elsif (i * 2 // 10) == 1
             sum += number[i] * 2 + 1
 
     for i in range[1, len(card), 2]:
