@@ -14,7 +14,17 @@ def main():
         number.append(int(card[i]))
 
     if valid(number):
-        if len(card) == 15 and card[0] == 3 and card[1] ==
+        if len(card) == 15 and card[0] == 3:
+            if card[1] in [4, 7]:
+                print("AMEX")
+
+        if len(card) == 16 and card[0] == 5:
+            if card[1] in range[1, 5]:
+                print("MASTERCARD")
+
+        if len(card) in [13, 16] and card[0] == 4:
+            print("VISA")
+
 
 def valid(number):
 
