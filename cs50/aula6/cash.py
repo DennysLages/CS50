@@ -7,7 +7,7 @@ def main():
     for coin in [0.25, 0.1, 0.05, 0.01]:
         if change / coin > 0:
             coins += change // coin
-            change = change - change // coin
+            change -= (change // coin) * coin
     print(coins)
 
 main()
