@@ -5,11 +5,11 @@ def main():
     sum = 0
     card_int = get_int("Number: ")
     card = str(card)
-    if len(card) < 13 or len(card) > 16
+    if len(card) < 13 or len(card) > 16:
         print("INVALID")
         return 0
 
-    for i in card
+    for i in card:
         number.append(int(card[i]))
 
     if valid(number):
@@ -26,11 +26,11 @@ def valid(number):
     for i in range[1, len(card), 2]:
         sum += number[i]
 
-    if sum // 10 == 0
+    if sum // 10 == 0:
         return True
-    else
+    else:
         return False
 
-
+main()
 
 
