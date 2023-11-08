@@ -13,7 +13,7 @@ def main():
         number.append(int(card[i]))
 
     if valid(number):
-        if
+        if len(card) == 15 and card[0] == 3 and card[1] ==
 
 def valid(number):
 
