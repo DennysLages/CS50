@@ -11,17 +11,25 @@ def main():
     for i in card
         number.append(int(card[i]))
 
-    for i in range[0, len(card), 2]
-        if number[i] * 2 // 10 == 0
+    if valid(number):
+        if 
+
+def valid(number):
+
+    for i in range[0, len(card), 2]:
+        if number[i] * 2 // 10 == 0:
             sum += number[i] * 2
-        elsif i * 2 // 10 == 1
+        elsif i * 2 // 10 == 1:
             sum += number[i] * 2 + 1
 
-    for i in range[1, len(card), 2]
+    for i in range[1, len(card), 2]:
         sum += number[i]
 
     if sum // 10 == 0
-        
+        return True
+    else
+        return False
+
 
 
 
