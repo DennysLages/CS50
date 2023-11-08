@@ -2,6 +2,6 @@ from CS50 import get_int
 
 def main():
     height = get_int("Height: ")
-    for i in range(height, 0, -1)
-        for j in range(height, 0, -1)
-            
+    for i in range(1, height)
+        for j in range(i, 0, -1)
+            print("#", end=" ")
