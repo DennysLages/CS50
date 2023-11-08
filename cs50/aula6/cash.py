@@ -8,7 +8,7 @@ def main():
         if change > 0:
             coins += change // coin
             change -= (change // coin) * coin
-            print(change)
+            print(change//coin)
             print(coins)
     print(coins)
 
