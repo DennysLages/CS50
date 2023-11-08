@@ -2,10 +2,12 @@ from cs50 import get_int
 from cs50 import get_string
 
 def main():
-    number = get_string("Number: ")
-    if len(number) < 13 or len(number) > 16
+    card = get_string("Number: ")
+    if len(card) < 13 or len(card) > 16
         print("INVALID")
         return 0
 
-    for number in range[]
+    for i in card
+        number.append(card[i])
+        
 
