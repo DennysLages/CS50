@@ -17,7 +17,7 @@ def main():
     # print(valid(number,card))
     if (valid(number, card)):
         print("Is Valid")
-        if len(card) == 15 and card[0] == 3:
+        if len(card) == 15: #and card[0] == 3:
             if card[1] in [4, 7]:
                 print("AMEX")
             else:
