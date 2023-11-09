@@ -20,13 +20,19 @@ def main():
         if len(card) == 15 and card[0] == 3:
             if card[1] in [4, 7]:
                 print("AMEX")
+            else:
+                print("INVALID1")
 
         if len(card) == 16 and card[0] == 5:
             if card[1] in range(1, 5):
                 print("MASTERCARD")
+            else:
+                print("INVALID2")
 
         if len(card) in [13, 16] and card[0] == 4:
             print("VISA")
+        else:
+            print("INVALID3")
     print("Reached the end of main function")
 
 def valid(number, card):
