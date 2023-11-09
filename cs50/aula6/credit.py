@@ -30,18 +30,19 @@ def valid(number, card):
 
     sum = 0
     for i in range(0, len(card), 2):
-        print(f"{number[i]}")
+        # print(f"{number[i]}")
         if number[i] * 2 // 10 == 0:
             sum += number[i] * 2
-            print(f"{number[i]} * 2 = {sum}")
+            # print(f"{number[i]} * 2 = {sum}")
         elif (i * 2 // 10) == 1:
+            print((i * 2 // 10))
             sum += number[i] * 2 + 1
-            print(f"{number[i]} * 2 = {sum}")
+            # print(f"{number[i]} * 2 = {sum}")
 
     for i in range(1, len(card), 2):
-        print(number[i])
+        # print(number[i])
         sum += number[i]
-        print(f"{number[i]} * 2 = {sum}")
+        # print(f"{number[i]} * 2 = {sum}")
 
     if sum // 10 == 0:
         return True
