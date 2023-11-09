@@ -11,7 +11,7 @@ def main():
         print("INVALID")
         return 0
 
-    for i in card:
+    for i in range[0, len(card)]:
         number.append(int(card[i]))
 
     if valid(number):
