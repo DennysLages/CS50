@@ -13,6 +13,7 @@ def main():
     for i in range(0, len(card)):
         number.append(int(card[i]))
 
+    print(f"{len(card)} & {card[0]} & {card[1]}")
     # print(valid(number,card))
     if (valid(number, card)):
         if len(card) == 15 and card[0] == 3:
@@ -32,7 +33,7 @@ def valid(number, card):
     sum = 0
     for i in range(0, len(card),2):
         sum += (((number[i] * 2) // 10) + (number[i] * 2) % 10)
-        print(f"{number[i] * 2} {sum}")
+        # print(f"{number[i] * 2} {sum}")
         # print(sum)
         # print((i * 2 // 10))
         # if number[i] * 2 // 10 == 0:
@@ -45,7 +46,7 @@ def valid(number, card):
     for i in range(1, len(card), 2):
         # print(number[i])
         sum += number[i]
-        print(f"{number[i]} {sum}")
+        # print(f"{number[i]} {sum}")
         # print(f"{number[i]} * 2 = {sum}")
 
     if sum % 10 != 0:
