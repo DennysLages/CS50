@@ -11,7 +11,7 @@ def main():
         print("INVALID")
         return 0
 
-    for i in range[0, len(card)]:
+    for i in range(0, len(card)):
         number.append(int(card[i]))
 
     if valid(number):
@@ -20,7 +20,7 @@ def main():
                 print("AMEX")
 
         if len(card) == 16 and card[0] == 5:
-            if card[1] in range[1, 5]:
+            if card[1] in range(1, 5):
                 print("MASTERCARD")
 
         if len(card) in [13, 16] and card[0] == 4:
@@ -29,13 +29,13 @@ def main():
 
 def valid(number):
 
-    for i in range[0, len(card), 2]:
+    for i in range(0, len(card), 2):
         if number[i] * 2 // 10 == 0:
             sum += number[i] * 2
         elif (i * 2 // 10) == 1:
             sum += number[i] * 2 + 1
 
-    for i in range[1, len(card), 2]:
+    for i in range(1, len(card), 2):
         sum += number[i]
 
     if sum // 10 == 0:
