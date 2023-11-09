@@ -47,11 +47,11 @@ def main():
 def valid(number, card):
 
     sum = 0
-    for i in range(len(card) - 1, 0, -2):
+    for i in range(len(card) - 2, 0, -2):
         sum += (((number[i] * 2) // 10) + (number[i] * 2) % 10)
         print(f"{number[i]} * 2 = {sum}")
 
-    for i in range(len(card) - 2, 0, -2):
+    for i in range(len(card) - 1, 0, -2):
         # print(number[i])
         sum += number[i]
         print(f"{number[i]} {sum}")
