@@ -13,6 +13,7 @@ def main():
     for i in range(0, len(card)):
         number.append(int(card[i]))
 
+    print(valid(number,card))
     if valid(number, card):
         if len(card) == 15 and card[0] == 3:
             if card[1] in [4, 7]:
