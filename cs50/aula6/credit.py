@@ -13,25 +13,25 @@ def main():
     for i in range(0, len(card)):
         number.append(int(card[i]))
 
-    print(f"{len(card)} & {card[0]} & {card[1]}")
     # print(valid(number,card))
     if (valid(number, card)):
+    print(f"{len(card)} & {card[0]} & {card[1]}")
         print("Is Valid")
-        if len(card) == 15 and {card[0] == 3 and card[1] in [4, 7]:
+        if len(card) == 15 and {card[0]} == 3 and {card[1]} in [4, 7]:
             print("AMEX")
             # if card[1] in [4, 7]:
             #     print("AMEX")
             # else:
             #     print("INVALID1")
 
-        if len(card) == 16 and card[0] == 5 and card[1] in range(1, 5):
+        if len(card) == 16 and {card[0]} == 5 and {card[1]} in range(1, 5):
             print("MASTERCARD")
             # if card[1] in range(1, 5):
             #     print("MASTERCARD")
             # else:
             #     print("INVALID2")
 
-        if len(card) in [13, 16] and card[0] == 4:
+        if len(card) in [13, 16] and {card[0]} == 4:
             print("VISA")
         else:
             print("INVALID3")
@@ -39,7 +39,7 @@ def main():
         # if len(card) in [13, 15, 16]:
         #     print("Test worked")
 
-        if card[0] in [4, 5]:
+        if {card[0]} == 4:
             print("Test 2 worked")
     print("Reached the end of main function")
 
