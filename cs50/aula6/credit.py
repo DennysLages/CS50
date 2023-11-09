@@ -17,7 +17,7 @@ def main():
     # print(valid(number,card))
     if (valid(number, card)):
         print("Is Valid")
-        if len(card) == 15 and card[0] == 3 and card[1] in [4, 7]:
+        if len(card) == 15 and {card[0] == 3 and card[1] in [4, 7]:
             print("AMEX")
             # if card[1] in [4, 7]:
             #     print("AMEX")
@@ -36,8 +36,11 @@ def main():
         else:
             print("INVALID3")
 
-        if len(card) in [13, 15, 16]:
-            print("Test worked")
+        # if len(card) in [13, 15, 16]:
+        #     print("Test worked")
+
+        if card[0] in [4, 5]:
+            print("Test 2 worked")
     print("Reached the end of main function")
 
 def valid(number, card):
