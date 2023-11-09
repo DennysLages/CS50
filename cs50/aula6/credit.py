@@ -41,7 +41,7 @@ def valid(number, card):
     if sum // 10 == 0:
         return True
     else:
-        print("Returned False")
+        print("INVALID")
         return False
 
 main()
