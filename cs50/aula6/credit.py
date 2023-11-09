@@ -35,7 +35,7 @@ def valid(number, card):
             sum += number[i] * 2
             print(f"{number[i]} * 2 = {sum}")
         elif (i * 2 // 10) == 1:
-            sum += number[i] * 2 + 1
+            sum += (number[i] * 2) + 1
             print(f"{number[i]} * 2 = {sum}")
 
     for i in range(1, len(card), 2):
