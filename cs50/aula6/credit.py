@@ -31,11 +31,11 @@ def valid(number, card):
     sum = 0
     for i in range(0, len(card), 2):
         # print(f"{number[i]}")
+        print((i * 2 // 10))
         if number[i] * 2 // 10 == 0:
             sum += number[i] * 2
             # print(f"{number[i]} * 2 = {sum}")
         elif (i * 2 // 10) == 1:
-            print((i * 2 // 10))
             sum += number[i] * 2 + 1
             # print(f"{number[i]} * 2 = {sum}")
 
