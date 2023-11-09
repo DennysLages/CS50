@@ -25,7 +25,7 @@ def main():
             # else:
             #     print("INVALID1")
 
-        if len(card) == 16 and number[0] == 5 and number[1] in range(1, 5):
+        if len(card) == 16 and number[0] == 5: #and number[1] in range(1, 5):
             print("MASTERCARD")
             # if card[1] in range(1, 5):
             #     print("MASTERCARD")
