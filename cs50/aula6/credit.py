@@ -35,6 +35,9 @@ def main():
             print("VISA")
         else:
             print("INVALID3")
+
+        if len(card) in [13, 15, 16]:
+            print("Test worked")
     print("Reached the end of main function")
 
 def valid(number, card):
