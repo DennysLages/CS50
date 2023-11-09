@@ -2,7 +2,6 @@ from cs50 import get_int
 from cs50 import get_string
 
 def main():
-    sum = 0
     card_int = get_int("Number: ")
     card = str(card_int)
     number = []
@@ -29,6 +28,7 @@ def main():
 
 def valid(number, card):
 
+    sum = 0
     for i in range(0, len(card), 2):
         if number[i] * 2 // 10 == 0:
             sum += number[i] * 2
@@ -41,6 +41,7 @@ def valid(number, card):
     if sum // 10 == 0:
         return True
     else:
+        print("Returned False")
         return False
 
 main()
