@@ -29,7 +29,7 @@ def main():
 def valid(number, card):
 
     sum = 0
-    for i in range(0, len(card)):
+    for i in range(0, len(card),2):
         sum += (((number[i] * 2) // 10) + (number[i] * 2) % 10)
         print(number[i] * 2)
         print(sum)
