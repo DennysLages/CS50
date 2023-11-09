@@ -4,7 +4,7 @@ from cs50 import get_string
 def main():
     sum = 0
     card_int = get_int("Number: ")
-    card = str(card)
+    card = str(card_int)
     valid_len = [13, 15, 16]
     if len(card) not in valid_len:
         print("INVALID")
