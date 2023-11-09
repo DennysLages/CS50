@@ -47,7 +47,7 @@ def valid(number, card):
         print(f"{number[i]} {sum}")
         # print(f"{number[i]} * 2 = {sum}")
 
-    if sum // 10 == 0:
+    if sum % 10 == 0:
         return True
     else:
         print("INVALID")
