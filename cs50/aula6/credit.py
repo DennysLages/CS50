@@ -18,14 +18,14 @@ def main():
         # print(f"{len(card)} & {card[0]} & {card[1]}")
         # print(f"{number[0]} & {number[1]}")
         # print("Is Valid")
-        if len(card) == 15 and number[0] == 3 and number[1] in [4, 7]:
+        if len(card) == 15 and number[0] == 3 and (number[1] == 4 or number[1] == 7): # in [4, 7]:
             print("AMEX")
             # if card[1] in [4, 7]:
             #     print("AMEX")
             # else:
             #     print("INVALID1")
 
-        if len(card) == 16 and number[0] == 5: #and number[1] in range(1, 5):
+        if len(card) == 16 and number[0] == 5 and (number[1] > 0 or number[1] < 6):# in range(1, 5):
             print("MASTERCARD")
             # if card[1] in range(1, 5):
             #     print("MASTERCARD")
