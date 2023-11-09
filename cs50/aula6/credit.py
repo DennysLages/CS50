@@ -14,17 +14,17 @@ def main():
         number.append(int(card[i]))
 
     print(valid(number,card))
-    if valid(number, card):
-        if len(card) == 15 and card[0] == 3:
-            if card[1] in [4, 7]:
-                print("AMEX")
+    valid(number, card)
+    if len(card) == 15 and card[0] == 3:
+        if card[1] in [4, 7]:
+            print("AMEX")
 
-        if len(card) == 16 and card[0] == 5:
-            if card[1] in range(1, 5):
-                print("MASTERCARD")
+    if len(card) == 16 and card[0] == 5:
+        if card[1] in range(1, 5):
+            print("MASTERCARD")
 
-        if len(card) in [13, 16] and card[0] == 4:
-            print("VISA")
+    if len(card) in [13, 16] and card[0] == 4:
+        print("VISA")
 
 
 def valid(number, card):
@@ -50,7 +50,6 @@ def valid(number, card):
 
     if sum % 10 != 0:
         print("INVALID")
-        return False
 
 main()
 
