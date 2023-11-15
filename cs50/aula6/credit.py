@@ -18,7 +18,7 @@ def main():
         # print(f"{number[0]} & {number[1]}")
 
         if len(card) == 15 and number[0] == 3 and (number[1] == 4 or number[1] == 7): # in [4, 7]:
-            print("AMEX")
+            print("AMAAMEX")
 
         if len(card) == 16 and number[0] == 5 and (number[1] > 0 or number[1] < 6):# in range(1, 5):
             print("MASTERCARD")
